@@ -4,8 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="使用Markdown语法写文章, C++,算法,数据结构,ACM">
-    <meta name="description" content=" ">
+    <meta name="keywords" content="面向对象程序设计实验5, C++,算法,数据结构,ACM">
+    <meta name="description" content="题目概要要求编写一个程序,可以管理朋友条目.所用的知识点是“继承”.
+程序的主菜单如下：
+1.输入朋友条目
+2.输出朋友条目
+3.修改姓名
+4.修改电话
+5.修改地址
+0.退出
+
+分析:(1) 编写一个新类$FreindEntry$,此类是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +26,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>使用Markdown语法写文章 | 搁浅至云</title>
+    <title>面向对象程序设计实验5 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -260,7 +269,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'cedb1bac7efcd7db47e9f2f2250a7c832aba83b410dd85766e2aea6ec9321e51';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -273,12 +282,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/06/gjS2yh8oxJHspMX.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/20/QWf6JD7wN9UymkF.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">使用Markdown语法写文章</h1>
+                    <h1 class="description center-align post-title">面向对象程序设计实验5</h1>
                 </div>
             </div>
         </div>
@@ -398,12 +407,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/">
-                                <span class="chip bg-color">Markdown语法</span>
+                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                                <span class="chip bg-color">面向对象程序设计</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-                                <span class="chip bg-color">博客文章</span>
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
                             </a>
                         
                     </div>
@@ -414,8 +423,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5/" class="post-category">
-                                博客初步
+                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                面向对象程序设计
                             </a>
                         
                     </div>
@@ -427,21 +436,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-25
+                    2022-04-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-19
+                    2022-04-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    945
                 </div>
                 
 
@@ -468,191 +477,217 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>学会用$Markdown语法$写博客文章是非常重要的,本文主要对$Markdown语法$常见操作的使用进行编写(有时候自己也会忘记一些语法，可通过该博客查看回忆).</p>
-</blockquote>
-<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1 标题"></a>1 标题</h3><p>标题的语法如下:</p>
-<pre class=" language-none"><code class="language-none"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
+                <h4 id="题目概要"><a href="#题目概要" class="headerlink" title="题目概要"></a>题目概要</h4><p>要求编写一个程序,可以管理朋友条目.所用的知识点是“继承”.</p>
+<p>程序的主菜单如下：</p>
+<pre class=" language-Markdown"><code class="language-Markdown">1.输入朋友条目
+2.输出朋友条目
+3.修改姓名
+4.修改电话
+5.修改地址
+0.退出
 </code></pre>
-<p>在$Markdown$中标题使用<code>#</code>号表示,一个<code>#</code>代表一级标题,一共有六种不同字体大小(第$i$级标题的$i$越大,字体越小)的标题.</p>
-<p><img src="https://s2.loli.net/2022/03/28/FlERbBcyMarSJ6p.png" alt="图1  6种不同标题的效果展示"></p>
-<h3 id="2-段落"><a href="#2-段落" class="headerlink" title="2 段落"></a>2 段落</h3><p>在$Markdown$中每写一个段落需要换行一次,没有空格两个以上并且按下回车键(换行),这一段文字就自成一段.(<b><font color="Green">一般写完一段就空一行接着写下一段</font></b>).</p>
-<p><img src="https://s2.loli.net/2022/03/28/HwBqOVcP7MmNZL1.png" alt="图2  段落之间的写法的效果展示"></p>
-<h3 id="3-字体"><a href="#3-字体" class="headerlink" title="3 字体"></a>3 字体</h3><p>在$Markdown$中字体有<b><font color="Red">斜体和粗体</font></b>,字体的语法如下:</p>
-<pre class=" language-none"><code class="language-none">*斜体文本*
-_斜体文本_
-**加粗文本**
-__加粗文本__
-***粗斜体字体***
-___粗斜体字体___
-</code></pre>
-<p>不建议采用使用<b><font color="Blue">下划线</font></b>版本,下划线会连在一起,不好区分数量,故一般采用以下三种写法:</p>
-<pre class=" language-none"><code class="language-none">*斜体文本*
-**加粗文本**
-***粗斜体字体***
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/28/WJiIkbzSo9lxgwe.png" alt="图3  斜体和粗体的效果展示"></p>
-<!-- <font color=Red>此地方为内容</font> -->
-<h3 id="4-分割符"><a href="#4-分割符" class="headerlink" title="4 分割符"></a>4 分割符</h3><p>分隔线在一行中，使用<b><font color="Red">三个以上</font></b>的<strong>星号、减号、下划线</strong>来建立(可以隔开),分隔符的语法如下:</p>
-<pre class=" language-none"><code class="language-none">***
+<p>分析:<br>(1) 编写一个新类$FreindEntry$,此类是$CommEntry$的子类;<br>(2) $FreindEntry$有数据成员$addr$,用于存放一个朋友条目的地址;<br>(3) 根据分析,需要新编写四个函数.<br>$void$  $input()$ ;  //提示：如何使用父类的同名函数<br>$void$  $output()$; //提示：如何使用父类的同名函数<br>$void$  $setAddr(string$ $a)$;<br>$string$ $getAddr()$;</p>
+<h4 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h4><p><img src="https://s2.loli.net/2022/04/20/pzIyV62g5cqxlUW.png"></p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
 
-* * * * *
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-___
+<span class="token keyword">class</span> <span class="token class-name">CommEntry</span><span class="token punctuation">{</span>
 
-_ _ _ _ _ _
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">update_name</span><span class="token punctuation">(</span>string change_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">update_tel</span><span class="token punctuation">(</span>string change_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string <span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string <span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
--------
+<span class="token keyword">private</span><span class="token operator">:</span>
+    string name<span class="token punctuation">;</span>
+    string tel<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-- - - -
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/28/yX7LGFpb9HgPrxs.png" alt="图4  分隔符的效果展示"></p>
-<h3 id="5-删除线"><a href="#5-删除线" class="headerlink" title="5 删除线"></a>5 删除线</h3><p>删除线是给文本加上删除线,在文本两端加上两个波浪线<code>~</code>即可.(<font color="Red">由于编译器的原因,图片左边的自动添上了删除线效果</font>),删除线的语法如下:</p>
-<pre class=" language-none"><code class="language-none">~~删除的文字~~
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/28/TwNeypsPIRudrkB.png" alt="图5  删除线的效果展示"></p>
-<h3 id="6-下划线"><a href="#6-下划线" class="headerlink" title="6 下划线"></a>6 下划线</h3><p>在$Markdown$没有下划线的语法,可利用$Html$的语法实现下划线,下划线的语法如下:</p>
-<pre class=" language-none"><code class="language-none"><u>下划线的文字</u>
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/28/GwdMYDW6rti7qJL.png" alt="图6  下划线的效果展示"></p>
-<h3 id="7-列表"><a href="#7-列表" class="headerlink" title="7 列表"></a>7 列表</h3><p>列表可分为两种:<b><font color="Red">有序列表</font></b>和<b><font color="Blue">无序列表</font></b>.</p>
-<h4 id="7-1-无序列表"><a href="#7-1-无序列表" class="headerlink" title="7.1 无序列表"></a>7.1 无序列表</h4><p>无序列表可使用<font color="Green">星号<code>*</code>,加号<code>+</code>,减号<code>-</code></font>的三种方式(<font color="Purple">内容与符号中间用空格隔开</font>),无序列表的语法如下:</p>
-<pre class=" language-none"><code class="language-none">* 第一项
-* 第二项
-* 第三项
 
-- 第四项
-- 第五项
-- 第六项
-  
-+ 第七项
-+ 第八项
-+ 第九项
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/29/HwR1TLjWaYzpiGZ.png" alt="图7.1 无序列表的效果展示"></p>
-<h4 id="7-2-有序列表"><a href="#7-2-有序列表" class="headerlink" title="7.2 有序列表"></a>7.2 有序列表</h4><p>有序列表使用<font color="Orange">数字+<code>.</code>+空格+内容</font>的方式,有序列表的语法如下:</p>
-<pre class=" language-none"><code class="language-none">1. 步骤一:xxxxxx
-2. 步骤二:yyyyyy
-3. 步骤三:zzzzzz
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/29/8EgUjLnQNdYGuDS.png" alt="图7.2 有序列表的效果展示"></p>
-<h4 id="7-3-列表嵌套"><a href="#7-3-列表嵌套" class="headerlink" title="7.3 列表嵌套"></a>7.3 列表嵌套</h4><p>有序列表和无序列表(或者无序列表和无序列表)可以一起使用,只需要在子列表的选项前添加四个空格,列表嵌套的语法如下:</p>
-<pre class=" language-none"><code class="language-none">1. 第一项：
-    * 子列表1
-    - 子列表2
-2. 第二项：
-    - 子列表1
-    - 子列表2
+<span class="token keyword">class</span> <span class="token class-name">FriendEntry</span><span class="token operator">:</span><span class="token keyword">public</span> CommEntry<span class="token punctuation">{</span>
 
-* 嵌套第一层
-    * 嵌套第二层
-        * 嵌套第三层
-            * 嵌套第四层
-                * 嵌套第五层 
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/29/edFqsuRc1NTV8a7.png" alt="7.3 列表嵌套的效果展示"></p>
-<h3 id="8-区块"><a href="#8-区块" class="headerlink" title="8 区块"></a>8 区块</h3><p>区块的作用是用来引用的,可以引用链接或者一段文字,在段落的开头使用<code>&gt;</code>符号,中间使用空格隔开内容，区块的语法如下:</p>
-<pre class=" language-none"><code class="language-none">> 这是我要引用的第一段内容
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">void</span> <span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">update_addr</span><span class="token punctuation">(</span>string change_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    string <span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-> 这是我要引用的第二段内容
-> 这是我接着第二段的空间引用的第三段内容
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/29/foizLuap3ICgy92.png" alt="图8.1 区块的效果展示"></p>
-<p>区块也可以<font color="BluRed">嵌套使用</font>,嵌套的第$i$层就有$i$个<code>&gt;</code>的符号.</p>
-<pre class=" language-none"><code class="language-none">> 区块嵌套第一层1.0
->> 区块嵌套第二层1.0
->>> 区块嵌套第三层
->>>
->>>> 区块嵌套第四层
->>
->> 区块嵌套第二层2.0 
-> 
-> 区块嵌套第一层2.0
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/29/qQNKuR1lmEJIAFz.png" alt="图8.2  区块嵌套的效果展示"></p>
-<h3 id="9-代码块"><a href="#9-代码块" class="headerlink" title="9 代码块"></a>9 代码块</h3><p>代码块可以展示不同语言的编程代码并实现不同的高亮效果.上下使用三个点进行包裹,可在最顶上写上代码的语言类型,代码块的语法如下:</p>
-<pre class=" language-cpp"><code class="language-cpp">    ```cpp
-        <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
-        <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
-        <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
-        <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-        <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    string addr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">int</span> CommEntry<span class="token operator">::</span><span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> op<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"-------------功能菜单-------------"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         1.输入通讯录条目"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         2.输出通讯录条目"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         3.修改通讯录条目姓名"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         4.修改通讯录条目电话"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         5.修改朋友条目地址"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         0.退出系统"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"----------------------------------"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入你要选择的功能编号(0-5):  "</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">>></span> op<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>op<span class="token operator">&lt;=</span><span class="token number">5</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"输入出错,请重新输入你要选择的功能编号(0,5):  "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> op<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该通讯录条目的名字:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该通讯录条目的电话:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
+    <span class="token function">update_name</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> FriendEntry<span class="token operator">::</span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">,</span>temp_addr<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该朋友条目的名字:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该朋友条目的电话:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该朋友条目的地址:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_addr<span class="token punctuation">;</span>
+    <span class="token function">update_name</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">update_addr</span><span class="token punctuation">(</span>temp_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+string CommEntry<span class="token operator">::</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+string CommEntry<span class="token operator">::</span><span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> tel<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+string FriendEntry<span class="token operator">::</span><span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> addr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入查看的通讯录条目查看的内容选项(1为名字,2为电话,0为全部):  "</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> op<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">>></span> op<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>op<span class="token operator">&lt;=</span><span class="token number">2</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"输入出错,请重新输入查看的通讯录条目查看的内容选项(1为名字,2为电话,0为全部):  "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">1</span><span class="token operator">||</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        string temp_name<span class="token operator">=</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的名字:  "</span> <span class="token operator">&lt;&lt;</span> temp_name <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">2</span><span class="token operator">||</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        string temp_tel<span class="token operator">=</span><span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的电话:  "</span> <span class="token operator">&lt;&lt;</span> temp_tel <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> FriendEntry<span class="token operator">::</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入查看的朋友条目查看的内容选项(1为名字,2为电话,3为地址,0为全部):  "</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> op<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">>></span> op<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>op<span class="token operator">&lt;=</span><span class="token number">3</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"输入出错,请重新输入查看的朋友条目查看的内容选项(1为名字,2为电话,3为地址,0为全部):  "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">1</span><span class="token operator">||</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        string temp_name<span class="token operator">=</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该朋友条目的名字:  "</span> <span class="token operator">&lt;&lt;</span> temp_name <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">2</span><span class="token operator">||</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        string temp_tel<span class="token operator">=</span><span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该朋友条目的电话:  "</span> <span class="token operator">&lt;&lt;</span> temp_tel <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">3</span><span class="token operator">||</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        string temp_addr<span class="token operator">=</span><span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该朋友条目的地址:  "</span> <span class="token operator">&lt;&lt;</span> temp_addr <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">update_name</span><span class="token punctuation">(</span>string change_name<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    name<span class="token operator">=</span>change_name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">update_tel</span><span class="token punctuation">(</span>string change_tel<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    tel<span class="token operator">=</span>change_tel<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> FriendEntry<span class="token operator">::</span><span class="token function">update_addr</span><span class="token punctuation">(</span>string change_addr<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    addr<span class="token operator">=</span>change_addr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    FriendEntry data<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> op<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
+            data<span class="token punctuation">.</span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span>
+            data<span class="token punctuation">.</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">3</span><span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"hello world"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            string temp_name<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的朋友条目的名字:  "</span><span class="token punctuation">;</span>
+            cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
+            data<span class="token punctuation">.</span><span class="token function">update_name</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-    ```
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">4</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            string temp_tel<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的朋友条目的电话:  "</span><span class="token punctuation">;</span>
+            cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
+            data<span class="token punctuation">.</span><span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            string temp_addr<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的朋友条目的地址:  "</span><span class="token punctuation">;</span>
+            cin <span class="token operator">>></span> temp_addr<span class="token punctuation">;</span>
+            data<span class="token punctuation">.</span><span class="token function">update_addr</span><span class="token punctuation">(</span>temp_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://s2.loli.net/2022/03/30/OJpI6sbSYcwUdHx.png" alt="图9  代码块的效果展示"></p>
-<h3 id="10-链接"><a href="#10-链接" class="headerlink" title="10 链接"></a>10 链接</h3><p>使用链接的两种方法:</p>
-<ul>
-<li>直接链接,适用于短的链接,不太用于自定义取名</li>
-<li>使用$markdown$语法插入</li>
-</ul>
-<p>链接的语法格式如下(这里以百度为例):</p>
-<pre class=" language-none"><code class="language-none">  //方法一:直接链接
-  // # <链接地址>
-
-  //方法二:
-  // # [这是链接的名称](链接地址)
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/30/m7soFwfeX2rlNtL.png" alt="图10  链接的效果展示"></p>
-<h3 id="11-图片"><a href="#11-图片" class="headerlink" title="11 图片"></a>11 图片</h3><p>插入图片的可以选择本地的图片或者<a target="_blank" rel="noopener" href="https://sm.ms/">图床</a>超链接,图片的语法如下:</p>
-<pre class=" language-none"><code class="language-none">![图片描述](图片链接或地址)
-</code></pre>
-<h3 id="12-表格"><a href="#12-表格" class="headerlink" title="12 表格"></a>12 表格</h3><p>在$Markdown$中可插入表格,表格的语法如下(此处为了美观所以比较对齐):</p>
-<pre class=" language-none"><code class="language-none">|  姓名   | 学号               |
-|  --     | --                |
-|  Lisa   | 95001             |
-|  Bob    | 95566322222222222 |
-| 我的名字 | 5487652           |
-
-|  表头   | 表头  |
-|  ----  | ----  |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/30/PCHdVgTO39cUSWh.png" alt="图12.1 表格的效果展示"></p>
-<p>表格也可以设置自动对齐规则:</p>
-<ul>
-<li>居右: <code>-:</code></li>
-<li>居左: <code>:-</code></li>
-<li>居中: <code>:-:</code></li>
-</ul>
-<p>表格对齐的语法如下:</p>
-<pre class=" language-none"><code class="language-none">| 左对齐 | 右对齐 | 居中对齐 |
-| :-----| ----: | :----: |
-| 200单元格 | 400单元格 | 单元格5000 |
-| 单元格 | 单元格 | 单元格 |
-</code></pre>
-<p><img src="https://s2.loli.net/2022/03/30/y1dkI8VenxA9mLr.png" alt="图12.2  表格对齐的效果展示"></p>
-<h3 id="13-转义字符"><a href="#13-转义字符" class="headerlink" title="13 转义字符"></a>13 转义字符</h3><p>由于Markdown中用了一些字符作为语法,如果想要使用输出字符此时需要<b><font color="Red">反斜线<code>\</code></font></b>来达到效果,其中英文句点看不出区别,转义字符的语法如下:</p>
-<pre class=" language-none"><code class="language-none">\   反斜线   \\
-`   反引号   \`
-*   星号     \*
-_   下划线   \_
-{}  花括号   \{}   
-[]  方括号   \[]
-()  小括号   \()
-#   井字号   \#
-+   加号     \+
--   减号     \-
-.   英文句点  \.
-!   感叹号   \!
-</code></pre>
-<p><img src="https://s2.loli.net/2022/04/01/bfh8KsrTdc9XWk5.png" alt="图13 转义的效果展示"></p>
-<h3 id="14-其他高级语法"><a href="#14-其他高级语法" class="headerlink" title="14 其他高级语法"></a>14 其他高级语法</h3><h4 id="14-1-数学公式"><a href="#14-1-数学公式" class="headerlink" title="14.1 数学公式"></a>14.1 数学公式</h4><p>用$$中间插入使用的表达式</p>
-<pre class=" language-none"><code class="language-none">$\sum_{i=1}^{n} (i^2+i+1)$
-</code></pre>
-<p>效果如右边所示:  $\sum_{i=1}^{n} (i^2+i+1)$</p>
-<h4 id="14-2-html元素"><a href="#14-2-html元素" class="headerlink" title="14.2 html元素"></a>14.2 html元素</h4><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Ctrl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Alt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Del<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>
-</code></pre>
-<p>效果如右边所示:<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd></p>
 
                 
             </div>
@@ -679,7 +714,7 @@ _   下划线   \_
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/03/25/shi-yong-markdown-yu-fa-xie-wen-zhang/">https://liaoy0103.top/2022/03/25/shi-yong-markdown-yu-fa-xie-wen-zhang/</a>
+                    <a href="https://liaoy0103.top/2022/04/20/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-5/">https://liaoy0103.top/2022/04/20/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -717,12 +752,12 @@ _   下划线   \_
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/">
-                                    <span class="chip bg-color">Markdown语法</span>
+                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                                    <span class="chip bg-color">面向对象程序设计</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-                                    <span class="chip bg-color">博客文章</span>
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
                                 </a>
                             
                         </div>
@@ -1170,82 +1205,35 @@ _   下划线   \_
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/01/shu-ju-ku-sqlserver-shi-yan-qian-yan/">
+                <a href="/2022/04/20/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-5/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/06/lcnJ9OMVWIsSp7G.jpg" class="responsive-img" alt="数据库SQLServer实验前言">
+                        <img src="https://s2.loli.net/2022/04/20/QWf6JD7wN9UymkF.jpg" class="responsive-img" alt="面向对象程序设计实验5">
                         
-                        <span class="card-title">数据库SQLServer实验前言</span>
+                        <span class="card-title">面向对象程序设计实验5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-01
-                        </span>
-                        <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">数据库基本操作</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/03/25/shi-yong-markdown-yu-fa-xie-wen-zhang/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.loli.net/2022/04/06/gjS2yh8oxJHspMX.jpg" class="responsive-img" alt="使用Markdown语法写文章">
-                        
-                        <span class="card-title">使用Markdown语法写文章</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                             
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5/" class="post-category">
-                                    博客初步
+                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                    面向对象程序设计
                                 </a>
                             
                             
@@ -1256,12 +1244,64 @@ _   下划线   \_
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/">
-                        <span class="chip bg-color">Markdown语法</span>
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                        <span class="chip bg-color">面向对象程序设计</span>
                     </a>
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-                        <span class="chip bg-color">博客文章</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/04/20/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-7/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.loli.net/2022/04/20/eI72qLFkRUcSwyo.jpg" class="responsive-img" alt="面向对象程序设计实验7">
+                        
+                        <span class="card-title">面向对象程序设计实验7</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                    面向对象程序设计
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                        <span class="chip bg-color">面向对象程序设计</span>
+                    </a>
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>
