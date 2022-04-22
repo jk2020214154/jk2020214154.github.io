@@ -437,14 +437,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    870
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -474,11 +474,169 @@
 <li>掌握子查询语句.</li>
 </ul>
 <h3 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h3><h4 id="1-多表查询"><a href="#1-多表查询" class="headerlink" title="(1).多表查询"></a>(1).多表查询</h4><ul>
-<li>数据库的各个表中存放着不同的数据,用户经常需要用多个表中的数据来组合提炼出所需要的信息,如果一个查询需要对多个表进行操作,就称为联表查询,联表查询的结果集或结果表称为表之间的连接.联表查询实际上是通过各各表之间共同列的关联来查询数据的,它是关系数据库查询最基本的特征.</li>
-<li>按照下表所示,分别在数据库$test$中构造$student$、$course$和$student_course$三张表,并写入记录.</li>
+<li><p>数据库的各个表中存放着不同的数据,用户经常需要用多个表中的数据来组合提炼出所需要的信息,如果一个查询需要对多个表进行操作,就称为联表查询,联表查询的结果集或结果表称为表之间的连接.联表查询实际上是通过各各表之间共同列的关联来查询数据的,它是关系数据库查询最基本的特征.</p>
+</li>
+<li><p>按照下表所示,分别在数据库$test$中构造$student$、$course$和$student_course$三张表,并写入记录.</p>
+</li>
+<li><p>$Student$表</p>
+</li>
 </ul>
-<p>….</p>
-<p>….</p>
+<table>
+<thead>
+<tr>
+<th align="center">列名称</th>
+<th align="center">类型</th>
+<th align="center">宽度</th>
+<th align="center">允许为空</th>
+<th align="center">缺省值</th>
+<th align="center">主键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">学号</td>
+<td align="center">$Char$</td>
+<td align="center">$8$</td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">学生姓名</td>
+<td align="center">$Nvarchar$</td>
+<td align="center">$8$</td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">性别</td>
+<td align="center">$Char$</td>
+<td align="center">$2$</td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">年龄</td>
+<td align="center">$Smallint$</td>
+<td align="center"></td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">班级号</td>
+<td align="center">$Char$</td>
+<td align="center">$6$</td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">入学时间</td>
+<td align="center">$Smalldatetime$</td>
+<td align="center"></td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">家庭住址</td>
+<td align="center">$Nvarchar$</td>
+<td align="center">$40$</td>
+<td align="center">是</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<hr>
+<ul>
+<li>$Student$表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">列名称</th>
+<th align="center">类型</th>
+<th align="center">宽度</th>
+<th align="center">允许为空</th>
+<th align="center">缺省值</th>
+<th align="center">主键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">课程号</td>
+<td align="center">$Char$</td>
+<td align="center">$10$</td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">课程名称</td>
+<td align="center">$Nvarchar$</td>
+<td align="center">$20$</td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">课程总学时</td>
+<td align="center">$Tinyint$</td>
+<td align="center"></td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">课程学分</td>
+<td align="center">$Tinyint$</td>
+<td align="center"></td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<hr>
+<ul>
+<li>Student_course表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">列名称</th>
+<th align="center">类型</th>
+<th align="center">宽度</th>
+<th align="center">允许为空</th>
+<th align="center">缺省值</th>
+<th align="center">主键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">课程号</td>
+<td align="center">$Char$</td>
+<td align="center">$10$</td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">学号</td>
+<td align="center">$Char$</td>
+<td align="center">$8$</td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">成绩</td>
+<td align="center">$Tinyint$</td>
+<td align="center"></td>
+<td align="center">否</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
 <p>….</p>
 <pre class=" language-SQL"><code class="language-SQL">create table Student
     (  学号       char(8)        not null  primary key,
@@ -1390,7 +1548,7 @@ select Student.学号,Student.学生姓名
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19.1k</span>
+                        class="white-color">19.3k</span>
             
             
             
