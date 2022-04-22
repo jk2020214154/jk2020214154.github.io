@@ -441,14 +441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    964
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -468,7 +468,225 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="A-Move-Right"><a href="#A-Move-Right" class="headerlink" title="A - Move Right"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/A">A - Move Right</a></h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><blockquote>
+<p>给定长度为$4$的$01$字符串,让整体往右移一次,最右边的元素将会消失,同时前补$0$.</p>
+</blockquote>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><blockquote>
+<p><b><font color="Red">模拟</font></b>,结果为$’0’+substr(0,3)$.</p>
+</blockquote>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+  * @file    : A_-_Move_Right.cpp
+  * @author  : SDTBU_LY
+  * @version : V1.0.0
+  * @date    : 2022-04-16 周六 16:01:19
+  * @上联    : ac自动机fail树上dfs序建可持久化线段树
+  * @下联    : 后缀自动机的next指针DAG图上求SG函数
+**/</span>
+
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdio></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iomanip></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cmath></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdlib></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;set></span></span>
+<span class="token comment" spellcheck="true">// #include&lt;unordered_set></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;map></span></span>
+<span class="token comment" spellcheck="true">// #include&lt;unordered_map></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;vector></span></span>
+
+<span class="token comment" spellcheck="true">// #define MAXN </span>
+<span class="token comment" spellcheck="true">// #define MAXM </span>
+<span class="token comment" spellcheck="true">// #define MAXK </span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ull<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> PII<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token punctuation">,</span><span class="token keyword">double</span><span class="token operator">></span> PDD<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> inf<span class="token operator">=</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> dinf<span class="token operator">=</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> ll llinf<span class="token operator">=</span><span class="token number">0x3f3f3f3f3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> PI<span class="token operator">=</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> eps<span class="token operator">=</span><span class="token number">1e-6</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> mod_1e9 <span class="token operator">=</span> <span class="token number">1000000007</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> mod_998 <span class="token operator">=</span> <span class="token number">998244353</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);</span>
+    <span class="token comment" spellcheck="true">//main函数由此开始</span>
+    string s<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> s<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"0"</span><span class="token operator">+</span>s<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="B-Unique-Nicknames"><a href="#B-Unique-Nicknames" class="headerlink" title="B - Unique Nicknames"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/B">B - Unique Nicknames</a></h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><blockquote>
+<p>给定$n$个人,每个人都有一个姓氏$s_i$和名字$t_i$.<br>现在考虑给这$n$个人取昵称,第$i$个人的昵称为$a_i$,每个$a_i$应满足以下条件:</p>
+<ul>
+<li>$a_i$可以从第$i$个人的姓氏$s_i$和名字$t_i$中选择;</li>
+<li>$a_i$不能成为别人的姓氏$s_j$和名字$t_i$,即$i \neq j,a_i \neq s_j$并且$a_i \neq t_j$.</li>
+</ul>
+<p>问是否存在这样的一组满足以上条件的名字.</p>
+</blockquote>
+<h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><blockquote>
+<p>由于数据范围较小,可<b><font color="Red">暴力枚举</font></b>,保证名字与名字之间不能相同,同时姓氏与名字之间也不相同.</p>
+</blockquote>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+  * @file    : B_-_Unique_Nicknames.cpp
+  * @author  : SDTBU_LY
+  * @version : V1.0.0
+  * @date    : 2022-04-16 周六 16:04:33
+  * @上联    : ac自动机fail树上dfs序建可持久化线段树
+  * @下联    : 后缀自动机的next指针DAG图上求SG函数
+**/</span>
+
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdio></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iomanip></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cmath></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdlib></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;set></span></span>
+<span class="token comment" spellcheck="true">// #include&lt;unordered_set></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;map></span></span>
+<span class="token comment" spellcheck="true">// #include&lt;unordered_map></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;vector></span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> MAXN 110</span>
+<span class="token comment" spellcheck="true">// #define MAXM </span>
+<span class="token comment" spellcheck="true">// #define MAXK </span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ull<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> PII<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token punctuation">,</span><span class="token keyword">double</span><span class="token operator">></span> PDD<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> inf<span class="token operator">=</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> dinf<span class="token operator">=</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> ll llinf<span class="token operator">=</span><span class="token number">0x3f3f3f3f3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> PI<span class="token operator">=</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> eps<span class="token operator">=</span><span class="token number">1e-6</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> mod_1e9 <span class="token operator">=</span> <span class="token number">1000000007</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> mod_998 <span class="token operator">=</span> <span class="token number">998244353</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">int</span> n<span class="token punctuation">;</span>
+string s1<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">,</span>s2<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);</span>
+    <span class="token comment" spellcheck="true">//main函数由此开始</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        cin <span class="token operator">>></span> s1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>></span> s2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>s2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>s1<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">||</span>s1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>s2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">||</span>s2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>s2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                cout <span class="token operator">&lt;&lt;</span> <span class="token string">"No"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Yes"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="C-1-2-1-3-1-2-1"><a href="#C-1-2-1-3-1-2-1" class="headerlink" title="C - 1 2 1 3 1 2 1"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/C">C - 1 2 1 3 1 2 1</a></h3><h4 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h4><blockquote>
+<p>给定序列$S_n$如下:</p>
+<ul>
+<li>序列$S_1$只存在单个元素$1$;</li>
+<li>序列$S_n(n\geqslant2)$包含序列$S_{n-1} , n ,S_{n-1}$.</li>
+</ul>
+<p>例如序列$S_2$为$1,2,1$,序列$S_3$为$1,2,1,3,1,2,1$;<br>给定一个$n$,打印出序列$S_n$.</p>
+</blockquote>
+<h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><blockquote>
+<p><b><font color="Red">递归打印</font></b>.</p>
+</blockquote>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+  * @file    : C_-_1_2_1_3_1_2_1.cpp
+  * @author  : SDTBU_LY
+  * @version : V1.0.0
+  * @date    : 2022-04-16 周六 16:16:05
+  * @上联    : ac自动机fail树上dfs序建可持久化线段树
+  * @下联    : 后缀自动机的next指针DAG图上求SG函数
+**/</span>
+
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdio></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iomanip></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cmath></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdlib></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;set></span></span>
+<span class="token comment" spellcheck="true">// #include&lt;unordered_set></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;map></span></span>
+<span class="token comment" spellcheck="true">// #include&lt;unordered_map></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;vector></span></span>
+
+<span class="token comment" spellcheck="true">// #define MAXN </span>
+<span class="token comment" spellcheck="true">// #define MAXM </span>
+<span class="token comment" spellcheck="true">// #define MAXK </span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ull<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> PII<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token punctuation">,</span><span class="token keyword">double</span><span class="token operator">></span> PDD<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> inf<span class="token operator">=</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> dinf<span class="token operator">=</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> ll llinf<span class="token operator">=</span><span class="token number">0x3f3f3f3f3f3f3f3f</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> PI<span class="token operator">=</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">double</span> eps<span class="token operator">=</span><span class="token number">1e-6</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> mod_1e9 <span class="token operator">=</span> <span class="token number">1000000007</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> mod_998 <span class="token operator">=</span> <span class="token number">998244353</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> n<span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> n <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span> <span class="token punctuation">;</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);</span>
+    <span class="token comment" spellcheck="true">//main函数由此开始</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="D-Cylinder"><a href="#D-Cylinder" class="headerlink" title="D - Cylinder"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/D">D - Cylinder</a></h3><h4 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="E-Max-Min"><a href="#E-Max-Min" class="headerlink" title="E - Max Min"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/E">E - Max Min</a></h3><h4 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="F-Cards"><a href="#F-Cards" class="headerlink" title="F - Cards"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/F">F - Cards</a></h3><h4 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4>
                 
             </div>
             <hr/>
@@ -1306,7 +1524,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19.3k</span>
+                        class="white-color">20.3k</span>
             
             
             
