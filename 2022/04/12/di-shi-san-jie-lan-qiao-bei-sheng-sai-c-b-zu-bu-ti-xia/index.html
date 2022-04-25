@@ -434,21 +434,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-18
+                    2022-04-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -478,7 +478,40 @@
 <h5 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h5><p>五种情况如下图所示,颜色只是为了标识不同的积木:<br><img src="https://s2.loli.net/2022/04/18/tfVcLhqwPo2JU3Z.png"></p>
 <h5 id="评测用例规模与约定"><a href="#评测用例规模与约定" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h5><p>对于所有测试用例,$1 \leqslant N \leqslant 10000000$.</p>
 </blockquote>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><hr>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><blockquote>
+<p><b><font color="Red">分类讨论+dp思想,递推</font></b>,设$dp[i]$为形成$i$列的方案数.</p>
+<ul>
+<li>前$i-1$已经排满,此时的方案数为$dp[i-1]$,如下图所示;<br><img src="https://s2.loli.net/2022/04/25/NERrqJMUZLylewX.png" alt="情况一"></li>
+<li>第$i-1$列没排与第$i$列组合(前$i-2$列已经排满),此时的方案数为$dp[i-2]$,如下图所示;<br><img src="https://s2.loli.net/2022/04/25/esjX4kilhg3xy9W.png" alt="情况二"></li>
+<li>第$i-1$列排了一半(包括上半和下半)与第$i$列组合(两种小情况都是在满足前$i-3$列已经排满),此时的方案数为$2 \times dp[i-3]$,如下图所示;<br><img src="https://s2.loli.net/2022/04/25/x53pkBiYKmhX68a.png" alt="情况三"><br>由于情况三分得不够细(未考虑$i-3$的状态).</li>
+<li>$i-3$与$i-2$组合,$i-1$与$i$组合,这种情况包含于情况二中,故不用再计算,如下图所示;<br><img src="https://s2.loli.net/2022/04/25/N6ibTGus5tXzf9a.png" alt="情况四于二"></li>
+<li>第$i-3$列与$i-2$形成正$’L’$,或倒$’L’$,此时的方案数为$2 \times dp[i-4]$;<br><img src="https://s2.loli.net/2022/04/25/xXPdtWh2C78ZA1r.png" alt="情况五"><br>同理,考虑$i-4$可得,方案数为$2 \times dp[i-5]$,如下图所示;<br><img src="https://s2.loli.net/2022/04/25/lLTf3QIa49XMBb2.png" alt="情况六"><br>综上:$dp[i]=dp[i-1]+dp[i-2]+2 \times dp[i-3] +2 \times dp[i-4]+…+2 \times dp[2] +2 \times dp[1]$;<br>$dp[i-1]=dp[i-2]+dp[i-3]+2 \times dp[i-4] +2 \times dp[i-5]+…+2 \times dp[2] +2 \times dp[1]$;<br>两式作差:$dp[i]-dp[i-1]=dp[i-1]+dp[i-3]$;<br>最后化简得:$dp[i]=2 \times dp[i-1] +dp[i-3]$.</li>
+</ul>
+</blockquote>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> MAXN 10000010</span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> mod<span class="token operator">=</span><span class="token number">1e9</span><span class="token operator">+</span><span class="token number">7</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>dp<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">(</span>ll<span class="token punctuation">)</span><span class="token number">2</span><span class="token operator">*</span>dp<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token operator">+</span>dp<span class="token punctuation">[</span>i<span class="token number">-3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> dp<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
 <h3 id="试题-H-扫雷-20分"><a href="#试题-H-扫雷-20分" class="headerlink" title="试题 H: 扫雷(20分)"></a>试题 H: <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4410/">扫雷</a>(20分)</h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><ul>
 <li>小明最近迷上了一款名为《扫雷》的游戏.其中有一个关卡的任务如下,在一个二维平面上放置着$n$个炸雷,第$i$个炸雷$(x_i,y_i,r_i)$表示在坐标$(x_i,y_i)$处存在一个炸雷,它的爆炸范围是以半径为$r_i$的一个圆.</li>
 <li>为了顺利通过这片土地,需要玩家进行排雷.玩家可以发射$m$个排雷火箭,小明已经规划好了每个排雷火箭的发射方向,第$j$个排雷火箭$(x_j,y_j,r_j)$表示这个排雷火箭将会在$(x_j,y_j)$处爆炸,它的爆炸范围是以半径为$r_j$的一个圆,在其爆炸范围内的炸雷会被引爆.同时,当炸雷被引爆时,在其爆炸范围内的炸雷也会被引爆.现在小明想知道他这次共引爆了几颗炸雷?</li>
@@ -1384,7 +1417,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">21.9k</span>
+                        class="white-color">22.3k</span>
             
             
             
