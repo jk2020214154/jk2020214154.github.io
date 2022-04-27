@@ -4,12 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面向对象程序设计实验7, C++,算法,数据结构,ACM">
-    <meta name="description" content="题目概要问题:在通讯录管理程序中,通讯录是由通讯录条目组成的.通讯录条目由姓名、电话组成的。可以进行输入、输出、修改姓名、修改电话,加入静态数据成员,拥有者Owner.
-程序的主界面如下所示:
-1.输入通讯录条目
-2.输出通讯录条目
-3.修">
+    <meta name="keywords" content="面向对象程序设计实验8, C++,算法,数据结构,ACM">
+    <meta name="description" content="题目概要通讯录是由通讯录条目组成的;通讯录总条目数,通讯录中现有多少条.可以输入通讯录、可以输出通讯录、可以查找、修改.其中的通讯录条目可以是一般条目,也可以是朋友条目.
+
+要求：
+1.输入通讯录
+2.输出通讯录
+3.查找姓名
+4.修改(输">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面向对象程序设计实验7 | 搁浅至云</title>
+    <title>面向对象程序设计实验8 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -277,12 +279,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/20/eI72qLFkRUcSwyo.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/27/8DihdWGOBtacJnb.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面向对象程序设计实验7</h1>
+                    <h1 class="description center-align post-title">面向对象程序设计实验8</h1>
                 </div>
             </div>
         </div>
@@ -431,28 +433,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-20
+                    2022-04-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-20
+                    2022-04-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    826
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -472,16 +474,41 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="题目概要"><a href="#题目概要" class="headerlink" title="题目概要"></a>题目概要</h4><p>问题:在通讯录管理程序中,通讯录是由通讯录条目组成的.通讯录条目由<b><font color="Red">姓名</font>、<font color="Red">电话</font></b>组成的。可以进行<strong>输入、输出、修改姓名、修改电话</strong>,加入静态数据成员,拥有者Owner.</p>
-<p>程序的主界面如下所示:</p>
-<pre class=" language-Markdown"><code class="language-Markdown">1.输入通讯录条目
-2.输出通讯录条目
-3.修改姓名
-4.修改电话
-5.修改拥有者
+                <h4 id="题目概要"><a href="#题目概要" class="headerlink" title="题目概要"></a>题目概要</h4><p>通讯录是由通讯录条目组成的;通讯录总条目数,通讯录中现有多少条.可以输入通讯录、可以输出通讯录、可以查找、修改.其中的通讯录条目可以是一般条目,也可以是朋友条目.</p>
+<p><img src="https://s2.loli.net/2022/04/27/TFUBlNAe8ogz5LI.png"></p>
+<p>要求：</p>
+<pre class=" language-Markdown"><code class="language-Markdown">1.输入通讯录
+2.输出通讯录
+3.查找姓名
+4.修改(输入姓名，修改其电话)
 0.退出
 </code></pre>
-<h4 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h4><p><img src="https://s2.loli.net/2022/04/20/niLO7V4hozsAfGg.png"></p>
+<h4 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h4><p>(1). 指针数组.数组中的每一个元素是一个指针,可以指向一般条目的对象,也可以指向朋友条目的对象.<br><img src="https://s2.loli.net/2022/04/27/vGM5cigOmol4WEN.png"></p>
+<h5 id="指针数组的声明："><a href="#指针数组的声明：" class="headerlink" title="指针数组的声明："></a>指针数组的声明：</h5><pre class=" language-cpp"><code class="language-cpp">CommEntry <span class="token operator">*</span><span class="token operator">*</span> pCes<span class="token punctuation">;</span>
+</code></pre>
+<h5 id="申请内存："><a href="#申请内存：" class="headerlink" title="申请内存："></a>申请内存：</h5><pre class=" language-cpp"><code class="language-cpp">    pCes <span class="token operator">=</span> <span class="token keyword">new</span> CommEntry <span class="token operator">*</span> <span class="token punctuation">[</span>maxCount<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<h5 id="回收内存："><a href="#回收内存：" class="headerlink" title="回收内存："></a>回收内存：</h5><pre class=" language-cpp"><code class="language-cpp">   <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>             
+      <span class="token keyword">delete</span> pCes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>pCes<span class="token punctuation">;</span>
+</code></pre>
+<h5 id="元素的使用"><a href="#元素的使用" class="headerlink" title="元素的使用:"></a>元素的使用:</h5><pre class=" language-cpp"><code class="language-cpp">    <span class="token keyword">if</span> <span class="token punctuation">(</span>iType<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        pCes<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> CommEntry<span class="token punctuation">;</span>           
+    <span class="token punctuation">}</span> 
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>iType <span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        pCes<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> FriendEntry<span class="token punctuation">;</span>           
+    <span class="token punctuation">}</span>
+
+   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//注意，下一行是多态函数的调用</span>
+      <span class="token punctuation">(</span>pCes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">output</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+</code></pre>
+<p>(2). 多态的使用</p>
+<p>1.输出通讯录时,根据据条目的实际类型(一般或是朋友)输出条目内容.提示:使用多态.<br>2.在输入通讯录时,根据据用户的要求创建通迅目的管理条目数.<br>3.（选做）写一个成员函数,分开显示朋友条目与一般条目.提示:使用RTTI技术.</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
@@ -492,62 +519,79 @@
 
 <span class="token keyword">public</span><span class="token operator">:</span>
     <span class="token keyword">int</span> <span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">void</span> <span class="token function">update_name</span><span class="token punctuation">(</span>string change_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">void</span> <span class="token function">update_tel</span><span class="token punctuation">(</span>string change_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">update_addr</span><span class="token punctuation">(</span>string change_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>   
-    <span class="token keyword">void</span> <span class="token function">update_owner</span><span class="token punctuation">(</span>string change_owner<span class="token punctuation">)</span><span class="token punctuation">;</span>
     string <span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     string <span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    string <span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    string <span class="token function">get_owner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">private</span><span class="token operator">:</span>
     string name<span class="token punctuation">;</span>
     string tel<span class="token punctuation">;</span>
-    string addr<span class="token punctuation">;</span>
-    <span class="token keyword">static</span> string owner<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-string CommEntry<span class="token operator">::</span>owner<span class="token operator">=</span><span class="token string">"Me"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">FriendEntry</span><span class="token operator">:</span><span class="token keyword">public</span> CommEntry<span class="token punctuation">{</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">update_addr</span><span class="token punctuation">(</span>string change_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    string <span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    string addr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token keyword">int</span> CommEntry<span class="token operator">::</span><span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> op<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"-------------功能菜单-------------"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         1.输入通讯录条目"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         2.输出通讯录条目"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         3.修改通讯录条目姓名"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         4.修改通讯录条目电话"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         5.修改通讯录条目地址"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         6.修改通讯录的拥有者"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         1.输入通讯录/朋友条目"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         2.输出通讯录/朋友条目"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         3.查询通讯录/朋友条目姓名"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         4.修改通讯录/朋友条目电话"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         0.退出系统"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"----------------------------------"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入你要选择的功能编号(0-6):  "</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入你要选择的功能编号(0-4):  "</span><span class="token punctuation">;</span>
     <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">>></span> op<span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>op<span class="token operator">&lt;=</span><span class="token number">6</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>op<span class="token operator">&lt;=</span><span class="token number">4</span><span class="token punctuation">)</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token keyword">else</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"输入出错,请重新输入你要选择的功能编号(0,6):  "</span><span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"输入出错,请重新输入你要选择的功能编号(0,4):  "</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> op<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+
 <span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    string temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">,</span>temp_addr<span class="token punctuation">;</span>
+    string temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该通讯录条目的名字:  "</span> <span class="token punctuation">;</span>
     cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该通讯录条目的电话:  "</span> <span class="token punctuation">;</span>
     cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该通讯录条目的地址:  "</span> <span class="token punctuation">;</span>
+    <span class="token function">update_name</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> FriendEntry<span class="token operator">::</span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">,</span>temp_addr<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该朋友条目的名字:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该朋友条目的电话:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该朋友条目的地址:  "</span> <span class="token punctuation">;</span>
     cin <span class="token operator">>></span> temp_addr<span class="token punctuation">;</span>
     <span class="token function">update_name</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">update_addr</span><span class="token punctuation">(</span>temp_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
+
 
 string CommEntry<span class="token operator">::</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
@@ -557,48 +601,28 @@ string CommEntry<span class="token operator">::</span><span class="token functio
 <span class="token punctuation">{</span>
     <span class="token keyword">return</span> tel<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-string CommEntry<span class="token operator">::</span><span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+string FriendEntry<span class="token operator">::</span><span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">return</span> addr<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-string CommEntry<span class="token operator">::</span><span class="token function">get_owner</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> owner<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-
 <span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录的拥有者名字为:  "</span> <span class="token operator">&lt;&lt;</span> <span class="token function">get_owner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入查看的通讯录条目查看的内容选项(1为名字,2为电话,3为地址,0为全部):  "</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> op<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">>></span> op<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>op<span class="token operator">&lt;=</span><span class="token number">3</span><span class="token punctuation">)</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"输入出错,请重新输入查看的通讯录条目查看的内容选项(1为名字,2为电话,3为地址,0为全部):  "</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">1</span><span class="token operator">||</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        string temp_name<span class="token operator">=</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的名字:  "</span> <span class="token operator">&lt;&lt;</span> temp_name <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">2</span><span class="token operator">||</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        string temp_tel<span class="token operator">=</span><span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的电话:  "</span> <span class="token operator">&lt;&lt;</span> temp_tel <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">3</span><span class="token operator">||</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        string temp_addr<span class="token operator">=</span><span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的地址:  "</span> <span class="token operator">&lt;&lt;</span> temp_addr <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    string temp_name<span class="token operator">=</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的名字:  "</span> <span class="token operator">&lt;&lt;</span> temp_name <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    string temp_tel<span class="token operator">=</span><span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的电话:  "</span> <span class="token operator">&lt;&lt;</span> temp_tel <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">update_owner</span><span class="token punctuation">(</span>string change_owner<span class="token punctuation">)</span>
+<span class="token keyword">void</span> FriendEntry<span class="token operator">::</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    owner<span class="token operator">=</span>change_owner<span class="token punctuation">;</span>
+    string temp_name<span class="token operator">=</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该朋友条目的名字:  "</span> <span class="token operator">&lt;&lt;</span> temp_name <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    string temp_tel<span class="token operator">=</span><span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该朋友条目的电话:  "</span> <span class="token operator">&lt;&lt;</span> temp_tel <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    string temp_addr<span class="token operator">=</span><span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该朋友条目的地址:  "</span> <span class="token operator">&lt;&lt;</span> temp_addr <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">update_name</span><span class="token punctuation">(</span>string change_name<span class="token punctuation">)</span>
@@ -611,57 +635,91 @@ string CommEntry<span class="token operator">::</span><span class="token functio
     tel<span class="token operator">=</span>change_tel<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">update_addr</span><span class="token punctuation">(</span>string change_addr<span class="token punctuation">)</span>
+<span class="token keyword">void</span> FriendEntry<span class="token operator">::</span><span class="token function">update_addr</span><span class="token punctuation">(</span>string change_addr<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     addr<span class="token operator">=</span>change_addr<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 
-
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    string temp_owner<span class="token punctuation">;</span>
-    CommEntry data<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入通讯录的拥有者:  "</span> <span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> temp_owner<span class="token punctuation">;</span>
-    data<span class="token punctuation">.</span><span class="token function">update_owner</span><span class="token punctuation">(</span>temp_owner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> num<span class="token punctuation">,</span>type<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入通讯录条目的管理条目个数和通讯录的类型(1为普通通讯录,2为朋友通讯录): "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> num <span class="token operator">>></span> type<span class="token punctuation">;</span>
+    CommEntry <span class="token operator">*</span><span class="token operator">*</span> data<span class="token punctuation">;</span>
+    data<span class="token operator">=</span><span class="token keyword">new</span> CommEntry <span class="token operator">*</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>num<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>type<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
+            data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token keyword">new</span> CommEntry<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>type<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span>
+            data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token keyword">new</span> FriendEntry<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> op<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> op<span class="token operator">=</span>data<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
-            data<span class="token punctuation">.</span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>num<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                cout <span class="token operator">&lt;&lt;</span> <span class="token string">"第"</span> <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">"个人的信息:"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+                data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
         <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span>
-            data<span class="token punctuation">.</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>num<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                cout <span class="token operator">&lt;&lt;</span> <span class="token string">"第"</span> <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">"个人的信息:"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+                data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
         <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">3</span><span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
             string temp_name<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的通讯录条目的名字:  "</span><span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要查找的通讯录/朋友条目的名字:  "</span><span class="token punctuation">;</span>
             cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
-            data<span class="token punctuation">.</span><span class="token function">update_name</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> flag<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>num<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span>temp_name<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"查找成功"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+                    data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    flag<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>flag<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                cout <span class="token operator">&lt;&lt;</span> <span class="token string">"查找失败"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
         <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">4</span><span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            string temp_tel<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的通讯录条目的电话:  "</span><span class="token punctuation">;</span>
-            cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
-            data<span class="token punctuation">.</span><span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            string temp_addr<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的通讯录条目的地址:  "</span><span class="token punctuation">;</span>
-            cin <span class="token operator">>></span> temp_addr<span class="token punctuation">;</span>
-            data<span class="token punctuation">.</span><span class="token function">update_addr</span><span class="token punctuation">(</span>temp_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">6</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的通讯录的拥有者:  "</span><span class="token punctuation">;</span>
-            cin <span class="token operator">>></span> temp_owner<span class="token punctuation">;</span>
-            data<span class="token punctuation">.</span><span class="token function">update_owner</span><span class="token punctuation">(</span>temp_owner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            string temp_tel<span class="token punctuation">,</span>temp_name<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的通讯录/朋友条目的姓名和即将修改的电话:  "</span><span class="token punctuation">;</span>
+            cin <span class="token operator">>></span> temp_name <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
+            <span class="token keyword">int</span> flag<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>num<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span>temp_name<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"修改电话成功"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+                    data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    flag<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>flag<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                cout <span class="token operator">&lt;&lt;</span> <span class="token string">"修改电话失败"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
         <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>num<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">delete</span> data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>data<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -691,7 +749,7 @@ string CommEntry<span class="token operator">::</span><span class="token functio
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/04/20/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-7/">https://liaoy0103.top/2022/04/20/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-7/</a>
+                    <a href="https://liaoy0103.top/2022/04/27/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-8/">https://liaoy0103.top/2022/04/27/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1182,16 +1240,17 @@ string CommEntry<span class="token operator">::</span><span class="token functio
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/20/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-5/">
+                <a href="/2022/04/27/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-8/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/20/QWf6JD7wN9UymkF.jpg" class="responsive-img" alt="面向对象程序设计实验5">
+                        <img src="https://s2.loli.net/2022/04/27/8DihdWGOBtacJnb.jpg" class="responsive-img" alt="面向对象程序设计实验8">
                         
-                        <span class="card-title">面向对象程序设计实验5</span>
+                        <span class="card-title">面向对象程序设计实验8</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1201,9 +1260,9 @@ string CommEntry<span class="token operator">::</span><span class="token functio
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1216,6 +1275,7 @@ string CommEntry<span class="token operator">::</span><span class="token functio
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1238,12 +1298,12 @@ string CommEntry<span class="token operator">::</span><span class="token functio
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/15/shu-ju-ku-sqlserver-shi-yan-er-biao-de-jian-dan-cha-xun/">
+                <a href="/2022/04/23/2021ccpc-gui-lin-zhan-bu-ti/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/15/JsWl5b7igSdMn8A.jpg" class="responsive-img" alt="数据库SQLServer实验二表的简单查询">
+                        <img src="https://s2.loli.net/2022/04/23/VewvNSEjWpf5F9O.jpg" class="responsive-img" alt="2021ccpc桂林站补题">
                         
-                        <span class="card-title">数据库SQLServer实验二表的简单查询</span>
+                        <span class="card-title">2021ccpc桂林站补题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1254,14 +1314,14 @@ string CommEntry<span class="token operator">::</span><span class="token functio
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                    ACM算法
                                 </a>
                             
                             
@@ -1271,8 +1331,12 @@ string CommEntry<span class="token operator">::</span><span class="token functio
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">数据库基本操作</span>
+                    <a href="/tags/2021ccpc/">
+                        <span class="chip bg-color">2021ccpc</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%A1%A5%E9%A2%98/">
+                        <span class="chip bg-color">补题</span>
                     </a>
                     
                 </div>
