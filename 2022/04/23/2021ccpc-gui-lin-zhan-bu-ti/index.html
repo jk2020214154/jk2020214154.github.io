@@ -434,21 +434,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-03
+                    2022-05-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    217
+                    489
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -474,7 +474,7 @@
 <p>如果选择$ban$掉猛犸,这一把赢的可能性为$1$,否则赢的可能性是$50$%(已知作者不打<strong>英雄联盟</strong>).<br>给定比赛中第$x$次$ban$掉猛犸,问最坏需要打多少场才能获得胜利.</p>
 </blockquote>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><blockquote>
-<p>结果为$2 \times x-1$,在$x$场之前的比分为$0:x-1$,在此之后都是必赢,即需要再打$x$次比赛能获得胜利.<br>注意开$long\ long$.</p>
+<p>结果为$2 \times x-1$,在$x$场之前的比分为$0:x-1$,在此之后都是必赢,即需要再打$x$次比赛能获得胜利.<br>注意开$long$ $long$.</p>
 </blockquote>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
@@ -499,7 +499,49 @@ ll n<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <hr>
-<h3 id="I-PTSD"><a href="#I-PTSD" class="headerlink" title="I - PTSD"></a><a target="_blank" rel="noopener" href="https://codeforces.com/gym/103409/problem/I">I - PTSD</a></h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="I-PTSD"><a href="#I-PTSD" class="headerlink" title="I - PTSD"></a><a target="_blank" rel="noopener" href="https://codeforces.com/gym/103409/problem/I">I - PTSD</a></h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><blockquote>
+<p>给定$n$个士兵,从$1,2,…,n$编号,每个士兵$i$有权值为$i$,给定一个$01$序列,表示每个是否存在$PTSD$疾病.<br>将这些分为几组,同一组内如果存在比存在$PTSD$疾病权值更大的士兵,则他会感到失望.求最大化分组后各组失望士兵的权值和更大.</p>
+</blockquote>
+<h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><blockquote>
+<p><b><font color="Red">贪心</font></b>,要使满足条件的权值和最大,要让失望的士兵分布在尽可能多的组,因此考虑两两配对.用$cnt$变量存储当前未配对的士兵,按照权值从大到小枚举,如果当前士兵存在$PTSD$疾病且$cnt&gt;0$,则进行分在一组,否则$cnt+1$,同理没有$PTSD$的士兵直接$cnt+1$即可.</p>
+</blockquote>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> MAXN 1000010</span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">int</span> t<span class="token punctuation">,</span>n<span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> res<span class="token punctuation">,</span>cnt<span class="token punctuation">;</span>
+<span class="token keyword">char</span> s<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cin <span class="token operator">>></span> t<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        res<span class="token operator">=</span>cnt<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        cin <span class="token operator">>></span> n <span class="token operator">>></span> s<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>n<span class="token punctuation">;</span>i<span class="token operator">>=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'0'</span><span class="token punctuation">)</span>
+                cnt<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'1'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>cnt<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span>
+                    cnt<span class="token operator">--</span><span class="token punctuation">,</span>res<span class="token operator">+</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+                <span class="token keyword">else</span> cnt<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
 <h3 id="G-Occupy-the-Cities"><a href="#G-Occupy-the-Cities" class="headerlink" title="G - Occupy the Cities"></a><a target="_blank" rel="noopener" href="https://codeforces.com/gym/103409/problem/G">G - Occupy the Cities</a></h3><h4 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><hr>
 <h3 id="D-Assumption-is-All-You-Need"><a href="#D-Assumption-is-All-You-Need" class="headerlink" title="D - Assumption is All You Need"></a><a target="_blank" rel="noopener" href="https://codeforces.com/gym/103409/problem/D">D - Assumption is All You Need</a></h3><h4 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><hr>
 <h3 id="E-Buy-and-Delete"><a href="#E-Buy-and-Delete" class="headerlink" title="E - Buy and Delete"></a><a target="_blank" rel="noopener" href="https://codeforces.com/gym/103409/problem/E">E - Buy and Delete</a></h3><h4 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4>
@@ -1340,7 +1382,7 @@ ll n<span class="token punctuation">;</span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.9k</span>
+                        class="white-color">27.2k</span>
             
             
             
