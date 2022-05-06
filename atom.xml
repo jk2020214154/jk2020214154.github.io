@@ -6,7 +6,7 @@
   <link href="https://liaoy0103.top/atom.xml" rel="self"/>
   
   <link href="https://liaoy0103.top/"/>
-  <updated>2022-05-04T11:49:34.244Z</updated>
+  <updated>2022-05-06T02:57:21.118Z</updated>
   <id>https://liaoy0103.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库SQLServer实验五数据库安全性、完整性控制</title>
+    <link href="https://liaoy0103.top/2022/05/06/shu-ju-ku-sqlserver-shi-yan-wu-shu-ju-ku-an-quan-xing-wan-zheng-xing-kong-zhi/"/>
+    <id>https://liaoy0103.top/2022/05/06/shu-ju-ku-sqlserver-shi-yan-wu-shu-ju-ku-an-quan-xing-wan-zheng-xing-kong-zhi/</id>
+    <published>2022-05-06T02:00:56.000Z</published>
+    <updated>2022-05-06T02:57:21.118Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://liaoy0103.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库基本操作" scheme="https://liaoy0103.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象程序设计实验10</title>
@@ -518,31 +543,6 @@
     <category term="面向对象程序设计" scheme="https://liaoy0103.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
     
     <category term="C++" scheme="https://liaoy0103.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库SQLServer实验前言</title>
-    <link href="https://liaoy0103.top/2022/04/01/shu-ju-ku-sqlserver-shi-yan-qian-yan/"/>
-    <id>https://liaoy0103.top/2022/04/01/shu-ju-ku-sqlserver-shi-yan-qian-yan/</id>
-    <published>2022-04-01T01:54:12.000Z</published>
-    <updated>2022-04-08T02:03:42.837Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="数据库" scheme="https://liaoy0103.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="数据库基本操作" scheme="https://liaoy0103.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   

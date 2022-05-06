@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面向对象程序设计实验1, C++,算法,数据结构,ACM">
-    <meta name="description" content="题目概要
-使用过程式编程编写一个通讯录条目管理程序.问题:在通讯录管理程序中,通讯录是由通讯录条目组成的.通讯录条目由姓名、电话组成的。可以进行输入、输出、修改姓名、修改电话.程序的主界面如下所示:
-
-测试程序：
-    1.输入通讯录条目">
+    <meta name="keywords" content="数据库SQLServer实验五数据库安全性、完整性控制, C++,算法,数据结构,ACM">
+    <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面向对象程序设计实验1 | 搁浅至云</title>
+    <title>数据库SQLServer实验五数据库安全性、完整性控制 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -264,7 +260,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = 'cedb1bac7efcd7db47e9f2f2250a7c832aba83b410dd85766e2aea6ec9321e51';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -277,12 +273,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/06/uZ8RqkW4siXEDHb.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/06/qIaAOYptg5yez7C.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面向对象程序设计实验1</h1>
+                    <h1 class="description center-align post-title">数据库SQLServer实验五数据库安全性、完整性控制</h1>
                 </div>
             </div>
         </div>
@@ -402,12 +398,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-                                <span class="chip bg-color">面向对象程序设计</span>
-                            </a>
-                        
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                                <span class="chip bg-color">数据库基本操作</span>
                             </a>
                         
                     </div>
@@ -418,8 +410,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                面向对象程序设计
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
                             </a>
                         
                     </div>
@@ -431,28 +423,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-03
+                    2022-05-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-06
+                    2022-05-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    708
+                    174
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -472,137 +464,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="题目概要"><a href="#题目概要" class="headerlink" title="题目概要"></a>题目概要</h4><blockquote>
-<p>使用过程式编程编写一个<strong>通讯录条目管理程序</strong>.<br>问题:在通讯录管理程序中,通讯录是由通讯录条目组成的.通讯录条目由<b><font color="Red">姓名</font>、<font color="Red">电话</font></b>组成的。可以进行<strong>输入、输出、修改姓名、修改电话</strong>.<br>程序的主界面如下所示:</p>
-</blockquote>
-<pre class=" language-Markdown"><code class="language-Markdown">测试程序：
-    1.输入通讯录条目
-    2.输出通讯录条目
-    3.修改姓名
-    4.修改电话
-    0.退出
-</code></pre>
-<h4 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h4><blockquote>
-<p>完善通讯录条目程序</p>
-<blockquote>
-<ul>
-<li>加入对”地址”的管理</li>
-<li>可以输入、输出条目。</li>
-<li>可以修改条目的每一个<b><font color="Red">子项(name, tel, addr)</font></b></li>
+                <h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ul>
+<li>掌握如何对数据库和表进行安全性、完整性控制</li>
 </ul>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>第一个实验只要求做一个通讯录条目的管理。<br>做完第一个实验后，可考虑如何编写一个通讯录管理程序。</p>
-<blockquote>
-<p>（1）如何存储通讯录？数组、链表、还是其它方式？<br>（2）第一次输入完多个条目以后，如何插入、删除一个条目？<br>（3）如何输入姓名，查找电话。</p>
-</blockquote>
-</blockquote>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
+<h3 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h3><ul>
+<li>在示例数据库建立多个用户$u1,u2$,赋予$u1$查看和删除$student$表的权限,授予$u2$查看数学系学生视图的权限,然后验证它们是否具有真正的权限.</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 分别执行</span>
+sp_addlogin <span class="token string">'u1'</span><span class="token punctuation">,</span><span class="token string">'123'</span><span class="token punctuation">,</span>Stu
 
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+sp_addlogin <span class="token string">'u2'</span><span class="token punctuation">,</span><span class="token string">'147'</span><span class="token punctuation">,</span>Stu
 
-<span class="token keyword">struct</span> commEntry<span class="token punctuation">{</span>
-    string name<span class="token punctuation">;</span>
-    string tel<span class="token punctuation">;</span>
-    string addr<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+sp_grantdbaccess u1
 
-<span class="token keyword">int</span> <span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> op<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"-------------功能菜单-------------"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         1.输入通讯录条目"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         2.输出通讯录条目"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         3.修改通讯录条目姓名"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         4.修改通讯录条目电话"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         5.修改通讯录条目地址"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         0.退出系统"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"----------------------------------"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入你要选择的功能编号(0-5):  "</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">>></span> op<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>op<span class="token operator">&lt;=</span><span class="token number">5</span><span class="token punctuation">)</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">else</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"输入出错,请重新输入你要选择的功能编号(0,5):  "</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> op<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+sp_grantdbaccess u2
 
-<span class="token keyword">void</span> <span class="token function">inputcommEntry</span><span class="token punctuation">(</span>commEntry <span class="token operator">&amp;</span>temp<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该通讯录条目的名字:  "</span> <span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> temp<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该通讯录条目的电话:  "</span> <span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> temp<span class="token punctuation">.</span>tel<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入该通讯录条目的地址:  "</span> <span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> temp<span class="token punctuation">.</span>addr<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<span class="token keyword">grant</span> <span class="token keyword">select</span><span class="token punctuation">,</span><span class="token keyword">delete</span>
+<span class="token keyword">on</span> student
+<span class="token keyword">To</span> u1
 
-<span class="token keyword">void</span> <span class="token function">outputcommEntry</span><span class="token punctuation">(</span>commEntry <span class="token operator">&amp;</span>temp<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的名字:  "</span> <span class="token operator">&lt;&lt;</span> temp<span class="token punctuation">.</span>name <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的电话:  "</span> <span class="token operator">&lt;&lt;</span> temp<span class="token punctuation">.</span>tel <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"该通讯录条目的地址:  "</span> <span class="token operator">&lt;&lt;</span> temp<span class="token punctuation">.</span>addr <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<span class="token keyword">grant</span> <span class="token keyword">select</span>
+<span class="token keyword">on</span>  Math_Student
+<span class="token keyword">to</span> u2
 
-<span class="token keyword">void</span> <span class="token function">update_name</span><span class="token punctuation">(</span>commEntry <span class="token operator">&amp;</span>temp<span class="token punctuation">,</span>string change_name<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    temp<span class="token punctuation">.</span>name<span class="token operator">=</span>change_name<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">update_tel</span><span class="token punctuation">(</span>commEntry <span class="token operator">&amp;</span>temp<span class="token punctuation">,</span>string change_tel<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    temp<span class="token punctuation">.</span>tel<span class="token operator">=</span>change_tel<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">update_addr</span><span class="token punctuation">(</span>commEntry <span class="token operator">&amp;</span>temp<span class="token punctuation">,</span>string change_addr<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    temp<span class="token punctuation">.</span>addr<span class="token operator">=</span>change_addr<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    commEntry data<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> op<span class="token operator">=</span><span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
-            <span class="token function">inputcommEntry</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span>
-            <span class="token function">outputcommEntry</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">3</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            string temp_name<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的通讯录条目的名字:  "</span><span class="token punctuation">;</span>
-            cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
-            <span class="token function">update_name</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">4</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            string temp_tel<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的通讯录条目的电话:  "</span><span class="token punctuation">;</span>
-            cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
-            <span class="token function">update_tel</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            string temp_addr<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的通讯录条目的地址:  "</span><span class="token punctuation">;</span>
-            cin <span class="token operator">>></span> temp_addr<span class="token punctuation">;</span>
-            <span class="token function">update_addr</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span>temp_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">-- 验证过程略</span>
 </code></pre>
+<ul>
+<li><p>给示例数据库中每个表建立主码;相关的表建立外码;在每个表的部分列上建立$CHECK$约束.</p>
+</li>
+<li><p>过程略(此过程一般在建表时就需要设置).</p>
+</li>
+</ul>
 
                 
             </div>
@@ -629,7 +521,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/04/03/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-1/">https://liaoy0103.top/2022/04/03/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-1/</a>
+                    <a href="https://liaoy0103.top/2022/05/06/shu-ju-ku-sqlserver-shi-yan-wu-shu-ju-ku-an-quan-xing-wan-zheng-xing-kong-zhi/">https://liaoy0103.top/2022/05/06/shu-ju-ku-sqlserver-shi-yan-wu-shu-ju-ku-an-quan-xing-wan-zheng-xing-kong-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -667,12 +559,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-                                    <span class="chip bg-color">面向对象程序设计</span>
-                                </a>
-                            
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                                    <span class="chip bg-color">数据库基本操作</span>
                                 </a>
                             
                         </div>
@@ -1120,68 +1008,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2022/04/04/shi-yong-markdown-bu-tong-de-zi-ti-yan-se-ji-da-xiao/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.loli.net/2022/04/06/2MiAdYNxqLOksaT.jpg" class="responsive-img" alt="使用Markdown不同的字体颜色及大小">
-                        
-                        <span class="card-title">使用Markdown不同的字体颜色及大小</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                             
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-04
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5/" class="post-category">
-                                    博客初步
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/">
-                        <span class="chip bg-color">Markdown语法</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-                        <span class="chip bg-color">博客文章</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/04/01/shu-ju-ku-sqlserver-shi-yan-qian-yan/">
+                <a href="/2022/05/06/shu-ju-ku-sqlserver-shi-yan-wu-shu-ju-ku-an-quan-xing-wan-zheng-xing-kong-zhi/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/06/lcnJ9OMVWIsSp7G.jpg" class="responsive-img" alt="数据库SQLServer实验前言">
+                        <img src="https://s2.loli.net/2022/05/06/qIaAOYptg5yez7C.jpg" class="responsive-img" alt="数据库SQLServer实验五数据库安全性、完整性控制">
                         
-                        <span class="card-title">数据库SQLServer实验前言</span>
+                        <span class="card-title">数据库SQLServer实验五数据库安全性、完整性控制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1192,7 +1029,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
                             </span>
                         <span class="publish-author">
                             
@@ -1206,11 +1043,64 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
                         <span class="chip bg-color">数据库基本操作</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/04/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-10/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.loli.net/2022/05/04/qN6bkeXHfslt4ro.jpg" class="responsive-img" alt="面向对象程序设计实验10">
+                        
+                        <span class="card-title">面向对象程序设计实验10</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                             
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                    面向对象程序设计
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                        <span class="chip bg-color">面向对象程序设计</span>
+                    </a>
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>
