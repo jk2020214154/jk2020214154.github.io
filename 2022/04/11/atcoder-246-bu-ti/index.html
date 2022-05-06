@@ -33,8 +33,8 @@
     
 <meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+</head>
 
 
 
@@ -434,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-19
+                    2022-05-06
                 </div>
                 
 
@@ -872,9 +872,9 @@ ll <span class="token function">f</span><span class="token punctuation">(</span>
 </ul>
 </blockquote>
 <h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><blockquote>
-<p><b><font color="Red">容斥原理+dfs(<font color="Blue">或者状态压缩,由于作者懒就不写状态压缩了</font>)+快速幂</font></b>.<br>根据容斥原理可得,设$A_i$为使用字符串集$s_i$打出长度为$L$的所有字符串的集合.容斥原理公式如下:<br>${\color{Red}\left| A_1 \cup A_2 \cup … \cup A_n \right|=+(\left| A_1 \right|+\left| A_2 \right|+…+\left| A_n \right|)}$<br>${\color{Red}-(\left| A_1 \cap A_2 \right|+\left| A_1 \cap A_3 \right|+…+\left| A_{n-1} \cap A_n \right|)}$<br>${\color{Red}+(\left| A_1 \cap A_2 \cap A_3 \right|+\left| A_1 \cap A_2 \cap A_4 \right|+…+\left| A_{n-2} \cap A_{n-1} \cap A_n \right|)}$<br>${\color{Red}-…}$<br>${\color{Red}+…}$<br>${\color{Red}+(-1)^{k-1}\left| A_1 \cap A_2 \cap … \cap A_n\right|}$(其中$k$为交集的个数)</p>
+<p><b><font color="Red">容斥原理+dfs(<font color="Blue">或者状态压缩,由于作者懒就不写状态压缩了</font>)+快速幂</font></b>.<br>根据容斥原理可得,设$A_i$为使用字符串集$s_i$打出长度为$L$的所有字符串的集合.容斥原理公式如下:<br>$\left| A_1 \cup A_2 \cup … \cup A_n \right|=+(\left| A_1 \right|+\left| A_2 \right|+…+\left| A_n \right|)$<br>$-(\left| A_1 \cap A_2 \right|+\left| A_1 \cap A_3 \right|+…+\left| A_{n-1} \cap A_n \right|)$<br>$+(\left| A_1 \cap A_2 \cap A_3 \right|+\left| A_1 \cap A_2 \cap A_4 \right|+…+\left| A_{n-2} \cap A_{n-1} \cap A_n \right|)$<br>$-…$<br>$+…$<br>$+(-1)^{k-1}\left| A_1 \cap A_2 \cap … \cap A_n\right|$(其中$k$为交集的个数)</p>
 <ul>
-<li>答案为${\color{Red}\left| A_1 \cup A_2 \cup … \cup A_n \right|}$</li>
+<li>答案为$\left| A_1 \cup A_2 \cup … \cup A_n \right|$</li>
 </ul>
 </blockquote>
 <ul>
