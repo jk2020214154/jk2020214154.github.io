@@ -4,8 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="使用Markdown不同的字体颜色及大小, C++,算法,数据结构,ACM">
-    <meta name="description" content=" ">
+    <meta name="keywords" content="面向对象程序设计实验9, C++,算法,数据结构,ACM">
+    <meta name="description" content="实验内容
+可以将条目输出到文件中。可以从文件读取数据
+
+代码#include&amp;lt;iostream&gt;
+#include&amp;lt;algorithm&gt;
+#include&amp;lt;cstring&gt;
+#include&amp;lt;fstream&gt;
+
+us">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>使用Markdown不同的字体颜色及大小 | 搁浅至云</title>
+    <title>面向对象程序设计实验9 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -260,7 +268,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'cedb1bac7efcd7db47e9f2f2250a7c832aba83b410dd85766e2aea6ec9321e51';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -273,12 +281,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/06/2MiAdYNxqLOksaT.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/11/Uwjg8uNJZecY73S.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">使用Markdown不同的字体颜色及大小</h1>
+                    <h1 class="description center-align post-title">面向对象程序设计实验9</h1>
                 </div>
             </div>
         </div>
@@ -398,12 +406,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/">
-                                <span class="chip bg-color">Markdown语法</span>
+                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                                <span class="chip bg-color">面向对象程序设计</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-                                <span class="chip bg-color">博客文章</span>
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
                             </a>
                         
                     </div>
@@ -414,8 +422,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5/" class="post-category">
-                                博客初步
+                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                面向对象程序设计
                             </a>
                         
                     </div>
@@ -427,28 +435,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-04
+                    2022-05-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-19
+                    2022-05-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    863
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
 
@@ -468,894 +476,271 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="字体的大小版式和颜色"><a href="#字体的大小版式和颜色" class="headerlink" title="字体的大小版式和颜色"></a>字体的大小版式和颜色</h3><h4 id="版式"><a href="#版式" class="headerlink" title="版式"></a>版式</h4><pre class=" language-none"><code class="language-none"><font face="黑体">我是黑体字</font>
-<font face="微软雅黑">我是微软雅黑</font>
-<font face="STCAIYUN">我是华文彩云</font>
-<font color=#0099ff size=5 face="宋体">color=#0099ff size=72 face="黑体"</font>
-<font color=#00ffff size=6>color=#00ffff</font>
-<font color=gray size=21>color=gray</font>
-</code></pre>
-<p><font face="黑体">我是黑体字</font><br><font face="微软雅黑">我是微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font color="#0099ff" size="5" face="黑体">color=#0099ff size=72 face=”黑体”</font><br><font color="#00ffff" size="6">color=#00ffff</font><br><font color="gray" size="21">color=gray</font></p>
-<h4 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h4><pre class=" language-none"><code class="language-none"><table><tbody>
-    <tr>
-        <th>方法说明</th><th>颜色名称</th><th>颜色</th>
-    </tr>
-    <tr>
-        <td><font color="Hotpink">此处实现方法利用 CSDN-markdown 内嵌 html 语言的优势</font></td>
-        <td><font color="Hotpink">Hotpink</font></td>
-        <td bgcolor="Hotpink">rgb(240, 248, 255)</td>
-    </tr>
-    <tr>
-        <td><font color="Pink">借助 table, tr, td 等表格标签的 bgcolor 属性实现背景色设置</font></td>
-        <td><font color="pink">AntiqueWhite</font></td>
-        <td bgcolor="Pink">rgb(255, 192, 203)</td>
-    </tr>
-</table>
-</code></pre>
-<table><tbody>
-    <tr>
-        <th><center>序号</center></th><th><center>颜色名</center></th><th><center>十六进制颜色值</center></th><th><center>颜色</center></th>
-    </tr>
-    <tr>
-        <td><b><center><font>1</font></center></b></td>
-        <td bgcolor="Black"><font color="AliceBlue">AliceBlue</font></td>
-        <td bgcolor="Black"><font color="AliceBlue">#F0F8FF</font></td>
-        <td bgcolor="AliceBlue">rgb(240, 248, 255)</td>
-    </tr>
-    <tr>
-        <td><b><center><font>2</font></center></b></td>
-        <td bgcolor="Black"><font color="AntiqueWhite">AntiqueWhite</font></td>
-        <td bgcolor="Black"><font color="AntiqueWhite">#FAEBD7</font></td>
-        <td bgcolor="AntiqueWhite">rgb(250, 235, 215)</td>
-    </tr>
-    <tr>
-        <td><b><center><font>3</font></center></b></td>
-        <td bgcolor="Black"><font color="Aqua">Aqua</font></td>
-        <td bgcolor="Black"><font color="Aqua">#00FFFF</font></td>
-        <td bgcolor="Aqua">rgb(0, 255, 255)</td>
-    </tr>
-    <tr>
-        <td><b><center><font>4</font></center></b></td>
-        <td bgcolor="Black"><font color="Aquamarine">Aquamarine</font></td>
-        <td bgcolor="Black"><font color="Aquamarine">#7FFFD4</font></td>
-        <td bgcolor="Aquamarine">rgb(127, 255, 212)</td>
-    </tr>
-    <tr>
-        <td><b><center><font>5</font></center></b></td>
-        <td bgcolor="Black"><font color="Azure">Azure</font></td>
-        <td bgcolor="Black"><font color="Azure">#F0FFFF</font></td>
-        <td bgcolor="Azure">rgb(240, 255, 255)</td>
-    </tr> 
-    <tr>
-        <td><b><center><font>6</font></center></b></td>
-        <td bgcolor="Black"><font color="Beige">Beige</font></td>
-        <td bgcolor="Black"><font color="Beige">#F5F5DC</font></td>
-        <td bgcolor="Beige">rgb(245, 245, 220)</td>
-    </tr> 
-    <tr>
-        <td><b><center><font>7</font></center></b></td>
-        <td bgcolor="Black"><font color="Bisque">Bisque</font></td>
-        <td bgcolor="Black"><font color="Bisque">#FFE4C4</font></td>
-        <td bgcolor="Bisque">rgb(255, 228, 196)</td>
-    </tr>    
-    <tr>
-        <td><b><center><font>8</font></center></b></td>
-        <td><font color="Black">Black</font></td>
-        <td><font color="Black">#000000</font></td>
-        <td bgcolor="Black"><font color="White">rgb(0, 0, 0)</font></td>
-    </tr>
-    <tr>
-        <td><b><center><font>9</font></center></b></td>
-        <td bgcolor="Black"><font color="BlanchedAlmond">BlanchedAlmond</font></td>
-        <td bgcolor="Black"><font color="BlanchedAlmond">#FFEBCD</font></td>
-        <td bgcolor="BlanchedAlmond">rgb(255, 235, 205)</td>
-    </tr>    
-    <tr>
-        <td><b><center><font>10</font></center></b></td>
-        <td><font color="Blue">Blue</font></td>
-        <td><font color="Blue">#0000FF</font></td>
-        <td bgcolor="Blue"><font color="White">rgb(0, 0, 255)</font></td>
-    </tr>   
-    <tr>
-        <td><b><center><font>11</font></center></b></td>
-        <td><font color="BlueViolet">BlueViolet</font></td>
-        <td><font color="BlueViolet">#8A2BE2</font></td>
-        <td bgcolor="BlueViolet"><font color="White">rgb(138, 43, 226)</font></td>
-    </tr>
-    <tr>
-        <td><b><center><font>12</font></center></b></td>
-        <td><font color="Brown">Brown</font></td>
-        <td><font color="Brown">#A52A2A</font></td>
-        <td bgcolor="Brown"><font color="White">rgb(165, 42, 42)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>13</font></center></b></td>
-        <td><font color="BurlyWood">BurlyWood</font></td>
-        <td><font color="BurlyWood">#DEB887</font></td>
-        <td bgcolor="BurlyWood"><font color="White">rgb(222, 184, 135)</font></td>
-    </tr>
-    <tr>
-        <td><b><center><font>14</font></center></b></td>
-        <td><font color="CadetBlue">CadetBlue</font></td>
-        <td><font color="CadetBlue">#5F9EA0</font></td>
-        <td bgcolor="CadetBlue"><font color="White">rgb(95, 158, 160)</font></td>
-    </tr>   
-    <tr>
-        <td><b><center><font>15</font></center></b></td>
-        <td bgcolor="Black"><font color="Chartreuse">Chartreuse</font></td>
-        <td bgcolor="Black"><font color="Chartreuse">#7FFF00</font></td>
-        <td bgcolor="Chartreuse"><font>rgb(127, 255, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>16</font></center></b></td>
-        <td><font color="Chocolate">Chocolate</font></td>
-        <td><font color="Chocolate">#D2691E</font></td>
-        <td bgcolor="Chocolate"><font color="white">rgb(210, 105, 30)</font></td>
-    </tr>
-    <tr>
-        <td><b><center><font>17</font></center></b></td>
-        <td><font color="Coral">Coral</font></td>
-        <td><font color="Coral">#FF7F50</font></td>
-        <td bgcolor="Coral"><font color="white">rgb(255, 127, 80)</font></td>
-    </tr>     
-    <tr>
-        <td><b><center><font>18</font></center></b></td>
-        <td><font color="CornflowerBlue">CornflowerBlue</font></td>
-        <td><font color="CornflowerBlue">#6495ED</font></td>
-        <td bgcolor="CornflowerBlue"><font color="white">rgb(100, 149, 237)</font></td>
-    </tr>
-    <tr>
-        <td><b><center><font>19</font></center></b></td>
-        <td bgcolor="Black"><font color="Cornsilk">Cornsilk</font></td>
-        <td bgcolor="Black"><font color="Cornsilk">#FFF8DC</font></td>
-        <td bgcolor="Cornsilk"><font>rgb(255, 248, 220)</font></td>
-    </tr>
-    <tr>
-        <td><b><center><font>20</font></center></b></td>
-        <td><font color="Crimson">Crimson</font></td>
-        <td><font color="Crimson">#DC143C</font></td>
-        <td bgcolor="Crimson"><font color="white">rgb(220, 20, 60)</font></td>
-    </tr>     
-    <tr>
-        <td><b><center><font>21</font></center></b></td>
-        <td bgcolor="Black"><font color="Cyan">Cyan</font></td>
-        <td bgcolor="Black"><font color="Cyan">#00FFFF</font></td>
-        <td bgcolor="Cyan"><font>rgb(0, 255, 255)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>22</font></center></b></td>
-        <td><font color="DarkBlue">DarkBlue</font></td>
-        <td><font color="DarkBlue">#00008B</font></td>
-        <td bgcolor="DarkBlue"><font color="white">rgb(0, 0, 139)</font></td>
-    </tr>     
-    <tr>
-        <td><b><center><font>23</font></center></b></td>
-        <td><font color="DarkCyan">DarkCyan</font></td>
-        <td><font color="DarkCyan">#008B8B</font></td>
-        <td bgcolor="DarkCyan"><font color="white">rgb(0, 139, 139)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>24</font></center></b></td>
-        <td><font color="DarkGoldenRod">DarkGoldenRod</font></td>
-        <td><font color="DarkGoldenRod">#B8860B</font></td>
-        <td bgcolor="DarkGoldenRod"><font color="white">rgb(184, 134, 11)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>25</font></center></b></td>
-        <td bgcolor="Black"><font color="DarkGray">DarkGray</font></td>
-        <td bgcolor="Black"><font color="DarkGray">#A9A9A9</font></td>
-        <td bgcolor="DarkGray"><font>rgb(169, 169, 169)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>26</font></center></b></td>
-        <td><font color="DarkGreen">DarkGreen</font></td>
-        <td><font color="DarkGreen">#006400</font></td>
-        <td bgcolor="DarkGreen"><font color="white">rgb(0, 100, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>27</font></center></b></td>
-        <td><font color="DarkKhaki">DarkKhaki</font></td>
-        <td><font color="DarkKhaki">#BDB76B</font></td>
-        <td bgcolor="DarkKhaki"><font color="white">rgb(189, 183, 107)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>28</font></center></b></td>
-        <td><font color="DarkMagenta">DarkMagenta</font></td>
-        <td><font color="DarkMagenta">#8B008B</font></td>
-        <td bgcolor="DarkMagenta"><font color="white">rgb(139, 0, 139)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>29</font></center></b></td>
-        <td><font color="DarkOliveGreen">DarkOliveGreen</font></td>
-        <td><font color="DarkOliveGreen">#556B2F</font></td>
-        <td bgcolor="DarkOliveGreen"><font color="white">rgb(85, 107, 47)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>30</font></center></b></td>
-        <td><font color="Darkorange">Darkorange</font></td>
-        <td><font color="Darkorange">#FF8C00</font></td>
-        <td bgcolor="Darkorange"><font color="white">rgb(255, 140, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>31</font></center></b></td>
-        <td><font color="DarkOrchid">DarkOrchid</font></td>
-        <td><font color="DarkOrchid">#9932CC</font></td>
-        <td bgcolor="DarkOrchid"><font color="white">rgb(153, 50, 204)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>32</font></center></b></td>
-        <td><font color="DarkRed">DarkRed</font></td>
-        <td><font color="DarkRed">#8B0000</font></td>
-        <td bgcolor="DarkRed"><font color="white">rgb(139, 0, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>33</font></center></b></td>
-        <td><font color="DarkSalmon">DarkSalmon</font></td>
-        <td><font color="DarkSalmon">#E9967A</font></td>
-        <td bgcolor="DarkSalmon"><font color="white">rgb(233, 150, 122)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>34</font></center></b></td>
-        <td><font color="DarkSeaGreen">DarkSeaGreen</font></td>
-        <td><font color="DarkSeaGreen">#8FBC8F</font></td>
-        <td bgcolor="DarkSeaGreen"><font color="white">rgb(143, 188, 143)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>35</font></center></b></td>
-        <td><font color="DarkSlateBlue">DarkSlateBlue</font></td>
-        <td><font color="DarkSlateBlue">#483D8B</font></td>
-        <td bgcolor="DarkSlateBlue"><font color="white">rgb(72, 61, 139)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>36</font></center></b></td>
-        <td><font color="DarkSlateGray">DarkSlateGray</font></td>
-        <td><font color="DarkSlateGray">#2F4F4F</font></td>
-        <td bgcolor="DarkSlateGray"><font color="white">rgb(47, 79, 79)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>37</font></center></b></td>
-        <td><font color="DarkTurquoise">DarkTurquoise</font></td>
-        <td><font color="DarkTurquoise">#00CED1</font></td>
-        <td bgcolor="DarkTurquoise"><font color="white">rgb(0, 206, 209)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>38</font></center></b></td>
-        <td><font color="DarkViolet">DarkViolet</font></td>
-        <td><font color="DarkViolet">#9400D3</font></td>
-        <td bgcolor="DarkViolet"><font color="white">rgb(148, 0, 211)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>39</font></center></b></td>
-        <td><font color="DeepPink">DeepPink</font></td>
-        <td><font color="DeepPink">#FF1493</font></td>
-        <td bgcolor="DeepPink"><font color="white">rgb(255, 20, 147)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>40</font></center></b></td>
-        <td><font color="DeepSkyBlue">DeepSkyBlue</font></td>
-        <td><font color="DeepSkyBlue">#00BFFF</font></td>
-        <td bgcolor="DeepSkyBlue"><font color="white">rgb(0, 191, 255)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>41</font></center></b></td>
-        <td><font color="DimGray">DimGray</font></td>
-        <td><font color="DimGray">#696969</font></td>
-        <td bgcolor="DimGray"><font color="white">rgb(105, 105, 105)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>42</font></center></b></td>
-        <td><font color="DodgerBlue">DodgerBlue</font></td>
-        <td><font color="DodgerBlue">#1E90FF</font></td>
-        <td bgcolor="DodgerBlue"><font color="white">rgb(30, 144, 255)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>43</font></center></b></td>
-        <td><font color="Feldspar">Feldspar</font></td>
-        <td><font color="Feldspar">#D19275</font></td>
-        <td bgcolor="Feldspar"><font color="white">rgb(209, 146, 117)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>44</font></center></b></td>
-        <td><font color="FireBrick">FireBrick</font></td>
-        <td><font color="#B22222">#B22222</font></td>
-        <td bgcolor="FireBrick"><font color="white">rgb(178, 34, 34)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>45</font></center></b></td>
-        <td bgcolor="Black"><font color="FloralWhite">FloralWhite</font></td>
-        <td bgcolor="Black"><font color="FloralWhite">#FFFAF0</font></td>
-        <td bgcolor="FloralWhite"><font>rgb(255, 250, 240)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>46</font></center></b></td>
-        <td><font color="ForestGreen">ForestGreen</font></td>
-        <td><font color="ForestGreen">#228B22</font></td>
-        <td bgcolor="ForestGreen"><font color="white">rgb(34, 139, 34)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>47</font></center></b></td>
-        <td><font color="Fuchsia">Fuchsia</font></td>
-        <td><font color="Fuchsia">#FF00FF</font></td>
-        <td bgcolor="Fuchsia"><font color="white">rgb(255, 0, 255)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>48</font></center></b></td>
-        <td bgcolor="Black"><font color="Gainsboro">Gainsboro</font></td>
-        <td bgcolor="Black"><font color="Gainsboro">#DCDCDC</font></td>
-        <td bgcolor="Gainsboro"><font>rgb(220, 220, 220)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>49</font></center></b></td>
-        <td bgcolor="Black"><font color="GhostWhite">GhostWhite</font></td>
-        <td bgcolor="Black"><font color="GhostWhite">#F8F8FF</font></td>
-        <td bgcolor="GhostWhite"><font>rgb(248, 248, 255)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>50</font></center></b></td>
-        <td><font color="Gold">Gold</font></td>
-        <td><font color="Gold">#FFD700</font></td>
-        <td bgcolor="Gold"><font color="white">rgb(255, 215, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>51</font></center></b></td>
-        <td><font color="GoldenRod">GoldenRod</font></td>
-        <td><font color="GoldenRod">#DAA520</font></td>
-        <td bgcolor="GoldenRod"><font color="white">rgb(218, 165, 32)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>52</font></center></b></td>
-        <td><font color="Gray">Gray</font></td>
-        <td><font color="Gray">#808080</font></td>
-        <td bgcolor="Gray"><font color="white">rgb(128, 128, 128)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>53</font></center></b></td>
-        <td><font color="Green">Green</font></td>
-        <td><font color="Green">#008000</font></td>
-        <td bgcolor="Green"><font color="white">rgb(0, 128, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>54</font></center></b></td>
-        <td bgcolor="Black"><font color="GreenYellow">GreenYellow</font></td>
-        <td bgcolor="Black"><font color="GreenYellow">#ADFF2F</font></td>
-        <td bgcolor="GreenYellow"><font>rgb(173, 255, 47)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>55</font></center></b></td>
-        <td bgcolor="Black"><font color="HoneyDew">HoneyDew</font></td>
-        <td bgcolor="Black"><font color="HoneyDew">#F0FFF0</font></td>
-        <td bgcolor="HoneyDew"><font>rgb(240, 255, 240)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>56</font></center></b></td>
-        <td><font color="HotPink">HotPink</font></td>
-        <td><font color="HotPink">#FF69B4</font></td>
-        <td bgcolor="HotPink"><font color="white">rgb(255, 105, 180)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>57</font></center></b></td>
-        <td><font color="IndianRed">IndianRed</font></td>
-        <td><font color="IndianRed">#CD5C5C</font></td>
-        <td bgcolor="IndianRed"><font color="white">rgb(205, 92, 92)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>58</font></center></b></td>
-        <td><font color="Indigo">Indigo</font></td>
-        <td><font color="Indigo">#4B0082</font></td>
-        <td bgcolor="Indigo"><font color="white">rgb(75, 0, 130)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>59</font></center></b></td>
-        <td bgcolor="Black"><font color="Ivory">Ivory</font></td>
-        <td bgcolor="Black"><font color="Ivory">#FFFFF0</font></td>
-        <td bgcolor="Ivory"><font color="">rgb(255, 255, 240)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>60</font></center></b></td>
-        <td bgcolor="Black"><font color="Khaki">Khaki</font></td>
-        <td bgcolor="Black"><font color="Khaki">#F0E68C</font></td>
-        <td bgcolor="Khaki"><font>rgb(240, 230, 140)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>61</font></center></b></td>
-        <td bgcolor="Black"><font color="Lavender">Lavender</font></td>
-        <td bgcolor="Black"><font color="Lavender">#E6E6FA</font></td>
-        <td bgcolor="Lavender"><font>rgb(230, 230, 250)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>62</font></center></b></td>
-        <td bgcolor="Black"><font color="LavenderBlush">LavenderBlush</font></td>
-        <td bgcolor="Black"><font color="LavenderBlush">#FFF0F5</font></td>
-        <td bgcolor="LavenderBlush"><font>rgb(255, 240, 245)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>63</font></center></b></td>
-        <td bgcolor="Black"><font color="LawnGreen">LawnGreen</font></td>
-        <td bgcolor="Black"><font color="LawnGreen">#7CFC00</font></td>
-        <td bgcolor="LawnGreen"><font>rgb(124, 252, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>64</font></center></b></td>
-        <td bgcolor="Black"><font color="LemonChiffon">LemonChiffon</font></td>
-        <td bgcolor="Black"><font color="LemonChiffon">#FFFACD</font></td>
-        <td bgcolor="LemonChiffon"><font>rgb(255, 250, 205)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>65</font></center></b></td>
-        <td bgcolor="Black"><font color="LightBlue">LightBlue</font></td>
-        <td bgcolor="Black"><font color="LightBlue">#ADD8E6</font></td>
-        <td bgcolor="LightBlue"><font>rgb(173, 216, 230)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>66</font></center></b></td>
-        <td><font color="LightCoral">LightCoral</font></td>
-        <td><font color="LightCoral">#F08080</font></td>
-        <td bgcolor="LightCoral"><font color="white">rgb(240, 128, 128)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>67</font></center></b></td>
-        <td bgcolor="Black"><font color="LightCyan">LightCyan</font></td>
-        <td bgcolor="Black"><font color="LightCyan">#E0FFFF</font></td>
-        <td bgcolor="LightCyan"><font>rgb(224, 255, 255)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>68</font></center></b></td>
-        <td bgcolor="Black"><font color="LightGoldenRodYellow">LightGoldenRodYellow</font></td>
-        <td bgcolor="Black"><font color="LightGoldenRodYellow">#FAFAD2</font></td>
-        <td bgcolor="LightGoldenRodYellow"><font>rgb(250, 250, 210)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>69</font></center></b></td>
-        <td bgcolor="Black"><font color="LightGrey">LightGrey</font></td>
-        <td bgcolor="Black"><font color="LightGrey">#D3D3D3</font></td>
-        <td bgcolor="LightGrey"><font>rgb(211, 211, 211)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>70</font></center></b></td>
-        <td bgcolor="Black"><font color="LightGreen">LightGreen</font></td>
-        <td bgcolor="Black"><font color="LightGreen">#90EE90</font></td>
-        <td bgcolor="LightGreen"><font>rgb(144, 238, 144)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>71</font></center></b></td>
-        <td bgcolor="Black"><font color="LightPink">LightPink</font></td>
-        <td bgcolor="Black"><font color="LightPink">#FFB6C1</font></td>
-        <td bgcolor="LightPink"><font>rgb(255, 182, 193)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>72</font></center></b></td>
-        <td bgcolor="Black"><font color="LightSalmon">LightSalmon</font></td>
-        <td bgcolor="Black"><font color="LightSalmon">#FFA07A</font></td>
-        <td bgcolor="LightSalmon"><font>rgb(255, 160, 122)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>73</font></center></b></td>
-        <td bgcolor="Black"><font color="LightSeaGreen">LightSeaGreen</font></td>
-        <td bgcolor="Black"><font color="LightSeaGreen">#20B2AA</font></td>
-        <td bgcolor="LightSeaGreen"><font>rgb(32, 178, 170)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>74</font></center></b></td>
-        <td bgcolor="Black"><font color="LightSkyBlue">LightSkyBlue</font></td>
-        <td bgcolor="Black"><font color="LightSkyBlue">#87CEFA</font></td>
-        <td bgcolor="LightSkyBlue"><font>rgb(135, 206, 250)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>75</font></center></b></td>
-        <td bgcolor="Black"><font color="LightSlateBlue">LightSlateBlue</font></td>
-        <td bgcolor="Black"><font color="LightSlateBlue">#8470FF</font></td>
-        <td bgcolor="LightSlateBlue"><font color="white">rgb(132, 112, 255)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>76</font></center></b></td>
-        <td bgcolor="Black"><font color="LightSlateGray">LightSlateGray</font></td>
-        <td bgcolor="Black"><font color="LightSlateGray">#778899</font></td>
-        <td bgcolor="LightSlateGray"><font color="white">rgb(119, 136, 153)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>77</font></center></b></td>
-        <td bgcolor="Black"><font color="LightSteelBlue">LightSteelBlue</font></td>
-        <td bgcolor="Black"><font color="LightSteelBlue">#B0C4DE</font></td>
-        <td bgcolor="LightSteelBlue"><font>rgb(176, 196, 222)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>78</font></center></b></td>
-        <td bgcolor="Black"><font color="LightYellow">LightYellow</font></td>
-        <td bgcolor="Black"><font color="LightYellow">#FFFFE0</font></td>
-        <td bgcolor="LightYellow"><font>rgb(255, 255, 224)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>79</font></center></b></td>
-        <td bgcolor="Black"><font color="Lime">Lime</font></td>
-        <td bgcolor="Black"><font color="Lime">#00FF00</font></td>
-        <td bgcolor="Lime"><font>rgb(0, 255, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>80</font></center></b></td>
-        <td bgcolor="Black"><font color="LimeGreen">LimeGreen</font></td>
-        <td bgcolor="Black"><font color="LimeGreen">#32CD32</font></td>
-        <td bgcolor="LimeGreen"><font>rgb(50, 205, 50)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>81</font></center></b></td>
-        <td bgcolor="Black"><font color="Linen">Linen</font></td>
-        <td bgcolor="Black"><font color="Linen">#FAF0E6</font></td>
-        <td bgcolor="Linen"><font>rgb(250, 240, 230)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>82</font></center></b></td>
-        <td><font color="Magenta">Magenta</font></td>
-        <td><font color="Magenta">#FF00FF</font></td>
-        <td bgcolor="Magenta"><font color="white">rgb(255, 0, 255)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>83</font></center></b></td>
-        <td><font color="Maroon">Maroon</font></td>
-        <td><font color="Maroon">#800000</font></td>
-        <td bgcolor="Maroon"><font color="white">rgb(128, 0, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>84</font></center></b></td>
-        <td><font color="MediumAquaMarine">MediumAquaMarine</font></td>
-        <td><font color="MediumAquaMarine">#66CDAA</font></td>
-        <td bgcolor="MediumAquaMarine"><font color="white">rgb(102, 205, 170)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>85</font></center></b></td>
-        <td><font color="MediumBlue">MediumBlue</font></td>
-        <td><font color="MediumBlue">#0000CD</font></td>
-        <td bgcolor="MediumBlue"><font color="white">rgb(0, 0, 205)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>86</font></center></b></td>
-        <td><font color="MediumOrchid">MediumOrchid</font></td>
-        <td><font color="MediumOrchid">#BA55D3</font></td>
-        <td bgcolor="MediumOrchid"><font color="white">rgb(186, 85, 211)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>87</font></center></b></td>
-        <td><font color="MediumPurple">MediumPurple</font></td>
-        <td><font color="MediumPurple">#9370D8</font></td>
-        <td bgcolor="MediumPurple"><font color="white">rgb(147, 112, 216)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>88</font></center></b></td>
-        <td><font color="MediumSeaGreen">MediumSeaGreen</font></td>
-        <td><font color="MediumSeaGreen">#3CB371</font></td>
-        <td bgcolor="MediumSeaGreen"><font color="white">rgb(60, 179, 113)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>89</font></center></b></td>
-        <td><font color="MediumSlateBlue">MediumSlateBlue</font></td>
-        <td><font color="MediumSlateBlue">#7B68EE</font></td>
-        <td bgcolor="MediumSlateBlue"><font color="white">rgb(123, 104, 238)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>90</font></center></b></td>
-        <td bgcolor="Black"><font color="MediumSpringGreen">MediumSpringGreen</font></td>
-        <td bgcolor="Black"><font color="MediumSpringGreen">#00FA9A</font></td>
-        <td bgcolor="MediumSpringGreen"><font>rgb(0, 250, 154)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>91</font></center></b></td>
-        <td><font color="MediumTurquoise">MediumTurquoise</font></td>
-        <td><font color="MediumTurquoise">#48D1CC</font></td>
-        <td bgcolor="MediumTurquoise"><font color="white">rgb(72, 209, 204)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>92</font></center></b></td>
-        <td><font color="MediumVioletRed">MediumVioletRed</font></td>
-        <td><font color="MediumVioletRed">#C71585</font></td>
-        <td bgcolor="MediumVioletRed"><font color="white">rgb(199, 21, 133)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>93</font></center></b></td>
-        <td><font color="MidnightBlue">MidnightBlue</font></td>
-        <td><font color="MidnightBlue">#191970</font></td>
-        <td bgcolor="MidnightBlue"><font color="white">rgb(25, 25, 112)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>94</font></center></b></td>
-        <td bgcolor="black"><font color="MintCream">MintCream</font></td>
-        <td bgcolor="black"><font color="MintCream">#F5FFFA</font></td>
-        <td bgcolor="MintCream"><font>rgb(245, 255, 250)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>95</font></center></b></td>
-        <td bgcolor="black"><font color="MistyRose">MistyRose</font></td>
-        <td bgcolor="black"><font color="MistyRose">#FFE4E1</font></td>
-        <td bgcolor="MistyRose"><font>rgb(255, 228, 225)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>96</font></center></b></td>
-        <td bgcolor="black"><font color="Moccasin">Moccasin</font></td>
-        <td bgcolor="black"><font color="Moccasin">#FFE4B5</font></td>
-        <td bgcolor="Moccasin"><font>rgb(255, 228, 181)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>97</font></center></b></td>
-        <td bgcolor="black"><font color="NavajoWhite">NavajoWhite</font></td>
-        <td bgcolor="black"><font color="NavajoWhite">#FFDEAD</font></td>
-        <td bgcolor="NavajoWhite"><font>rgb(255, 222, 173)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>98</font></center></b></td>
-        <td><font color="Navy">Navy</font></td>
-        <td><font color="Navy">#000080</font></td>
-        <td bgcolor="Navy"><font color="white">rgb(0, 0, 128)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>99</font></center></b></td>
-        <td bgcolor="black"><font color="OldLace">OldLace</font></td>
-        <td bgcolor="black"><font color="OldLace">#FDF5E6</font></td>
-        <td bgcolor="OldLace"><font>rgb(253, 245, 230)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>100</font></center></b></td>
-        <td><font color="Olive">Olive</font></td>
-        <td><font color="Olive">#808000</font></td>
-        <td bgcolor="Olive"><font color="white">rgb(128, 128, 0)</font></td>
-    </tr>     
-    <tr>
-        <td><b><center><font>101</font></center></b></td>
-        <td><font color="OliveDrab">OliveDrab</font></td>
-        <td><font color="OliveDrab">#6B8E23</font></td>
-        <td bgcolor="OliveDrab"><font color="white">rgb(107, 142, 35)</font></td>
-    </tr>    
-    <tr>
-        <td><b><center><font>102</font></center></b></td>
-        <td><font color="Orange">Orange</font></td>
-        <td><font color="Orange">#FFA500</font></td>
-        <td bgcolor="Orange"><font color="white">rgb(255, 165, 0)</font></td>
-    </tr>    
-    <tr>
-        <td><b><center><font>103</font></center></b></td>
-        <td><font color="OrangeRed">OrangeRed</font></td>
-        <td><font color="OrangeRed">#FF4500</font></td>
-        <td bgcolor="OrangeRed"><font color="white">rgb(255, 69, 0)</font></td>
-    </tr>    
-    <tr>
-        <td><b><center><font>104</font></center></b></td>
-        <td><font color="Orchid">Orchid</font></td>
-        <td><font color="Orchid">#DA70D6</font></td>
-        <td bgcolor="Orchid"><font color="white">rgb(218, 112, 214)</font></td>
-    </tr>   
-    <tr>
-        <td><b><center><font>105</font></center></b></td>
-        <td bgcolor="Black"><font color="PaleGoldenRod">PaleGoldenRod</font></td>
-        <td bgcolor="Black"><font color="PaleGoldenRod">#EEE8AA</font></td>
-        <td bgcolor="PaleGoldenRod"><font>rgb(238, 232, 170)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>106</font></center></b></td>
-        <td bgcolor="Black"><font color="PaleGreen">PaleGreen</font></td>
-        <td bgcolor="Black"><font color="PaleGreen">#98FB98</font></td>
-        <td bgcolor="PaleGreen"><font>rgb(152, 251, 152)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>107</font></center></b></td>
-        <td bgcolor="Black"><font color="PaleTurquoise">PaleTurquoise</font></td>
-        <td bgcolor="Black"><font color="PaleTurquoise">#AFEEEE</font></td>
-        <td bgcolor="PaleTurquoise"><font>rgb(175, 238, 238)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>108</font></center></b></td>
-        <td><font color="PaleVioletRed">PaleVioletRed</font></td>
-        <td><font color="PaleVioletRed">#D87093</font></td>
-        <td bgcolor="PaleVioletRed"><font color="white">rgb(216, 112, 147)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>109</font></center></b></td>
-        <td bgcolor="Black"><font color="PapayaWhip">PapayaWhip</font></td>
-        <td bgcolor="Black"><font color="PapayaWhip">#FFEFD5</font></td>
-        <td bgcolor="PapayaWhip"><font>rgb(255, 239, 213)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>110</font></center></b></td>
-        <td bgcolor="Black"><font color="PeachPuff">PeachPuff</font></td>
-        <td bgcolor="Black"><font color="PeachPuff">#FFDAB9</font></td>
-        <td bgcolor="PeachPuff"><font>rgb(255, 218, 185)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>111</font></center></b></td>
-        <td><font color="Peru">Peru</font></td>
-        <td><font color="Peru">#CD853F</font></td>
-        <td bgcolor="Peru"><font color="white">rgb(205, 133, 63)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>112</font></center></b></td>
-        <td><font color="Pink">Pink</font></td>
-        <td><font color="Pink">#FFC0CB</font></td>
-        <td bgcolor="Pink"><font>rgb(255, 192, 203)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>113</font></center></b></td>
-        <td><font color="Plum">Plum</font></td>
-        <td><font color="Plum">#DDA0DD</font></td>
-        <td bgcolor="Plum"><font>rgb(221, 160, 221)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>114</font></center></b></td>
-        <td><font color="PowderBlue">PowderBlue</font></td>
-        <td><font color="PowderBlue">#B0E0E6</font></td>
-        <td bgcolor="PowderBlue"><font>rgb(176, 224, 230)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>115</font></center></b></td>
-        <td><font color="Purple">Purple</font></td>
-        <td><font color="Purple">#800080</font></td>
-        <td bgcolor="Purple"><font color="white">rgb(128, 0, 128)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>116</font></center></b></td>
-        <td><font color="Red">Red</font></td>
-        <td><font color="Red">#FF0000</font></td>
-        <td bgcolor="Red"><font color="white">rgb(255, 0, 0)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>117</font></center></b></td>
-        <td><font color="RosyBrown">RosyBrown</font></td>
-        <td><font color="RosyBrown">#BC8F8F</font></td>
-        <td bgcolor="RosyBrown"><font color="white">rgb(188, 143, 143)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>118</font></center></b></td>
-        <td><font color="RoyalBlue">RoyalBlue</font></td>
-        <td><font color="RoyalBlue">#4169E1</font></td>
-        <td bgcolor="RoyalBlue"><font color="white">rgb(65, 105, 225)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>119</font></center></b></td>
-        <td><font color="SaddleBrown">SaddleBrown</font></td>
-        <td><font color="SaddleBrown">#8B4513</font></td>
-        <td bgcolor="SaddleBrown"><font color="white">rgb(139, 69, 19)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>120</font></center></b></td>
-        <td><font color="Salmon">Salmon</font></td>
-        <td><font color="Salmon">#FA8072</font></td>
-        <td bgcolor="Salmon"><font color="white">rgb(250, 128, 114)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>121</font></center></b></td>
-        <td><font color="SandyBrown">SandyBrown</font></td>
-        <td><font color="SandyBrown">#F4A460</font></td>
-        <td bgcolor="SandyBrown"><font color="white">rgb(244, 164, 96)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>122</font></center></b></td>
-        <td><font color="SeaGreen">SeaGreen</font></td>
-        <td><font color="SeaGreen">#2E8B57</font></td>
-        <td bgcolor="SeaGreen"><font color="white">rgb(46, 139, 87)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>123</font></center></b></td>
-        <td bgcolor="Black"><font color="SeaShell">SeaShell</font></td>
-        <td bgcolor="Black"><font color="SeaShell">#FFF5EE</font></td>
-        <td bgcolor="SeaShell"><font>rgb(255, 245, 238)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>124</font></center></b></td>
-        <td><font color="Sienna">Sienna</font></td>
-        <td><font color="Sienna">#A0522D</font></td>
-        <td bgcolor="Sienna"><font color="white">rgb(160, 82, 45)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>125</font></center></b></td>
-        <td bgcolor="Black"><font color="Silver">Silver</font></td>
-        <td bgcolor="Black"><font color="Silver">#C0C0C0</font></td>
-        <td bgcolor="Silver"><font>rgb(192, 192, 192)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>126</font></center></b></td>
-        <td><font color="SkyBlue">SkyBlue</font></td>
-        <td><font color="SkyBlue">#87CEEB</font></td>
-        <td bgcolor="SkyBlue"><font color="white">rgb(135, 206, 235)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>127</font></center></b></td>
-        <td><font color="SlateBlue">SlateBlue</font></td>
-        <td><font color="SlateBlue">#6A5ACD</font></td>
-        <td bgcolor="SlateBlue"><font color="white">rgb(106, 90, 205)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>128</font></center></b></td>
-        <td><font color="SlateGray">SlateGray</font></td>
-        <td><font color="SlateGray">#708090</font></td>
-        <td bgcolor="SlateGray"><font color="white">rgb(112, 128, 144)</font></td>
-    </tr>  
-    <tr>
-        <td><b><center><font>129</font></center></b></td>
-        <td bgcolor="Black"><font color="Snow">Snow</font></td>
-        <td bgcolor="Black"><font color="Snow">#FFFAFA</font></td>
-        <td bgcolor="Snow"><font>rgb(255, 250, 250)</font></td>
-    </tr>      
-    <tr>
-        <td><b><center><font>130</font></center></b></td>
-        <td bgcolor="Black"><font color="SpringGreen">SpringGreen</font></td>
-        <td bgcolor="Black"><font color="SpringGreen">#00FF7F</font></td>
-        <td bgcolor="SpringGreen"><font>rgb(0, 255, 127)</font></td>
-    </tr>     
-    <tr>
-        <td><b><center><font>131</font></center></b></td>
-        <td><font color="SteelBlue">SteelBlue</font></td>
-        <td><font color="SteelBlue">#4682B4</font></td>
-        <td bgcolor="SteelBlue"><font color="white">rgb(70, 130, 180)</font></td>
-    </tr>   
-    <tr>
-        <td><b><center><font>132</font></center></b></td>
-        <td><font color="Tan">Tan</font></td>
-        <td><font color="Tan">#D2B48C</font></td>
-        <td bgcolor="Tan"><font color="white">rgb(210, 180, 140)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>133</font></center></b></td>
-        <td><font color="Teal">Teal</font></td>
-        <td><font color="Teal">#008080</font></td>
-        <td bgcolor="Teal"><font color="white">rgb(0, 128, 128)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>134</font></center></b></td>
-        <td bgcolor="Black"><font color="Thistle">Thistle</font></td>
-        <td bgcolor="Black"><font color="Thistle">#D8BFD8</font></td>
-        <td bgcolor="Thistle"><font>rgb(216, 191, 216)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>135</font></center></b></td>
-        <td><font color="Tomato">Tomato</font></td>
-        <td><font color="Tomato">#FF6347</font></td>
-        <td bgcolor="Tomato"><font color="white">rgb(255, 99, 71)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>136</font></center></b></td>
-        <td><font color="Turquoise">Turquoise</font></td>
-        <td><font color="Turquoise">#40E0D0</font></td>
-        <td bgcolor="Turquoise"><font color="white">rgb(64, 224, 208)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>137</font></center></b></td>
-        <td><font color="Violet">Violet</font></td>
-        <td><font color="Violet">#EE82EE</font></td>
-        <td bgcolor="Violet"><font color="white">rgb(238, 130, 238)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>138</font></center></b></td>
-        <td><font color="VioletRed">VioletRed</font></td>
-        <td><font color="VioletRed">#D02090</font></td>
-        <td bgcolor="VioletRed"><font color="white">rgb(208, 32, 144)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>139</font></center></b></td>
-        <td bgcolor="Black"><font color="Wheat">Wheat</font></td>
-        <td bgcolor="Black"><font color="Wheat">#F5DEB3</font></td>
-        <td bgcolor="Wheat"><font>rgb(245, 222, 179)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>140</font></center></b></td>
-        <td bgcolor="Black"><font color="White">White</font></td>
-        <td bgcolor="Black"><font color="White">#FFFFFF</font></td>
-        <td bgcolor="White"><font>rgb(255, 255, 255)</font></td>
-    </tr>     
-    <tr>
-        <td><b><center><font>141</font></center></b></td>
-        <td bgcolor="Black"><font color="WhiteSmoke">WhiteSmoke</font></td>
-        <td bgcolor="Black"><font color="WhiteSmoke">#F5F5F5</font></td>
-        <td bgcolor="WhiteSmoke"><font>rgb(245, 245, 245)</font></td>
-    </tr>     
-    <tr>
-        <td><b><center><font>142</font></center></b></td>
-        <td bgcolor="Black"><font color="Yellow">Yellow</font></td>
-        <td bgcolor="Black"><font color="Yellow">#FFFF00</font></td>
-        <td bgcolor="Yellow"><font>rgb(255, 255, 0)</font></td>
-    </tr> 
-    <tr>
-        <td><b><center><font>143</font></center></b></td>
-        <td bgcolor="Black"><font color="YellowGreen">YellowGreen</font></td>
-        <td bgcolor="Black"><font color="YellowGreen">#9ACD32</font></td>
-        <td bgcolor="YellowGreen"><font>rgb(154, 205, 50)</font></td>
-    </tr> 
+                <h4 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h4><ul>
+<li>可以将条目输出到文件中。可以从文件读取数据</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;fstream></span></span>
 
-</tbody></table>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">CommEntry</span><span class="token punctuation">{</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment" spellcheck="true">//int displaymenu();</span>
+    <span class="token keyword">void</span> <span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">inputcommEntryfile</span><span class="token punctuation">(</span>istream <span class="token operator">&amp;</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">outputcommEntryfile</span><span class="token punctuation">(</span>ostream <span class="token operator">&amp;</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">update_name</span><span class="token punctuation">(</span>string change_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">update_tel</span><span class="token punctuation">(</span>string change_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">update_addr</span><span class="token punctuation">(</span>string change_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string <span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string <span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string <span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    string name<span class="token punctuation">;</span>
+    string tel<span class="token punctuation">;</span>
+    string addr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Comms</span><span class="token punctuation">{</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Comms</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">,</span><span class="token keyword">int</span> maxnum<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        maxCount<span class="token operator">=</span>maxnum<span class="token punctuation">;</span>
+        Count<span class="token operator">=</span>num<span class="token punctuation">;</span>
+        pCe<span class="token operator">=</span><span class="token keyword">new</span> CommEntry<span class="token punctuation">[</span>num<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token operator">~</span><span class="token function">Comms</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        maxCount<span class="token operator">=</span>Count<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>pCe<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> <span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">inputAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">inputAllfile</span><span class="token punctuation">(</span>istream <span class="token operator">&amp;</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">outputAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">outputAllfile</span><span class="token punctuation">(</span>ostream <span class="token operator">&amp;</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    CommEntry<span class="token operator">&amp;</span> <span class="token function">get_CommEntry</span><span class="token punctuation">(</span><span class="token keyword">int</span> inum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span>string nm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">modify</span><span class="token punctuation">(</span>string nm<span class="token punctuation">,</span>string t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    CommEntry <span class="token operator">*</span>pCe<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> maxCount<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> Count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">int</span> Comms<span class="token operator">::</span><span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> op<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"-------------功能菜单-------------"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         1.输入通讯录"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         2.输出通讯录"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         3.查找通讯录姓名"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         4.修改通讯录指定名字的电话"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         5.输出到文件"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         6.从文件中读取数据"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"         0.退出系统"</span>  <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"----------------------------------"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入你要选择的功能编号(0-6):  "</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">>></span> op<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>op<span class="token operator">&lt;=</span><span class="token number">6</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"输入出错,请重新输入你要选择的功能编号(0-6):  "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> op<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">,</span>temp_addr<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入名字:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入电话:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入地址:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> temp_addr<span class="token punctuation">;</span>
+    <span class="token function">update_name</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">update_addr</span><span class="token punctuation">(</span>temp_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">inputcommEntryfile</span><span class="token punctuation">(</span>istream <span class="token operator">&amp;</span>in<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    string temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">,</span>temp_addr<span class="token punctuation">;</span>
+    in <span class="token operator">>></span> temp_name <span class="token operator">>></span> temp_tel <span class="token operator">>></span> temp_addr<span class="token punctuation">;</span>
+    <span class="token function">update_name</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">update_tel</span><span class="token punctuation">(</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">update_addr</span><span class="token punctuation">(</span>temp_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">outputcommEntryfile</span><span class="token punctuation">(</span>ostream <span class="token operator">&amp;</span>out<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    out <span class="token operator">&lt;&lt;</span> <span class="token string">"姓名:  "</span> <span class="token operator">&lt;&lt;</span> <span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"  电话:  "</span> <span class="token operator">&lt;&lt;</span> <span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"  地址:  "</span> <span class="token operator">&lt;&lt;</span> <span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+CommEntry<span class="token operator">&amp;</span> Comms<span class="token operator">::</span><span class="token function">get_CommEntry</span><span class="token punctuation">(</span><span class="token keyword">int</span> inum<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> pCe<span class="token punctuation">[</span>inum<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> Comms<span class="token operator">::</span><span class="token function">find</span><span class="token punctuation">(</span>string nm<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> flag<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>Count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">get_CommEntry</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span>nm<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            flag<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//找不到该姓名</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> Comms<span class="token operator">::</span><span class="token function">modify</span><span class="token punctuation">(</span>string nm<span class="token punctuation">,</span>string t<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> pos<span class="token operator">=</span><span class="token function">find</span><span class="token punctuation">(</span>nm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pos<span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token function">get_CommEntry</span><span class="token punctuation">(</span>pos<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">update_tel</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">"查无此人,无法修改!"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">void</span> Comms<span class="token operator">::</span><span class="token function">inputAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>Count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"***第"</span> <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">"个通讯录条目***"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token function">get_CommEntry</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">inputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> Comms<span class="token operator">::</span><span class="token function">outputAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>Count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"***第"</span> <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">"个通讯录条目***"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token function">get_CommEntry</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> Comms<span class="token operator">::</span><span class="token function">inputAllfile</span><span class="token punctuation">(</span>istream <span class="token operator">&amp;</span>in<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>Count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//cout &lt;&lt; "***第" &lt;&lt; i &lt;&lt; "个通讯录条目***" &lt;&lt; endl;</span>
+        <span class="token function">get_CommEntry</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">inputcommEntryfile</span><span class="token punctuation">(</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> Comms<span class="token operator">::</span><span class="token function">outputAllfile</span><span class="token punctuation">(</span>ostream <span class="token operator">&amp;</span>out<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>Count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        out <span class="token operator">&lt;&lt;</span> <span class="token string">"***第"</span> <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">"个通讯录条目***"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token function">get_CommEntry</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">outputcommEntryfile</span><span class="token punctuation">(</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+string CommEntry<span class="token operator">::</span><span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+string CommEntry<span class="token operator">::</span><span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> tel<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+string CommEntry<span class="token operator">::</span><span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> addr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"名字:  "</span> <span class="token operator">&lt;&lt;</span> <span class="token function">get_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"   "</span> <span class="token operator">&lt;&lt;</span><span class="token string">"电话:  "</span> <span class="token operator">&lt;&lt;</span> <span class="token function">get_tel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"   "</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"地址:  "</span> <span class="token operator">&lt;&lt;</span> <span class="token function">get_addr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">update_name</span><span class="token punctuation">(</span>string change_name<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    name<span class="token operator">=</span>change_name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">update_tel</span><span class="token punctuation">(</span>string change_tel<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    tel<span class="token operator">=</span>change_tel<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> CommEntry<span class="token operator">::</span><span class="token function">update_addr</span><span class="token punctuation">(</span>string change_addr<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    addr<span class="token operator">=</span>change_addr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> num<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入通讯录的总人数:  "</span> <span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> num<span class="token punctuation">;</span>
+    Comms data<span class="token operator">=</span><span class="token function">Comms</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> op<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">displaymenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
+            data<span class="token punctuation">.</span><span class="token function">inputAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span>
+            data<span class="token punctuation">.</span><span class="token function">outputAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">3</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            string temp_name<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入查找的姓名:  "</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+            cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
+            <span class="token keyword">int</span> pos<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>pos<span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+                data<span class="token punctuation">.</span><span class="token function">get_CommEntry</span><span class="token punctuation">(</span>pos<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">outputcommEntry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      
+            <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">"查无此人"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>  
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">4</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            string temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的名字:  "</span> <span class="token punctuation">;</span>
+            cin <span class="token operator">>></span> temp_name<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入要修改的电话:  "</span><span class="token punctuation">;</span>
+            cin <span class="token operator">>></span> temp_tel<span class="token punctuation">;</span>
+            data<span class="token punctuation">.</span><span class="token function">modify</span><span class="token punctuation">(</span>temp_name<span class="token punctuation">,</span>temp_tel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            ofstream file1<span class="token punctuation">;</span>
+            file1<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"record.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            data<span class="token punctuation">.</span><span class="token function">outputAllfile</span><span class="token punctuation">(</span>file1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            file1<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">6</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            ifstream file1<span class="token punctuation">;</span>
+            string file_name<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请输入读入文件名:  "</span><span class="token punctuation">;</span>
+            cin <span class="token operator">>></span> file_name<span class="token punctuation">;</span>
+            file1<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>file_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            data<span class="token punctuation">.</span><span class="token function">inputAllfile</span><span class="token punctuation">(</span>file1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>op<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
                 
             </div>
@@ -1382,7 +767,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/04/04/shi-yong-markdown-bu-tong-de-zi-ti-yan-se-ji-da-xiao/">https://liaoy0103.top/2022/04/04/shi-yong-markdown-bu-tong-de-zi-ti-yan-se-ji-da-xiao/</a>
+                    <a href="https://liaoy0103.top/2022/05/11/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-9/">https://liaoy0103.top/2022/05/11/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-9/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1420,12 +805,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/">
-                                    <span class="chip bg-color">Markdown语法</span>
+                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                                    <span class="chip bg-color">面向对象程序设计</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-                                    <span class="chip bg-color">博客文章</span>
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
                                 </a>
                             
                         </div>
@@ -1873,16 +1258,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/06/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-2/">
+                <a href="/2022/05/11/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-9/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/06/LjZJGiAQoqtf9Wx.jpg" class="responsive-img" alt="面向对象程序设计实验2">
+                        <img src="https://s2.loli.net/2022/05/11/Uwjg8uNJZecY73S.jpg" class="responsive-img" alt="面向对象程序设计实验9">
                         
-                        <span class="card-title">面向对象程序设计实验2</span>
+                        <span class="card-title">面向对象程序设计实验9</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1892,9 +1278,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1907,6 +1293,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1929,12 +1316,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/03/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-1/">
+                <a href="/2022/05/11/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-6/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/06/uZ8RqkW4siXEDHb.jpg" class="responsive-img" alt="面向对象程序设计实验1">
+                        <img src="https://s2.loli.net/2022/05/11/16DGAaUrkT8BgO3.jpg" class="responsive-img" alt="面向对象程序设计实验6">
                         
-                        <span class="card-title">面向对象程序设计实验1</span>
+                        <span class="card-title">面向对象程序设计实验6</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1945,7 +1332,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-11
                             </span>
                         <span class="publish-author">
                             
