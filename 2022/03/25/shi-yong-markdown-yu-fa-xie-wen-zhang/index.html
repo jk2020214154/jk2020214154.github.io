@@ -434,21 +434,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-19
+                    2022-05-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    921
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -472,34 +472,41 @@
 <p>学会用$Markdown语法$写博客文章是非常重要的,本文主要对$Markdown语法$常见操作的使用进行编写(有时候自己也会忘记一些语法，可通过该博客查看回忆).</p>
 </blockquote>
 <h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1 标题"></a>1 标题</h3><p>标题的语法如下:</p>
-<pre class=" language-none"><code class="language-none"># 一级标题
+<!-- ```none
+# 一级标题
 ## 二级标题
 ### 三级标题
 #### 四级标题
 ##### 五级标题
 ###### 六级标题
-</code></pre>
+``` -->
+
 <p>在$Markdown$中标题使用<code>#</code>号表示,一个<code>#</code>代表一级标题,一共有六种不同字体大小(第$i$级标题的$i$越大,字体越小)的标题.</p>
 <p><img src="https://s2.loli.net/2022/03/28/FlERbBcyMarSJ6p.png" alt="图1  6种不同标题的效果展示"></p>
 <h3 id="2-段落"><a href="#2-段落" class="headerlink" title="2 段落"></a>2 段落</h3><p>在$Markdown$中每写一个段落需要换行一次,没有空格两个以上并且按下回车键(换行),这一段文字就自成一段.(<b><font color="Green">一般写完一段就空一行接着写下一段</font></b>).</p>
 <p><img src="https://s2.loli.net/2022/03/28/HwBqOVcP7MmNZL1.png" alt="图2  段落之间的写法的效果展示"></p>
 <h3 id="3-字体"><a href="#3-字体" class="headerlink" title="3 字体"></a>3 字体</h3><p>在$Markdown$中字体有<b><font color="Red">斜体和粗体</font></b>,字体的语法如下:</p>
-<pre class=" language-none"><code class="language-none">*斜体文本*
+<!-- ```none
+*斜体文本*
 _斜体文本_
 **加粗文本**
 __加粗文本__
 ***粗斜体字体***
 ___粗斜体字体___
-</code></pre>
+``` -->
+
 <p>不建议采用使用<b><font color="Blue">下划线</font></b>版本,下划线会连在一起,不好区分数量,故一般采用以下三种写法:</p>
-<pre class=" language-none"><code class="language-none">*斜体文本*
+<!-- ```none
+*斜体文本*
 **加粗文本**
 ***粗斜体字体***
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/28/WJiIkbzSo9lxgwe.png" alt="图3  斜体和粗体的效果展示"></p>
 <!-- <font color=Red>此地方为内容</font> -->
 <h3 id="4-分割符"><a href="#4-分割符" class="headerlink" title="4 分割符"></a>4 分割符</h3><p>分隔线在一行中，使用<b><font color="Red">三个以上</font></b>的<strong>星号、减号、下划线</strong>来建立(可以隔开),分隔符的语法如下:</p>
-<pre class=" language-none"><code class="language-none">***
+<!-- ```none
+***
 
 * * * * *
 
@@ -510,19 +517,25 @@ _ _ _ _ _ _
 -------
 
 - - - -
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/28/yX7LGFpb9HgPrxs.png" alt="图4  分隔符的效果展示"></p>
 <h3 id="5-删除线"><a href="#5-删除线" class="headerlink" title="5 删除线"></a>5 删除线</h3><p>删除线是给文本加上删除线,在文本两端加上两个波浪线<code>~</code>即可.(<font color="Red">由于编译器的原因,图片左边的自动添上了删除线效果</font>),删除线的语法如下:</p>
-<pre class=" language-none"><code class="language-none">~~删除的文字~~
-</code></pre>
+<!-- ```none
+~~删除的文字~~
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/28/TwNeypsPIRudrkB.png" alt="图5  删除线的效果展示"></p>
 <h3 id="6-下划线"><a href="#6-下划线" class="headerlink" title="6 下划线"></a>6 下划线</h3><p>在$Markdown$没有下划线的语法,可利用$Html$的语法实现下划线,下划线的语法如下:</p>
-<pre class=" language-none"><code class="language-none"><u>下划线的文字</u>
-</code></pre>
+<!-- ```none
+<u>下划线的文字</u>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/28/GwdMYDW6rti7qJL.png" alt="图6  下划线的效果展示"></p>
 <h3 id="7-列表"><a href="#7-列表" class="headerlink" title="7 列表"></a>7 列表</h3><p>列表可分为两种:<b><font color="Red">有序列表</font></b>和<b><font color="Blue">无序列表</font></b>.</p>
 <h4 id="7-1-无序列表"><a href="#7-1-无序列表" class="headerlink" title="7.1 无序列表"></a>7.1 无序列表</h4><p>无序列表可使用<font color="Green">星号<code>*</code>,加号<code>+</code>,减号<code>-</code></font>的三种方式(<font color="Purple">内容与符号中间用空格隔开</font>),无序列表的语法如下:</p>
-<pre class=" language-none"><code class="language-none">* 第一项
+<!-- ```none
+* 第一项
 * 第二项
 * 第三项
 
@@ -533,16 +546,20 @@ _ _ _ _ _ _
 + 第七项
 + 第八项
 + 第九项
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/29/HwR1TLjWaYzpiGZ.png" alt="图7.1 无序列表的效果展示"></p>
 <h4 id="7-2-有序列表"><a href="#7-2-有序列表" class="headerlink" title="7.2 有序列表"></a>7.2 有序列表</h4><p>有序列表使用<font color="Orange">数字+<code>.</code>+空格+内容</font>的方式,有序列表的语法如下:</p>
-<pre class=" language-none"><code class="language-none">1. 步骤一:xxxxxx
+<!-- ```none
+1. 步骤一:xxxxxx
 2. 步骤二:yyyyyy
 3. 步骤三:zzzzzz
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/29/8EgUjLnQNdYGuDS.png" alt="图7.2 有序列表的效果展示"></p>
 <h4 id="7-3-列表嵌套"><a href="#7-3-列表嵌套" class="headerlink" title="7.3 列表嵌套"></a>7.3 列表嵌套</h4><p>有序列表和无序列表(或者无序列表和无序列表)可以一起使用,只需要在子列表的选项前添加四个空格,列表嵌套的语法如下:</p>
-<pre class=" language-none"><code class="language-none">1. 第一项：
+<!-- ```none
+1. 第一项：
     * 子列表1
     - 子列表2
 2. 第二项：
@@ -554,17 +571,21 @@ _ _ _ _ _ _
         * 嵌套第三层
             * 嵌套第四层
                 * 嵌套第五层 
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/29/edFqsuRc1NTV8a7.png" alt="7.3 列表嵌套的效果展示"></p>
 <h3 id="8-区块"><a href="#8-区块" class="headerlink" title="8 区块"></a>8 区块</h3><p>区块的作用是用来引用的,可以引用链接或者一段文字,在段落的开头使用<code>&gt;</code>符号,中间使用空格隔开内容，区块的语法如下:</p>
-<pre class=" language-none"><code class="language-none">> 这是我要引用的第一段内容
+<!-- ```none
+> 这是我要引用的第一段内容
 
 > 这是我要引用的第二段内容
 > 这是我接着第二段的空间引用的第三段内容
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/29/foizLuap3ICgy92.png" alt="图8.1 区块的效果展示"></p>
 <p>区块也可以<font color="BluRed">嵌套使用</font>,嵌套的第$i$层就有$i$个<code>&gt;</code>的符号.</p>
-<pre class=" language-none"><code class="language-none">> 区块嵌套第一层1.0
+<!-- ```none
+> 区块嵌套第一层1.0
 >> 区块嵌套第二层1.0
 >>> 区块嵌套第三层
 >>>
@@ -573,21 +594,24 @@ _ _ _ _ _ _
 >> 区块嵌套第二层2.0 
 > 
 > 区块嵌套第一层2.0
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/29/qQNKuR1lmEJIAFz.png" alt="图8.2  区块嵌套的效果展示"></p>
 <h3 id="9-代码块"><a href="#9-代码块" class="headerlink" title="9 代码块"></a>9 代码块</h3><p>代码块可以展示不同语言的编程代码并实现不同的高亮效果.上下使用三个点进行包裹,可在最顶上写上代码的语言类型,代码块的语法如下:</p>
-<pre class=" language-cpp"><code class="language-cpp">    ```cpp
-        <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
-        <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
-        <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
-        <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-        <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"hello world"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+<!-- ```cpp
+    ```cpp
+        #include<iostream>
+        #include<cstring>
+        #include<algorithm>
+        using namespace std;
+        int main()
+        {
+            cout <! "hello world" <! endl;
+            return 0;
+        }
     ```
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/30/OJpI6sbSYcwUdHx.png" alt="图9  代码块的效果展示"></p>
 <h3 id="10-链接"><a href="#10-链接" class="headerlink" title="10 链接"></a>10 链接</h3><p>使用链接的两种方法:</p>
 <ul>
@@ -595,18 +619,24 @@ _ _ _ _ _ _
 <li>使用$markdown$语法插入</li>
 </ul>
 <p>链接的语法格式如下(这里以百度为例):</p>
-<pre class=" language-none"><code class="language-none">  //方法一:直接链接
+<!-- ```none
+  //方法一:直接链接
   // # <链接地址>
 
   //方法二:
   // # [这是链接的名称](链接地址)
-</code></pre>
+
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/30/m7soFwfeX2rlNtL.png" alt="图10  链接的效果展示"></p>
 <h3 id="11-图片"><a href="#11-图片" class="headerlink" title="11 图片"></a>11 图片</h3><p>插入图片的可以选择本地的图片或者<a target="_blank" rel="noopener" href="https://sm.ms/">图床</a>超链接,图片的语法如下:</p>
-<pre class=" language-none"><code class="language-none">![图片描述](图片链接或地址)
-</code></pre>
+<!-- ```none
+![图片描述](图片链接或地址)
+``` -->
+
 <h3 id="12-表格"><a href="#12-表格" class="headerlink" title="12 表格"></a>12 表格</h3><p>在$Markdown$中可插入表格,表格的语法如下(此处为了美观所以比较对齐):</p>
-<pre class=" language-none"><code class="language-none">|  姓名   | 学号               |
+<!-- ```none
+|  姓名   | 学号               |
 |  --     | --                |
 |  Lisa   | 95001             |
 |  Bob    | 95566322222222222 |
@@ -616,7 +646,8 @@ _ _ _ _ _ _
 |  ----  | ----  |
 | 单元格  | 单元格 |
 | 单元格  | 单元格 |
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/30/PCHdVgTO39cUSWh.png" alt="图12.1 表格的效果展示"></p>
 <p>表格也可以设置自动对齐规则:</p>
 <ul>
@@ -625,14 +656,17 @@ _ _ _ _ _ _
 <li>居中: <code>:-:</code></li>
 </ul>
 <p>表格对齐的语法如下:</p>
-<pre class=" language-none"><code class="language-none">| 左对齐 | 右对齐 | 居中对齐 |
+<!-- ```none
+| 左对齐 | 右对齐 | 居中对齐 |
 | :-----| ----: | :----: |
 | 200单元格 | 400单元格 | 单元格5000 |
 | 单元格 | 单元格 | 单元格 |
-</code></pre>
+``` -->
+
 <p><img src="https://s2.loli.net/2022/03/30/y1dkI8VenxA9mLr.png" alt="图12.2  表格对齐的效果展示"></p>
 <h3 id="13-转义字符"><a href="#13-转义字符" class="headerlink" title="13 转义字符"></a>13 转义字符</h3><p>由于Markdown中用了一些字符作为语法,如果想要使用输出字符此时需要<b><font color="Red">反斜线<code>\</code></font></b>来达到效果,其中英文句点看不出区别,转义字符的语法如下:</p>
-<pre class=" language-none"><code class="language-none">\   反斜线   \\
+<!-- ```none
+\   反斜线   \\
 `   反引号   \`
 *   星号     \*
 _   下划线   \_
@@ -644,14 +678,19 @@ _   下划线   \_
 -   减号     \-
 .   英文句点  \.
 !   感叹号   \!
-</code></pre>
+```  -->
+
 <p><img src="https://s2.loli.net/2022/04/01/bfh8KsrTdc9XWk5.png" alt="图13 转义的效果展示"></p>
 <h3 id="14-其他高级语法"><a href="#14-其他高级语法" class="headerlink" title="14 其他高级语法"></a>14 其他高级语法</h3><h4 id="14-1-数学公式"><a href="#14-1-数学公式" class="headerlink" title="14.1 数学公式"></a>14.1 数学公式</h4><p>用$$中间插入使用的表达式</p>
-<pre class=" language-none"><code class="language-none">$\sum_{i=1}^{n} (i^2+i+1)$
-</code></pre>
+<!-- ```none
+$\sum_{i=1}^{n} (i^2+i+1)$
+``` -->
+
 <p>效果如右边所示:  $\sum_{i=1}^{n} (i^2+i+1)$</p>
-<h4 id="14-2-html元素"><a href="#14-2-html元素" class="headerlink" title="14.2 html元素"></a>14.2 html元素</h4><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Ctrl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Alt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Del<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>
-</code></pre>
+<h4 id="14-2-html元素"><a href="#14-2-html元素" class="headerlink" title="14.2 html元素"></a>14.2 html元素</h4><!-- ```html
+<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>
+``` -->
+
 <p>效果如右边所示:<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd></p>
 
                 
@@ -1492,7 +1531,7 @@ _   下划线   \_
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.6k</span>
+                        class="white-color">29.1k</span>
             
             
             
