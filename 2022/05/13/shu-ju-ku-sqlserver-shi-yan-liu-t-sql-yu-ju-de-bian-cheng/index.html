@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库SQLServer实验三多表查询和子查询, C++,算法,数据结构,ACM">
+    <meta name="keywords" content="数据库SQLServer实验六T-SQL语句的编程, C++,算法,数据结构,ACM">
     <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库SQLServer实验三多表查询和子查询 | 搁浅至云</title>
+    <title>数据库SQLServer实验六T-SQL语句的编程 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -273,12 +273,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/22/ywdjVsTeSapCiE5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/13/BmXqWoFCzl7wRGL.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库SQLServer实验三多表查询和子查询</h1>
+                    <h1 class="description center-align post-title">数据库SQLServer实验六T-SQL语句的编程</h1>
                 </div>
             </div>
         </div>
@@ -423,28 +423,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-22
+                    2022-05-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-22
+                    2022-05-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    546
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -464,252 +464,83 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ul>
-<li>了解查询的概念和方法;</li>
-<li>掌握查询分析器的使用方法;</li>
-<li>掌握$SELECT$语句在单表查询中的应用;</li>
-<li>掌握复杂查询的使用方法;</li>
-<li>掌握多表连接的方法;</li>
-<li>掌握$SELECT$语句在多表查询中的应用;</li>
-<li>掌握子查询语句.</li>
+                <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ul>
+<li>掌握程序中的批处理、脚本和注释的基本概念和使用方法;</li>
+<li>掌握流程控制语句的基本语法;</li>
+<li>能够熟练使用这些流程控制语句;</li>
+<li>熟练掌握$SQL$ $Server$用户定义函数的创建方法;</li>
+<li>掌握创建触发器的方法;</li>
+<li>掌握创建存储过程的方法.</li>
 </ul>
-<h3 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h3><h4 id="1-多表查询"><a href="#1-多表查询" class="headerlink" title="(1).多表查询"></a>(1).多表查询</h4><ul>
-<li><p>数据库的各个表中存放着不同的数据,用户经常需要用多个表中的数据来组合提炼出所需要的信息,如果一个查询需要对多个表进行操作,就称为联表查询,联表查询的结果集或结果表称为表之间的连接.联表查询实际上是通过各各表之间共同列的关联来查询数据的,它是关系数据库查询最基本的特征.</p>
-</li>
-<li><p>按照下表所示,分别在数据库$test$中构造$student$、$course$和$student_course$三张表,并写入记录.</p>
-</li>
-<li><p>$Student$表</p>
-</li>
+<h4 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h4><ul>
+<li>在示例数据库的学生基本信息表上如果存在出生时间在$1995$年以前的学生,给出这些学生的列表.否则给出一条提示信息,说明没有满足条件的学生.</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="center">列名称</th>
-<th align="center">类型</th>
-<th align="center">宽度</th>
-<th align="center">允许为空</th>
-<th align="center">缺省值</th>
-<th align="center">主键</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">学号</td>
-<td align="center">$Char$</td>
-<td align="center">$8$</td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center">是</td>
-</tr>
-<tr>
-<td align="center">学生姓名</td>
-<td align="center">$Nvarchar$</td>
-<td align="center">$8$</td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">性别</td>
-<td align="center">$Char$</td>
-<td align="center">$2$</td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">年龄</td>
-<td align="center">$Smallint$</td>
-<td align="center"></td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">班级号</td>
-<td align="center">$Char$</td>
-<td align="center">$6$</td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">入学时间</td>
-<td align="center">$Smalldatetime$</td>
-<td align="center"></td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">家庭住址</td>
-<td align="center">$Nvarchar$</td>
-<td align="center">$40$</td>
-<td align="center">是</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<hr>
-<ul>
-<li>$Student$表</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">列名称</th>
-<th align="center">类型</th>
-<th align="center">宽度</th>
-<th align="center">允许为空</th>
-<th align="center">缺省值</th>
-<th align="center">主键</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">课程号</td>
-<td align="center">$Char$</td>
-<td align="center">$10$</td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center">是</td>
-</tr>
-<tr>
-<td align="center">课程名称</td>
-<td align="center">$Nvarchar$</td>
-<td align="center">$20$</td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">课程总学时</td>
-<td align="center">$Tinyint$</td>
-<td align="center"></td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">课程学分</td>
-<td align="center">$Tinyint$</td>
-<td align="center"></td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<hr>
-<ul>
-<li>Student_course表</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">列名称</th>
-<th align="center">类型</th>
-<th align="center">宽度</th>
-<th align="center">允许为空</th>
-<th align="center">缺省值</th>
-<th align="center">主键</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">课程号</td>
-<td align="center">$Char$</td>
-<td align="center">$10$</td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center">是</td>
-</tr>
-<tr>
-<td align="center">学号</td>
-<td align="center">$Char$</td>
-<td align="center">$8$</td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center">是</td>
-</tr>
-<tr>
-<td align="center">成绩</td>
-<td align="center">$Tinyint$</td>
-<td align="center"></td>
-<td align="center">否</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<pre class=" language-SQL"><code class="language-SQL">create table Student
-    (  学号       char(8)        not null  primary key,
-       学生姓名   nvarchar(8)    not null ,
-       性别       char(2)        not null ,
-       年龄       smallint       not null ,
-       班级号     char(6)        not null ,
-       入学时间   smalldatetime  not null ,
-       家庭住址   nvarchar(40)   )
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">--由于建表无出生年份,另建一个视图</span>
+<span class="token keyword">create</span> <span class="token keyword">view</span> studentbase
+<span class="token keyword">as</span>
+<span class="token keyword">select</span> Sno<span class="token punctuation">,</span>Sname<span class="token punctuation">,</span>Ssex<span class="token punctuation">,</span>Sage<span class="token punctuation">,</span>Sdept<span class="token punctuation">,</span><span class="token number">2022</span><span class="token operator">-</span>Sage 出生年份 <span class="token keyword">from</span> Student
 
-create table Course
-    (  课程号     char(10)       not null  primary key,
-       课程名称   nvarchar(20)   not null ,
-       课程总学时 tinyint                 ,
-       课程学分   tinyint                 )
+<span class="token keyword">if</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> studentbase <span class="token keyword">where</span> 出生年份<span class="token operator">&lt;</span><span class="token number">1995</span><span class="token punctuation">)</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> studentbase <span class="token keyword">where</span> 出生年份<span class="token operator">&lt;</span><span class="token number">1995</span>
+<span class="token keyword">end</span>
+<span class="token keyword">else</span> 
+    <span class="token keyword">print</span> <span class="token string">'无满足条件的学生'</span>
+</code></pre>
+<ul>
+<li>显示所有系别为<code>计算机</code>的学生信息,并且在显示之前,暂停$1$分钟.</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">waitfor</span> delay <span class="token string">'00:01:00'</span>
+    <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> studentbase <span class="token keyword">where</span> Sdept<span class="token operator">=</span><span class="token string">'计算机'</span>
+</code></pre>
+<ul>
+<li>创建一个函数,可以按学号查询学生选修课的平均成绩,如果不及格,显示其学号,姓名,并输出<code>该同学平均成绩不及格</code>,否则输出<code>全部通过</code></li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">function</span> cj<span class="token punctuation">(</span><span class="token variable">@s_no</span> char<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">returns</span> <span class="token keyword">float</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">declare</span> <span class="token variable">@x</span> <span class="token keyword">float</span><span class="token punctuation">,</span><span class="token variable">@name</span> char<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+    <span class="token keyword">select</span> <span class="token variable">@x</span><span class="token operator">=</span><span class="token function">avg</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">from</span> sc <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token variable">@s_no</span>
+    <span class="token keyword">select</span> <span class="token variable">@name</span><span class="token operator">=</span>sname <span class="token keyword">from</span> student <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token variable">@s_no</span>
+    <span class="token keyword">return</span> <span class="token variable">@x</span>
+<span class="token keyword">end</span>
 
-create table Student_Course
-    (  课程号    char(10)       not null,
-       学号      char(8)        not null,
-       成绩      tinyint        not null
-       primary key (课程号,学号),
-       foreign key (课程号) references Course  (课程号),
-       foreign key (学号)   references Student (学号),
-    )
-# 录入数据略
+<span class="token comment" spellcheck="true">--举例</span>
+<span class="token keyword">if</span> dbo<span class="token punctuation">.</span>cj<span class="token punctuation">(</span><span class="token string">'202001008'</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">60</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">select</span> sno<span class="token punctuation">,</span>sname <span class="token keyword">from</span> Student <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'202001008'</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'该同学平均成绩不及格'</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+<span class="token keyword">else</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'全部通过'</span><span class="token punctuation">)</span>
 </code></pre>
 <ul>
-<li>从$student$、$course$和$student_course$三张表中检索选修了课程的学生的学号、姓名、课程号、课程名及成绩.</li>
+<li>创建一个触发器，当对学生表执行$UPDATE$操作时,该触发器被触发,不允许修改学生表中的学号.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">select Student.学号,Student.学生姓名,Course.课程号,Course.课程名称,Student_Course.成绩
-    from Student ,Course ,Student_Course
-    where Student.学号=Student_Course.学号 and Course.课程号=Student_Course.课程号
-</code></pre>
-<ul>
-<li>如果要在数据检索时对表中数据按照一定条件进行分组汇总或求平均值,就要在$SELECT$语句中与$GROUP$ $BY$子句一起使用集合函数.使用$GROUP$ $BY$子句进行数据检索可得到数据分类的汇总统计、平均值或其他统计信息.</li>
-</ul>
-<p>(1) 使用不带$HAVING$的$GROUP$ $BY$子句,汇总出$student_course$表中的学生的学号及总成绩</p>
-<pre class=" language-SQL"><code class="language-SQL">select 学号,sum(成绩) 总成绩
-    from Student_Course
-    group by 学号
-</code></pre>
-<p>(2) 使用带$HAVING$的$GROUP$ $BY$子句,汇总出$student_course$表中总分大于$450$分的学生的学号及总成绩</p>
-<pre class=" language-SQL"><code class="language-SQL">select 学号,sum(成绩) 总成绩
-    from Student_Course
-    group by 学号
-    having sum(成绩)>450
-</code></pre>
-<h4 id="2-子查询"><a href="#2-子查询" class="headerlink" title="(2).子查询"></a>(2).子查询</h4><p>1．使用$IN$或$NOT$ $IN$关键字.</p>
-<ul>
-<li>使用$IN$关键字查询出‘$jk1$’ ‘$dx2$’ ‘$dx1$’班所有男生的学号、课程号及相应的成绩</li>
-</ul>
-<pre class=" language-SQL"><code class="language-SQL">select Student_Course.学号,课程号,成绩
-    from Student_Course,Student
-    where Student.学号=Student_Course.学号 and Student.班级号 in ('jk1','dx2','dx1') and Student.性别='男'
-</code></pre>
-<ol start="2">
-<li>使用$EXISTS$或$NOT$ $EXISTS$关键字.</li>
-</ol>
-<ul>
-<li>使用$EXISTS$关键字查询出$‘jk1’$班选修‘数据结构’课程的学生的学号、姓名;使用$NOT EXISTS$查询出‘$jk1$’班没有选修‘数据结构’课程的学生的学号、姓名</li>
-</ul>
-<pre class=" language-SQL"><code class="language-SQL">select Student.学号,Student.学生姓名
-    from Student
-    where exists
-    (    select * from Student_Course ,Course
-        where Student_Course.学号=Student.学号 and Student_Course.课程号=Course.课程号 and Course.课程名称='数据结构' and Student.班级号='jk1'
-    )
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">trigger</span> update_sno <span class="token keyword">on</span> student
+<span class="token keyword">for</span> <span class="token keyword">update</span>
+<span class="token keyword">as</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">if</span> <span class="token keyword">update</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span>
+    <span class="token keyword">begin</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'不允许修改学生表中的学号'</span><span class="token punctuation">)</span>
+        <span class="token keyword">rollback</span> <span class="token keyword">transaction</span>
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span>
 
-select Student.学号,Student.学生姓名
-    from Student
-    where Student.班级号='jk1' and not exists
-    (    select * from Student_Course ,Course
-        where Student_Course.学号=Student.学号 and Student_Course.课程号=Course.课程号 and Course.课程名称='数据结构' 
-    )
+<span class="token comment" spellcheck="true">--举例</span>
+<span class="token keyword">update</span> student <span class="token keyword">set</span> sno<span class="token operator">=</span><span class="token string">'95001'</span> <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'202001008'</span>
+</code></pre>
+<ul>
+<li>创建一个存储过程,它带有一个输入参数,用于接受学号,显示该学生的姓名、选修课的课程名、成绩.</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">proc</span> p1<span class="token punctuation">(</span><span class="token variable">@s_no</span> char<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">as</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">select</span> sname<span class="token punctuation">,</span>cname<span class="token punctuation">,</span>grade <span class="token keyword">from</span> Student<span class="token punctuation">,</span>Course<span class="token punctuation">,</span>SC <span class="token keyword">where</span> sc<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Course<span class="token punctuation">.</span>Cno <span class="token operator">and</span> sc<span class="token punctuation">.</span>Sno<span class="token operator">=</span>Student<span class="token punctuation">.</span>Sno <span class="token operator">and</span> sc<span class="token punctuation">.</span>sno<span class="token operator">=</span><span class="token variable">@s_no</span>
+<span class="token keyword">end</span>
+
+<span class="token comment" spellcheck="true">--举例</span>
+<span class="token keyword">exec</span> p1 <span class="token string">'202001001'</span>
 </code></pre>
 
                 
@@ -737,7 +568,7 @@ select Student.学号,Student.学生姓名
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/04/22/shu-ju-ku-sqlserver-shi-yan-san-duo-biao-cha-xun-he-zi-cha-xun/">https://liaoy0103.top/2022/04/22/shu-ju-ku-sqlserver-shi-yan-san-duo-biao-cha-xun-he-zi-cha-xun/</a>
+                    <a href="https://liaoy0103.top/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/">https://liaoy0103.top/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1224,16 +1055,17 @@ select Student.学号,Student.学生姓名
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/23/2021ccpc-gui-lin-zhan-bu-ti/">
+                <a href="/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/23/VewvNSEjWpf5F9O.jpg" class="responsive-img" alt="2021ccpc桂林站补题">
+                        <img src="https://s2.loli.net/2022/05/13/BmXqWoFCzl7wRGL.jpg" class="responsive-img" alt="数据库SQLServer实验六T-SQL语句的编程">
                         
-                        <span class="card-title">2021ccpc桂林站补题</span>
+                        <span class="card-title">数据库SQLServer实验六T-SQL语句的编程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1243,30 +1075,27 @@ select Student.学号,Student.学生姓名
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
-                                    ACM算法
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/2021ccpc/">
-                        <span class="chip bg-color">2021ccpc</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%A1%A5%E9%A2%98/">
-                        <span class="chip bg-color">补题</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                        <span class="chip bg-color">数据库基本操作</span>
                     </a>
                     
                 </div>
@@ -1280,30 +1109,30 @@ select Student.学号,Student.学生姓名
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/21/atcoder-247-bu-ti/">
+                <a href="/2022/05/11/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-9/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/21/CYc3G7APHgoFzrh.jpg" class="responsive-img" alt="AtCoder-247 补题">
+                        <img src="https://s2.loli.net/2022/05/11/Uwjg8uNJZecY73S.jpg" class="responsive-img" alt="面向对象程序设计实验9">
                         
-                        <span class="card-title">AtCoder-247 补题</span>
+                        <span class="card-title">面向对象程序设计实验9</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
-                                    ACM算法
+                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                    面向对象程序设计
                                 </a>
                             
                             
@@ -1313,12 +1142,12 @@ select Student.学号,Student.学生姓名
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%A1%A5%E9%A2%98/">
-                        <span class="chip bg-color">补题</span>
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                        <span class="chip bg-color">面向对象程序设计</span>
                     </a>
                     
-                    <a href="/tags/AtCoder/">
-                        <span class="chip bg-color">AtCoder</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>

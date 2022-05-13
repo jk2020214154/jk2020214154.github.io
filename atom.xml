@@ -6,7 +6,7 @@
   <link href="https://liaoy0103.top/atom.xml" rel="self"/>
   
   <link href="https://liaoy0103.top/"/>
-  <updated>2022-05-11T09:40:17.993Z</updated>
+  <updated>2022-05-13T03:02:46.420Z</updated>
   <id>https://liaoy0103.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库SQLServer实验六T-SQL语句的编程</title>
+    <link href="https://liaoy0103.top/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/"/>
+    <id>https://liaoy0103.top/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/</id>
+    <published>2022-05-13T02:07:14.000Z</published>
+    <updated>2022-05-13T03:02:46.420Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://liaoy0103.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库基本操作" scheme="https://liaoy0103.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象程序设计实验9</title>
@@ -100,7 +125,7 @@
     <link href="https://liaoy0103.top/2022/05/04/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-10/"/>
     <id>https://liaoy0103.top/2022/05/04/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-10/</id>
     <published>2022-05-04T11:28:54.000Z</published>
-    <updated>2022-05-04T11:49:34.244Z</updated>
+    <updated>2022-05-13T03:03:42.729Z</updated>
     
     
       
@@ -498,33 +523,6 @@
     <id>https://liaoy0103.top/2022/04/06/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-3/</id>
     <published>2022-04-06T09:03:41.000Z</published>
     <updated>2022-04-13T10:54:52.859Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="面向对象程序设计" scheme="https://liaoy0103.top/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-    <category term="面向对象程序设计" scheme="https://liaoy0103.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="C++" scheme="https://liaoy0103.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面向对象程序设计实验2</title>
-    <link href="https://liaoy0103.top/2022/04/06/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-2/"/>
-    <id>https://liaoy0103.top/2022/04/06/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-2/</id>
-    <published>2022-04-06T06:32:58.000Z</published>
-    <updated>2022-04-13T10:52:48.121Z</updated>
     
     
       
