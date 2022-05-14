@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库SQLServer实验六T-SQL语句的编程, C++,算法,数据结构,ACM">
+    <meta name="keywords" content="CodeForces-1673补题, C++,算法,数据结构,ACM">
     <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库SQLServer实验六T-SQL语句的编程 | 搁浅至云</title>
+    <title>CodeForces-1673补题 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -273,12 +273,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/13/BmXqWoFCzl7wRGL.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/14/e3lVNknzrZPOIyE.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库SQLServer实验六T-SQL语句的编程</h1>
+                    <h1 class="description center-align post-title">CodeForces-1673补题</h1>
                 </div>
             </div>
         </div>
@@ -398,8 +398,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">数据库基本操作</span>
+                            <a href="/tags/%E8%A1%A5%E9%A2%98/">
+                                <span class="chip bg-color">补题</span>
+                            </a>
+                        
+                            <a href="/tags/CodeForces-cf/">
+                                <span class="chip bg-color">CodeForces(cf)</span>
                             </a>
                         
                     </div>
@@ -410,8 +414,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                ACM算法
                             </a>
                         
                     </div>
@@ -423,28 +427,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-13
+                    2022-05-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-13
+                    2022-05-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    546
+                    61
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -464,85 +468,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ul>
-<li>掌握程序中的批处理、脚本和注释的基本概念和使用方法;</li>
-<li>掌握流程控制语句的基本语法;</li>
-<li>能够熟练使用这些流程控制语句;</li>
-<li>熟练掌握$SQL$ $Server$用户定义函数的创建方法;</li>
-<li>掌握创建触发器的方法;</li>
-<li>掌握创建存储过程的方法.</li>
-</ul>
-<h4 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h4><ul>
-<li>在示例数据库的学生基本信息表上如果存在出生时间在$1995$年以前的学生,给出这些学生的列表.否则给出一条提示信息,说明没有满足条件的学生.</li>
-</ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">--由于建表无出生年份,另建一个视图</span>
-<span class="token keyword">create</span> <span class="token keyword">view</span> studentbase
-<span class="token keyword">as</span>
-<span class="token keyword">select</span> Sno<span class="token punctuation">,</span>Sname<span class="token punctuation">,</span>Ssex<span class="token punctuation">,</span>Sage<span class="token punctuation">,</span>Sdept<span class="token punctuation">,</span><span class="token number">2022</span><span class="token operator">-</span>Sage 出生年份 <span class="token keyword">from</span> Student
-
-<span class="token keyword">if</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> studentbase <span class="token keyword">where</span> 出生年份<span class="token operator">&lt;</span><span class="token number">1995</span><span class="token punctuation">)</span>
-<span class="token keyword">begin</span>
-    <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> studentbase <span class="token keyword">where</span> 出生年份<span class="token operator">&lt;</span><span class="token number">1995</span>
-<span class="token keyword">end</span>
-<span class="token keyword">else</span> 
-    <span class="token keyword">print</span> <span class="token string">'无满足条件的学生'</span>
-</code></pre>
-<ul>
-<li>显示所有系别为<code>计算机</code>的学生信息,并且在显示之前,暂停$1$分钟.</li>
-</ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">waitfor</span> delay <span class="token string">'00:01:00'</span>
-    <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> studentbase <span class="token keyword">where</span> Sdept<span class="token operator">=</span><span class="token string">'计算机'</span>
-</code></pre>
-<ul>
-<li>创建一个函数,可以按学号查询学生选修课的平均成绩,如果不及格,显示其学号,姓名,并输出<code>该同学平均成绩不及格</code>,否则输出<code>全部通过</code></li>
-</ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">function</span> cj<span class="token punctuation">(</span><span class="token variable">@s_no</span> char<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">returns</span> <span class="token keyword">float</span>
-<span class="token keyword">begin</span>
-    <span class="token keyword">declare</span> <span class="token variable">@x</span> <span class="token keyword">float</span><span class="token punctuation">,</span><span class="token variable">@name</span> char<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
-    <span class="token keyword">select</span> <span class="token variable">@x</span><span class="token operator">=</span><span class="token function">avg</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token keyword">from</span> sc <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token variable">@s_no</span>
-    <span class="token keyword">select</span> <span class="token variable">@name</span><span class="token operator">=</span>sname <span class="token keyword">from</span> student <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token variable">@s_no</span>
-    <span class="token keyword">return</span> <span class="token variable">@x</span>
-<span class="token keyword">end</span>
-
-<span class="token comment" spellcheck="true">--举例</span>
-<span class="token keyword">if</span> dbo<span class="token punctuation">.</span>cj<span class="token punctuation">(</span><span class="token string">'202001008'</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">60</span>
-<span class="token keyword">begin</span>
-    <span class="token keyword">select</span> sno<span class="token punctuation">,</span>sname <span class="token keyword">from</span> Student <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'202001008'</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'该同学平均成绩不及格'</span><span class="token punctuation">)</span>
-<span class="token keyword">end</span>
-<span class="token keyword">else</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'全部通过'</span><span class="token punctuation">)</span>
-</code></pre>
-<ul>
-<li>创建一个触发器，当对学生表执行$UPDATE$操作时,该触发器被触发,不允许修改学生表中的学号.</li>
-</ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">trigger</span> update_sno <span class="token keyword">on</span> student
-<span class="token keyword">for</span> <span class="token keyword">update</span>
-<span class="token keyword">as</span>
-<span class="token keyword">begin</span>
-    <span class="token keyword">if</span> <span class="token keyword">update</span><span class="token punctuation">(</span>sno<span class="token punctuation">)</span>
-    <span class="token keyword">begin</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'不允许修改学生表中的学号'</span><span class="token punctuation">)</span>
-        <span class="token keyword">rollback</span> <span class="token keyword">transaction</span>
-    <span class="token keyword">end</span>
-<span class="token keyword">end</span>
-
-<span class="token comment" spellcheck="true">--举例</span>
-<span class="token keyword">update</span> student <span class="token keyword">set</span> sno<span class="token operator">=</span><span class="token string">'95001'</span> <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'202001008'</span>
-</code></pre>
-<ul>
-<li>创建一个存储过程,它带有一个输入参数,用于接受学号,显示该学生的姓名、选修课的课程名、成绩.</li>
-</ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">proc</span> p1<span class="token punctuation">(</span><span class="token variable">@s_no</span> char<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">as</span>
-<span class="token keyword">begin</span>
-    <span class="token keyword">select</span> sname<span class="token punctuation">,</span>cname<span class="token punctuation">,</span>grade <span class="token keyword">from</span> Student<span class="token punctuation">,</span>Course<span class="token punctuation">,</span>SC <span class="token keyword">where</span> sc<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Course<span class="token punctuation">.</span>Cno <span class="token operator">and</span> sc<span class="token punctuation">.</span>Sno<span class="token operator">=</span>Student<span class="token punctuation">.</span>Sno <span class="token operator">and</span> sc<span class="token punctuation">.</span>sno<span class="token operator">=</span><span class="token variable">@s_no</span>
-<span class="token keyword">end</span>
-
-<span class="token comment" spellcheck="true">--举例</span>
-<span class="token keyword">exec</span> p1 <span class="token string">'202001001'</span>
-</code></pre>
-
+                <h3 id="A-Subtle-Substring-Subtraction"><a href="#A-Subtle-Substring-Subtraction" class="headerlink" title="A - Subtle Substring Subtraction"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1673/A">A - Subtle Substring Subtraction</a></h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="B-A-Perfectly-Balanced-String"><a href="#B-A-Perfectly-Balanced-String" class="headerlink" title="B - A Perfectly Balanced String?"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1673/B">B - A Perfectly Balanced String?</a></h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="C-Palindrome-Basis"><a href="#C-Palindrome-Basis" class="headerlink" title="C - Palindrome Basis"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1673/C">C - Palindrome Basis</a></h3><h4 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="D-Lost-Arithmetic-Progression"><a href="#D-Lost-Arithmetic-Progression" class="headerlink" title="D - Lost Arithmetic Progression"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1673/D">D - Lost Arithmetic Progression</a></h3><h4 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="E-Power-or-XOR"><a href="#E-Power-or-XOR" class="headerlink" title="E - Power or XOR?"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1673/E">E - Power or XOR?</a></h3><h4 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="F-Anti-Theft-Road-Planning"><a href="#F-Anti-Theft-Road-Planning" class="headerlink" title="F - Anti-Theft Road Planning"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1673/F">F - Anti-Theft Road Planning</a></h3><h4 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h4><h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4>
                 
             </div>
             <hr/>
@@ -568,7 +499,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/">https://liaoy0103.top/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/</a>
+                    <a href="https://liaoy0103.top/2022/05/14/codeforces-1673-bu-ti/">https://liaoy0103.top/2022/05/14/codeforces-1673-bu-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -606,8 +537,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">数据库基本操作</span>
+                                <a href="/tags/%E8%A1%A5%E9%A2%98/">
+                                    <span class="chip bg-color">补题</span>
+                                </a>
+                            
+                                <a href="/tags/CodeForces-cf/">
+                                    <span class="chip bg-color">CodeForces(cf)</span>
                                 </a>
                             
                         </div>
@@ -1055,9 +990,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/05/14/codeforces-1673-bu-ti/">
                     <div class="card-image">
@@ -1074,9 +1010,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1089,6 +1025,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1111,30 +1048,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/11/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-9/">
+                <a href="/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/11/Uwjg8uNJZecY73S.jpg" class="responsive-img" alt="面向对象程序设计实验9">
+                        <img src="https://s2.loli.net/2022/05/13/BmXqWoFCzl7wRGL.jpg" class="responsive-img" alt="数据库SQLServer实验六T-SQL语句的编程">
                         
-                        <span class="card-title">面向对象程序设计实验9</span>
+                        <span class="card-title">数据库SQLServer实验六T-SQL语句的编程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                             
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    面向对象程序设计
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
                                 </a>
                             
                             
@@ -1144,12 +1081,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">面向对象程序设计</span>
-                    </a>
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                        <span class="chip bg-color">数据库基本操作</span>
                     </a>
                     
                 </div>
