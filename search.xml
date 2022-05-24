@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>kuangbin专题一简单搜索(下)</title>
+      <link href="/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-xia/"/>
+      <url>/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-xia/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> ACM算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kuangbin专题 </tag>
+            
+            <tag> 简单搜索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>kuangbin专题一简单搜索(上)</title>
+      <link href="/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-shang/"/>
+      <url>/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-shang/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-棋盘问题"><a href="#1-棋盘问题" class="headerlink" title="1. 棋盘问题"></a><a href="https://www.acwing.com/problem/content/1116/">1. 棋盘问题</a></h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><ul><li>在一个给定形状的棋盘（形状可能是不规则的）上面摆放棋子，棋子没有区别。</li><li>要求摆放时任意的两个棋子不能放在棋盘中的同一行或者同一列，请编程求解对于给定形状和大小的棋盘，摆放$k$个棋子的所有可行的摆放方案数目$C$。</li></ul><blockquote><h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>fff</p></blockquote><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> ACM算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kuangbin专题 </tag>
+            
+            <tag> 简单搜索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CodeForces-1673补题</title>
       <link href="/2022/05/14/codeforces-1673-bu-ti/"/>
       <url>/2022/05/14/codeforces-1673-bu-ti/</url>

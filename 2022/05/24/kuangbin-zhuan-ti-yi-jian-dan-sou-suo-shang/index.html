@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库SQLServer实验四视图, C++,算法,数据结构,ACM">
+    <meta name="keywords" content="kuangbin专题一简单搜索(上), C++,算法,数据结构,ACM">
     <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库SQLServer实验四视图 | 搁浅至云</title>
+    <title>kuangbin专题一简单搜索(上) | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -273,12 +273,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/29/nhYFSKi3zjsaHR9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/24/45GMpaw89Eodjku.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库SQLServer实验四视图</h1>
+                    <h1 class="description center-align post-title">kuangbin专题一简单搜索(上)</h1>
                 </div>
             </div>
         </div>
@@ -398,8 +398,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">数据库基本操作</span>
+                            <a href="/tags/kuangbin%E4%B8%93%E9%A2%98/">
+                                <span class="chip bg-color">kuangbin专题</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/">
+                                <span class="chip bg-color">简单搜索</span>
                             </a>
                         
                     </div>
@@ -410,8 +414,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                ACM算法
                             </a>
                         
                     </div>
@@ -423,21 +427,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-29
+                    2022-05-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-29
+                    2022-05-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    286
+                    113
                 </div>
                 
 
@@ -464,58 +468,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ul>
-<li>熟练掌握$sql$的应用;</li>
-<li>掌握$sql$视图建立和删除;</li>
-<li>掌握$sql$视图查询.</li>
+                <h3 id="1-棋盘问题"><a href="#1-棋盘问题" class="headerlink" title="1. 棋盘问题"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1116/">1. 棋盘问题</a></h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><ul>
+<li>在一个给定形状的棋盘（形状可能是不规则的）上面摆放棋子，棋子没有区别。</li>
+<li>要求摆放时任意的两个棋子不能放在棋盘中的同一行或者同一列，请编程求解对于给定形状和大小的棋盘，摆放$k$个棋子的所有可行的摆放方案数目$C$。</li>
 </ul>
-<h3 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h3><h4 id="1-定义视图"><a href="#1-定义视图" class="headerlink" title="(1).定义视图"></a>(1).定义视图</h4><h5 id="建立视图"><a href="#建立视图" class="headerlink" title="建立视图"></a>建立视图</h5><ul>
-<li>建立数学系学生的视图</li>
-</ul>
-<pre class=" language-SQL"><code class="language-SQL">create view Math_Student
-as
-select Sno 学号,Sname 姓名,Sage 年龄,Ssex 性别 from Student
-where Sdept='数学'
---先执行上面语句,再执行最后语句
-select * from Math_Student
-</code></pre>
-<ul>
-<li>建立学生的学号$(Sno)$、姓名$(Sname)$、选修课程名$(Cname)$及成绩$(Grade)$的视图.</li>
-</ul>
-<pre class=" language-SQL"><code class="language-SQL">create view Student_Grade
-as
-select Sc.Sno 学号,Sname 姓名,Cname 课程名,Grade 成绩 from Student,Course,Sc
-where Student.Sno=Sc.Sno and Course.Cno=Sc.cno
---先执行上面语句,再执行最后语句
-select * from Student_Grade
-</code></pre>
-<ul>
-<li>定义一个反映学生出生年份的视图.</li>
-</ul>
-<pre class=" language-SQL"><code class="language-SQL">create view Birth_year
-as
-select Sno 学号,Sname 姓名,DateName(year,GetDate())-Sage 出生年份 from Student
---先执行上面语句,再执行最后语句
-select * from Birth_year
-</code></pre>
-<h5 id="删除视图"><a href="#删除视图" class="headerlink" title="删除视图"></a>删除视图</h5><ul>
-<li>删除反映学生出生年份的视图.</li>
-</ul>
-<pre class=" language-SQL"><code class="language-SQL">drop view Birth_year
-</code></pre>
-<h4 id="2-查询视图"><a href="#2-查询视图" class="headerlink" title="(2).查询视图"></a>(2).查询视图</h4><ul>
-<li>在数学系的学生视图中找出年龄$(Sage)$小于$20$岁的学生姓名$(Sname)$和年龄$(Sage)$.</li>
-</ul>
-<pre class=" language-SQL"><code class="language-SQL">select 姓名,年龄 from Math_Student
-where 年龄<20
-</code></pre>
-<ul>
-<li>在创建的第二个视图中查询成绩在$85$分以上的学生学号$(Sno)$、姓名$(Sname)$和课程名称$(Cname)$.</li>
-</ul>
-<pre class=" language-SQL"><code class="language-SQL">select 学号,姓名,课程名 from Student_Grade
-where 成绩>=85
-</code></pre>
-
+<blockquote>
+<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>fff</p>
+</blockquote>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4>
                 
             </div>
             <hr/>
@@ -541,7 +501,7 @@ where 成绩>=85
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/04/29/shu-ju-ku-sqlserver-shi-yan-si-shi-tu/">https://liaoy0103.top/2022/04/29/shu-ju-ku-sqlserver-shi-yan-si-shi-tu/</a>
+                    <a href="https://liaoy0103.top/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-shang/">https://liaoy0103.top/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-shang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -579,8 +539,12 @@ where 成绩>=85
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">数据库基本操作</span>
+                                <a href="/tags/kuangbin%E4%B8%93%E9%A2%98/">
+                                    <span class="chip bg-color">kuangbin专题</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/">
+                                    <span class="chip bg-color">简单搜索</span>
                                 </a>
                             
                         </div>
@@ -1032,12 +996,12 @@ where 成绩>=85
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/30/2021-jiang-su-sheng-da-xue-sheng-cheng-xu-she-ji-da-sai-bu-ti/">
+                <a href="/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-xia/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/30/khQSpruOCXRGtEL.jpg" class="responsive-img" alt="2021江苏省大学生程序设计大赛补题">
+                        <img src="https://s2.loli.net/2022/05/24/HXplnsbgk4Em35A.jpg" class="responsive-img" alt="kuangbin专题一简单搜索(下)">
                         
-                        <span class="card-title">2021江苏省大学生程序设计大赛补题</span>
+                        <span class="card-title">kuangbin专题一简单搜索(下)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1048,7 +1012,7 @@ where 成绩>=85
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-30
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-24
                         </span>
                         <span class="publish-author">
                             
@@ -1065,12 +1029,12 @@ where 成绩>=85
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/2021ccpc/">
-                        <span class="chip bg-color">2021ccpc</span>
+                    <a href="/tags/kuangbin%E4%B8%93%E9%A2%98/">
+                        <span class="chip bg-color">kuangbin专题</span>
                     </a>
                     
-                    <a href="/tags/%E8%A1%A5%E9%A2%98/">
-                        <span class="chip bg-color">补题</span>
+                    <a href="/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/">
+                        <span class="chip bg-color">简单搜索</span>
                     </a>
                     
                 </div>
@@ -1084,30 +1048,30 @@ where 成绩>=85
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/27/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-8/">
+                <a href="/2022/05/14/codeforces-1673-bu-ti/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/27/8DihdWGOBtacJnb.jpg" class="responsive-img" alt="面向对象程序设计实验8">
+                        <img src="https://s2.loli.net/2022/05/14/e3lVNknzrZPOIyE.jpg" class="responsive-img" alt="CodeForces-1673补题">
                         
-                        <span class="card-title">面向对象程序设计实验8</span>
+                        <span class="card-title">CodeForces-1673补题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                             
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    面向对象程序设计
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                    ACM算法
                                 </a>
                             
                             
@@ -1117,12 +1081,12 @@ where 成绩>=85
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">面向对象程序设计</span>
+                    <a href="/tags/%E8%A1%A5%E9%A2%98/">
+                        <span class="chip bg-color">补题</span>
                     </a>
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/CodeForces-cf/">
+                        <span class="chip bg-color">CodeForces(cf)</span>
                     </a>
                     
                 </div>

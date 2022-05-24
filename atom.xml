@@ -6,7 +6,7 @@
   <link href="https://liaoy0103.top/atom.xml" rel="self"/>
   
   <link href="https://liaoy0103.top/"/>
-  <updated>2022-05-20T11:42:41.410Z</updated>
+  <updated>2022-05-24T03:43:21.122Z</updated>
   <id>https://liaoy0103.top/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kuangbin专题一简单搜索(下)</title>
+    <link href="https://liaoy0103.top/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-xia/"/>
+    <id>https://liaoy0103.top/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-xia/</id>
+    <published>2022-05-24T03:29:39.000Z</published>
+    <updated>2022-05-24T03:43:21.122Z</updated>
+    
+    
+    
+    
+    <category term="ACM算法" scheme="https://liaoy0103.top/categories/ACM%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="kuangbin专题" scheme="https://liaoy0103.top/tags/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="简单搜索" scheme="https://liaoy0103.top/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kuangbin专题一简单搜索(上)</title>
+    <link href="https://liaoy0103.top/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-shang/"/>
+    <id>https://liaoy0103.top/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-shang/</id>
+    <published>2022-05-24T03:29:26.000Z</published>
+    <updated>2022-05-24T03:43:24.613Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="ACM算法" scheme="https://liaoy0103.top/categories/ACM%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="kuangbin专题" scheme="https://liaoy0103.top/tags/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="简单搜索" scheme="https://liaoy0103.top/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>CodeForces-1673补题</title>
@@ -489,58 +535,6 @@
     <category term="补题" scheme="https://liaoy0103.top/tags/%E8%A1%A5%E9%A2%98/"/>
     
     <category term="蓝桥杯" scheme="https://liaoy0103.top/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AtCoder-246 补题</title>
-    <link href="https://liaoy0103.top/2022/04/11/atcoder-246-bu-ti/"/>
-    <id>https://liaoy0103.top/2022/04/11/atcoder-246-bu-ti/</id>
-    <published>2022-04-11T06:56:32.000Z</published>
-    <updated>2022-05-06T01:48:56.637Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="ACM算法" scheme="https://liaoy0103.top/categories/ACM%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="补题" scheme="https://liaoy0103.top/tags/%E8%A1%A5%E9%A2%98/"/>
-    
-    <category term="AtCoder" scheme="https://liaoy0103.top/tags/AtCoder/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库SQLServer实验一数据库定义和数据库更新</title>
-    <link href="https://liaoy0103.top/2022/04/08/shu-ju-ku-sqlserver-shi-yan-yi-shu-ju-ku-ding-yi-he-shu-ju-ku-geng-xin/"/>
-    <id>https://liaoy0103.top/2022/04/08/shu-ju-ku-sqlserver-shi-yan-yi-shu-ju-ku-ding-yi-he-shu-ju-ku-geng-xin/</id>
-    <published>2022-04-08T02:04:18.000Z</published>
-    <updated>2022-04-08T04:14:23.483Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="数据库" scheme="https://liaoy0103.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="数据库基本操作" scheme="https://liaoy0103.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
