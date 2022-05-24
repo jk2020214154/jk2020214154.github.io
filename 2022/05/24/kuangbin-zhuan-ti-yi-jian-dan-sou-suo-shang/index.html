@@ -441,14 +441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    113
+                    815
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -468,14 +468,137 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-棋盘问题"><a href="#1-棋盘问题" class="headerlink" title="1. 棋盘问题"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1116/">1. 棋盘问题</a></h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><ul>
+                <h2 id="注意此处提供了链接"><a href="#注意此处提供了链接" class="headerlink" title="注意此处提供了链接"></a>注意此处提供了链接</h2><p><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/article/371">kuangbin专题总</a><br><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/65959">kuangbin专题1</a></p>
+<h3 id="1-棋盘问题"><a href="#1-棋盘问题" class="headerlink" title="1. 棋盘问题"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1116/">1. 棋盘问题</a></h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><ul>
 <li>在一个给定形状的棋盘（形状可能是不规则的）上面摆放棋子，棋子没有区别。</li>
 <li>要求摆放时任意的两个棋子不能放在棋盘中的同一行或者同一列，请编程求解对于给定形状和大小的棋盘，摆放$k$个棋子的所有可行的摆放方案数目$C$。</li>
 </ul>
 <blockquote>
-<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>fff</p>
+<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>输入含有多组测试数据.<br>每组数据的第一行是两个正整数$n,k$，用一个空格隔开，表示了将在一个$n∗n$的矩阵内描述棋盘，以及摆放棋子的数目。当为<code>-1 -1</code>时表示输入结束。<br>随后的$n$行描述了棋盘的形状：每行有$n$个字符，其中<code>#</code>表示棋盘区域，<code>.</code>表示空白区域（数据保证不出现多余的空白行或者空白列）。</p>
+<h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p>对于每一组数据，给出一行输出，输出摆放的方案数目$C$（数据保证 $C&lt;2^{31}$）。</p>
+<h5 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h5><p>$n \leqslant 8, k \leqslant n$</p>
+<h5 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h5><p>$2$ $1$<br>#.<br>.#<br>$4$ $4$<br>…#<br>..#.<br>.#..<br>#…<br>$-1$ $-1$</p>
+<h5 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h5><p>$2$<br>$1$</p>
 </blockquote>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>经典<b><font color="red">dfs</font></b>问题.</p>
+<ul>
+<li>方法一: 枚举<b><font color="Blue">每一个元素</font></b>,时间复杂度为$O(2^{n^2})$.</li>
+<li>方法二: 枚举<b><font color="Orange">每一行(或每一列)</font></b>,时间复杂度为$O(n!)$.</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><ul>
+<li>方法一 :枚举<b><font color="Blue">每一个元素</font></b></li>
+</ul>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> MAXN 10</span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>k<span class="token punctuation">,</span>res<span class="token punctuation">;</span>
+<span class="token keyword">char</span> g<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> row<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">,</span>col<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">,</span><span class="token keyword">int</span> cnt<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">==</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+        y<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>x<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">==</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>cnt<span class="token operator">==</span>k<span class="token punctuation">)</span>
+            res<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>g<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'#'</span><span class="token operator">&amp;&amp;</span>row<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>col<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        g<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'.'</span><span class="token punctuation">;</span>
+        row<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span>col<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">dfs</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>cnt<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        g<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'#'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//恢复现场</span>
+        row<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span>col<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>cnt<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//不选(x,y)的元素</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>k<span class="token punctuation">)</span><span class="token operator">!=</span><span class="token constant">EOF</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>k<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span>g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        res<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//memset(col,0,sizeof(col));</span>
+        <span class="token comment" spellcheck="true">//memset(row,0,sizeof(row));</span>
+        <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>方法二: 枚举<b><font color="Orange">每一行(或每一列)</font></b>.</li>
+</ul>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> MAXN 10</span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>k<span class="token punctuation">,</span>res<span class="token punctuation">;</span>
+<span class="token keyword">char</span> g<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> col<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//标记该列是否使用</span>
+
+<span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> root<span class="token punctuation">,</span><span class="token keyword">int</span> cnt<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">==</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//所有行都枚举完</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>cnt<span class="token operator">==</span>k<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//且使用的次数刚好为k</span>
+            res<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>g<span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'#'</span><span class="token operator">&amp;&amp;</span>col<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//该点为棋盘元素,且没被访问过</span>
+            g<span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'.'</span><span class="token punctuation">;</span>
+            col<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>cnt<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//选当前行,枚举下一行</span>
+            col<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//恢复现场</span>
+            g<span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'#'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>cnt<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//当前行不选</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>k<span class="token punctuation">)</span><span class="token operator">!=</span><span class="token constant">EOF</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>k<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        res<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//memset(col,0,sizeof(col));</span>
+        <span class="token comment" spellcheck="true">//此处col可以不用清0,由于dfs会恢复现场使得col数组最终为0</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span>g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="2-地牢大师"><a href="#2-地牢大师" class="headerlink" title="2. 地牢大师"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1098/">2. 地牢大师</a></h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="3-抓住那头牛"><a href="#3-抓住那头牛" class="headerlink" title="3. 抓住那头牛"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1102/">3. 抓住那头牛</a></h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="4-翻转"><a href="#4-翻转" class="headerlink" title="4. 翻转"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4221/">4. 翻转</a></h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="5-找倍数"><a href="#5-找倍数" class="headerlink" title="5. 找倍数"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4222/">5. 找倍数</a></h3><h4 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="6-质数路径"><a href="#6-质数路径" class="headerlink" title="6. 质数路径"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4223/">6. 质数路径</a></h3><h4 id="问题描述-5"><a href="#问题描述-5" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="7-洗牌"><a href="#7-洗牌" class="headerlink" title="7. 洗牌"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4224/">7. 洗牌</a></h3><h4 id="问题描述-6"><a href="#问题描述-6" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4>
                 
             </div>
             <hr/>
@@ -1317,7 +1440,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.3k</span>
+                        class="white-color">30.1k</span>
             
             
             
