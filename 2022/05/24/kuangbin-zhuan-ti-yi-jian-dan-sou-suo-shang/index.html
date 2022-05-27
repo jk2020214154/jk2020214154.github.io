@@ -434,21 +434,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-24
+                    2022-05-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    4.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    18 分
                 </div>
                 
 
@@ -893,8 +893,103 @@ ll <span class="token function">bfs</span><span class="token punctuation">(</spa
 <h5 id="输入样例-5"><a href="#输入样例-5" class="headerlink" title="输入样例"></a>输入样例</h5><p>$3$<br>$1033$ $8179$<br>$1373$ $8017$<br>$1033$ $1033$</p>
 <h5 id="输出样例-5"><a href="#输出样例-5" class="headerlink" title="输出样例"></a>输出样例</h5><p>$6$<br>$7$<br>$0$</p>
 </blockquote>
-<h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><hr>
-<h3 id="7-洗牌"><a href="#7-洗牌" class="headerlink" title="7. 洗牌"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4224/">7. 洗牌</a></h3><h4 id="问题描述-6"><a href="#问题描述-6" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><blockquote>
+<p>每一个数最多$9\times 4$的变化,利用<b><font color="Red">bfs</font></b>找出最短路径即可.</p>
+</blockquote>
+<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> MAXN 10010</span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> t<span class="token punctuation">,</span>start_<span class="token punctuation">,</span>end_<span class="token punctuation">;</span>
+<span class="token keyword">int</span> primes<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">,</span>is_prime<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">,</span>cnt<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//判断是否为素数</span>
+<span class="token keyword">int</span> vis<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//标记搜索是否使用过</span>
+
+<span class="token keyword">struct</span> node<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> num<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> step<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">get_primes</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span class="token comment" spellcheck="true">//欧拉筛</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>vis<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+            primes<span class="token punctuation">[</span>cnt<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>primes<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">&lt;=</span>n<span class="token operator">/</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            is_prime<span class="token punctuation">[</span>primes<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">%</span>primes<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">bfs</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    queue<span class="token operator">&lt;</span>node<span class="token operator">></span> q<span class="token punctuation">;</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>vis<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>vis<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>start_<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    vis<span class="token punctuation">[</span>start_<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>q<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        node temp<span class="token operator">=</span>q<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">.</span>num<span class="token operator">==</span>end_<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> temp<span class="token punctuation">.</span>step<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> x<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span>temp<span class="token punctuation">.</span>num<span class="token operator">/</span><span class="token number">1000</span><span class="token punctuation">,</span>temp<span class="token punctuation">.</span>num<span class="token operator">/</span><span class="token number">100</span><span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">,</span>temp<span class="token punctuation">.</span>num<span class="token operator">/</span><span class="token number">10</span><span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">,</span>temp<span class="token punctuation">.</span>num<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//分别存储千位、百位、十位、个位</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">3</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> tempnum<span class="token operator">=</span>x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//暂存该位</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span><span class="token number">9</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>tempnum<span class="token operator">!=</span>j<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>j<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//修改该位</span>
+                    <span class="token keyword">int</span> sum<span class="token operator">=</span><span class="token number">1000</span><span class="token operator">*</span>x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">100</span><span class="token operator">*</span>x<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">10</span><span class="token operator">*</span>x<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">+</span>x<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>is_prime<span class="token punctuation">[</span>sum<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>vis<span class="token punctuation">[</span>sum<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>sum<span class="token operator">>=</span><span class="token number">1000</span><span class="token operator">&amp;&amp;</span>sum<span class="token operator">&lt;=</span><span class="token number">9999</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">{</span>
+                        vis<span class="token punctuation">[</span>sum<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+                        q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>sum<span class="token punctuation">,</span>temp<span class="token punctuation">.</span>step<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>tempnum<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//复原该位</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">get_primes</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>start_<span class="token punctuation">,</span><span class="token operator">&amp;</span>end_<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token function">bfs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="7-洗牌"><a href="#7-洗牌" class="headerlink" title="7. 洗牌"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4224/">7. 洗牌</a></h3><h4 id="问题描述-6"><a href="#问题描述-6" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
+<p>给定两叠纸牌$S_1$和$S_2$，每叠恰好有$C$张牌。<br>每张牌的尺寸大小都完全相同，但是颜色可能不同。<br>下面介绍洗牌规则。<br>不妨设$S_1$中纸牌从上到下编号依次为 $a_1,a_2,…,a_C$，$S_2$ 中纸牌从上到下编号依次为$b_1,b_2,…,b_C$。<br>洗牌就是将这两叠牌交错堆叠在一起，形成一个拥有 $2C$张牌的新牌堆$S_{12}$。<br>新牌堆中的牌由上至下依次为 $a_1,b_1,a_2,b_2,…,a_C,b_C$。<br>可参考下图：<b><font color="Red">图床G了,恢复后再上传</font></b>.<br>然后，将牌堆从中间一分为二，下半部分是新的 $S_1$，上半部分是新的 $S_2$。<br>这样就可以继续进行洗牌操作获得新的$S_{12}$了。<br>给定$S_1$和$S_2$，请问至少需要进行多少轮洗牌操作方可获得指定牌堆$S_{12}$。</p>
+<h5 id="输入格式-6"><a href="#输入格式-6" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行包含一个整数$T$，表示共有$T$组测试数据。<br>每组数据第一行包含一个整数$C$。<br>第二行包含一个长度为$C$的由大写字母构成的字符串，其中第$i$个字母表示初始$S_1$中由底向上第$i$张牌的颜色。<br>第三行包含一个长度为$C$的由大写字母构成的字符串，其中第$i$个字母表示初始$S_2$中由底向上第$i$张牌的颜色。<br>第四行包含一个长度为$2C$的由大写字母构成的字符串，其中第$i$个字母表示目标$S_{12}$中由底向上第$i$张牌的颜色。</p>
+<h5 id="输出格式-6"><a href="#输出格式-6" class="headerlink" title="输出格式"></a>输出格式</h5><p>共$T$行，每行输出一组数据的结果，首先输出组别编号$i$（从$1$开始），然后输出所需要的最少洗牌次数。如果无法通过洗牌获得目标牌堆，则输出$−1$。</p>
+<h5 id="数据范围-6"><a href="#数据范围-6" class="headerlink" title="数据范围"></a>数据范围</h5><p>$1 \leqslant T \leqslant 1000$,<br>$1 \leqslant C \leqslant 100$.<br>卡牌最多有$8$种颜色，用大写字母$A∼H$表示，所以输入字符串中不会出现其他大写字母。</p>
+<h5 id="输入样例-6"><a href="#输入样例-6" class="headerlink" title="输入样例"></a>输入样例</h5><p>$2$<br>$4$<br>$AHAH$<br>$HAHA$<br>$HHAAAAHH$<br>$3$<br>$CDE$<br>$CDE$<br>$EEDDCC$</p>
+<h5 id="输出样例-6"><a href="#输出样例-6" class="headerlink" title="输出样例"></a>输出样例</h5><p>$1$ $2$<br>$2$ $-1$</p>
+</blockquote>
+<h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><p>此题为<b><font color="Red">模拟+bfs(可不用bfs)</font></b>,最多枚举$2C$次模拟操作,就可以知道能否得到该字符串.</p>
+<h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -1790,7 +1885,7 @@ string s1<span class="token punctuation">,</span>s2<span class="token punctuatio
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">32.5k</span>
+                        class="white-color">33.3k</span>
             
             
             
