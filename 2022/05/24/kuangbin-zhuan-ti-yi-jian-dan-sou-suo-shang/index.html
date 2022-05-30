@@ -434,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-27
+                    2022-05-30
                 </div>
                 
 
@@ -981,7 +981,7 @@ ll <span class="token function">bfs</span><span class="token punctuation">(</spa
 </code></pre>
 <hr>
 <h3 id="7-洗牌"><a href="#7-洗牌" class="headerlink" title="7. 洗牌"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4224/">7. 洗牌</a></h3><h4 id="问题描述-6"><a href="#问题描述-6" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
-<p>给定两叠纸牌$S_1$和$S_2$，每叠恰好有$C$张牌。<br>每张牌的尺寸大小都完全相同，但是颜色可能不同。<br>下面介绍洗牌规则。<br>不妨设$S_1$中纸牌从上到下编号依次为 $a_1,a_2,…,a_C$，$S_2$ 中纸牌从上到下编号依次为$b_1,b_2,…,b_C$。<br>洗牌就是将这两叠牌交错堆叠在一起，形成一个拥有 $2C$张牌的新牌堆$S_{12}$。<br>新牌堆中的牌由上至下依次为 $a_1,b_1,a_2,b_2,…,a_C,b_C$。<br>可参考下图：<b><font color="Red">图床G了,恢复后再上传</font></b>.<br>然后，将牌堆从中间一分为二，下半部分是新的 $S_1$，上半部分是新的 $S_2$。<br>这样就可以继续进行洗牌操作获得新的$S_{12}$了。<br>给定$S_1$和$S_2$，请问至少需要进行多少轮洗牌操作方可获得指定牌堆$S_{12}$。</p>
+<p>给定两叠纸牌$S_1$和$S_2$，每叠恰好有$C$张牌。<br>每张牌的尺寸大小都完全相同，但是颜色可能不同。<br>下面介绍洗牌规则。<br>不妨设$S_1$中纸牌从上到下编号依次为 $a_1,a_2,…,a_C$，$S_2$ 中纸牌从上到下编号依次为$b_1,b_2,…,b_C$。<br>洗牌就是将这两叠牌交错堆叠在一起，形成一个拥有 $2C$张牌的新牌堆$S_{12}$。<br>新牌堆中的牌由上至下依次为 $a_1,b_1,a_2,b_2,…,a_C,b_C$。<br>可参考下图：<br><img src="https://s2.loli.net/2022/05/30/mlOcVzBLi9GnTDA.png"><br>然后，将牌堆从中间一分为二，下半部分是新的 $S_1$，上半部分是新的 $S_2$。<br>这样就可以继续进行洗牌操作获得新的$S_{12}$了。<br>给定$S_1$和$S_2$，请问至少需要进行多少轮洗牌操作方可获得指定牌堆$S_{12}$。</p>
 <h5 id="输入格式-6"><a href="#输入格式-6" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行包含一个整数$T$，表示共有$T$组测试数据。<br>每组数据第一行包含一个整数$C$。<br>第二行包含一个长度为$C$的由大写字母构成的字符串，其中第$i$个字母表示初始$S_1$中由底向上第$i$张牌的颜色。<br>第三行包含一个长度为$C$的由大写字母构成的字符串，其中第$i$个字母表示初始$S_2$中由底向上第$i$张牌的颜色。<br>第四行包含一个长度为$2C$的由大写字母构成的字符串，其中第$i$个字母表示目标$S_{12}$中由底向上第$i$张牌的颜色。</p>
 <h5 id="输出格式-6"><a href="#输出格式-6" class="headerlink" title="输出格式"></a>输出格式</h5><p>共$T$行，每行输出一组数据的结果，首先输出组别编号$i$（从$1$开始），然后输出所需要的最少洗牌次数。如果无法通过洗牌获得目标牌堆，则输出$−1$。</p>
 <h5 id="数据范围-6"><a href="#数据范围-6" class="headerlink" title="数据范围"></a>数据范围</h5><p>$1 \leqslant T \leqslant 1000$,<br>$1 \leqslant C \leqslant 100$.<br>卡牌最多有$8$种颜色，用大写字母$A∼H$表示，所以输入字符串中不会出现其他大写字母。</p>
@@ -1885,7 +1885,7 @@ string s1<span class="token punctuation">,</span>s2<span class="token punctuatio
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.3k</span>
+                        class="white-color">34.6k</span>
             
             
             
