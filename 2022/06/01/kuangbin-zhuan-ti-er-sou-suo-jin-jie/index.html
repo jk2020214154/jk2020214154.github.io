@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库SQLServer实验前言, C++,算法,数据结构,ACM">
+    <meta name="keywords" content="kuangbin专题二搜索进阶, C++,算法,数据结构,ACM">
     <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库SQLServer实验前言 | 搁浅至云</title>
+    <title>kuangbin专题二搜索进阶 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -273,12 +273,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/06/lcnJ9OMVWIsSp7G.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/06/01/l2GS5OJIawXWgvo.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库SQLServer实验前言</h1>
+                    <h1 class="description center-align post-title">kuangbin专题二搜索进阶</h1>
                 </div>
             </div>
         </div>
@@ -398,8 +398,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">数据库基本操作</span>
+                            <a href="/tags/kuangbin%E4%B8%93%E9%A2%98/">
+                                <span class="chip bg-color">kuangbin专题</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/">
+                                <span class="chip bg-color">简单搜索</span>
                             </a>
                         
                     </div>
@@ -410,8 +414,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                ACM算法
                             </a>
                         
                     </div>
@@ -423,21 +427,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-01
+                    2022-06-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-08
+                    2022-06-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    352
+                    115
                 </div>
                 
 
@@ -464,82 +468,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-创建学生信息表Student"><a href="#1-创建学生信息表Student" class="headerlink" title="1 创建学生信息表Student"></a>1 创建学生信息表Student</h3><pre class=" language-SQL"><code class="language-SQL">Create table Student
-    (Sno char(10) primary key,
-     Sname char(20) unique,
-     Ssex char(2),
-     Sage smallint,
-     Sdept char(30)
-    )
-</code></pre>
-<h3 id="2-创建课程信息表Course"><a href="#2-创建课程信息表Course" class="headerlink" title="2 创建课程信息表Course"></a>2 创建课程信息表Course</h3><pre class=" language-SQL"><code class="language-SQL">Create table Course
-    (Cno char(4) primary key,
-     Cname char(40) NOT NULL,
-     Cpno char(4),
-     Credit smallint,
-     foreign key(Cpno) references Course(Cno)
-    )
-</code></pre>
-<h3 id="3-创建选课信息表SC"><a href="#3-创建选课信息表SC" class="headerlink" title="3 创建选课信息表SC"></a>3 创建选课信息表SC</h3><pre class=" language-SQL"><code class="language-SQL">Create table SC
-    (Sno char(10),
-     Cno char(4),
-     Grade smallint,
-     primary key(Sno,Cno),
-     foreign key(Sno) references Student(Sno),
-     foreign key(Cno) references Course(Cno) 
-    )
-</code></pre>
-<h3 id="4-删除选课信息表SC"><a href="#4-删除选课信息表SC" class="headerlink" title="4 删除选课信息表SC"></a>4 删除选课信息表SC</h3><pre class=" language-SQL"><code class="language-SQL">drop table SC
-</code></pre>
-<h3 id="5-录入学生信息表Student"><a href="#5-录入学生信息表Student" class="headerlink" title="5 录入学生信息表Student"></a>5 录入学生信息表Student</h3><pre class=" language-SQL"><code class="language-SQL">insert
-into Student
-Values  ('202001001','张小玲','女',19,'电子信息'),
-        ('202001008','张玲','女',20,'电子信息'),
-        ('202002001','张强','男',21,'计算机'),
-        ('202002003','张峰','男',21,'电子信息'),
-        ('202002005','刘梅','女',17,'计算机'),
-        ('201902001','王一','男',22,'计算机'),
-        ('201903005','郑丽','女',18,'网络工程'),
-        ('202101003','沈艳','女',19,'电子信息'),
-        ('202103001','赵丽红','女',20,'网络工程'),
-        ('202104001','李宏伟','男',19,'通信工程'),
-        ('202104005','刘景鹏','男',21,'通信工程')
-</code></pre>
-<h3 id="6-录入课程信息表Course"><a href="#6-录入课程信息表Course" class="headerlink" title="6 录入课程信息表Course"></a>6 录入课程信息表Course</h3><pre class=" language-SQL"><code class="language-SQL">insert
-into Course
-Values   ('1','数据库','5',4),
-         ('2','高等数学',NULL,2),
-         ('3','信息系统','1',4),
-         ('4','操作系统','6',3),
-         ('5','数据结构','7',4),
-         ('6','数据处理',NULL,2),
-         ('7','C语言','6',5)
-</code></pre>
-<h3 id="7-录入选课信息表SC"><a href="#7-录入选课信息表SC" class="headerlink" title="7  录入选课信息表SC"></a>7  录入选课信息表SC</h3><pre class=" language-SQL"><code class="language-SQL">insert
-into SC
-Values   ('202001001','1',NULL),
-         ('202001001','2',95),
-         ('202001001','4',NULL),
-         ('202001001','7',87),
-         ('202001008','4',65),
-         ('202001008','2',59),
-         ('202002001','3',63),
-         ('202002001','7',74),
-         ('202002001','2',84),
-         ('202002003','4',58),
-         ('202002003','2',76),
-         ('202002003','1',89),
-         ('202002005','3',77),
-         ('202002005','2',69),
-         ('201902001','5',83),
-         ('201902001','1',62),
-         ('201903005','3',43),
-         ('201903005','7',64),
-         ('202101003','4',87),
-         ('202104001','3',97),
-         ('202104001','5',65)
-</code></pre>
-
+                <h2 id="注意此处提供了链接"><a href="#注意此处提供了链接" class="headerlink" title="注意此处提供了链接"></a>注意此处提供了链接</h2><p><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/article/371">kuangbin专题总</a><br><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/65997">kuangbin专题2</a></p>
+<h3 id="1-八数码"><a href="#1-八数码" class="headerlink" title="1. 八数码"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/181/">1. 八数码</a></h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="2-八数码II"><a href="#2-八数码II" class="headerlink" title="2. 八数码II"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4231/">2. 八数码II</a></h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="3-哈密顿绕行世界问题"><a href="#3-哈密顿绕行世界问题" class="headerlink" title="3. 哈密顿绕行世界问题 "></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4232/">3. 哈密顿绕行世界问题 </a></h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="4-逃跑"><a href="#4-逃跑" class="headerlink" title="4. 逃跑"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4233/">4. 逃跑</a></h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="5-DNA序列"><a href="#5-DNA序列" class="headerlink" title="5. DNA序列"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4234/">5. DNA序列</a></h3><h4 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="6-噩梦"><a href="#6-噩梦" class="headerlink" title="6. 噩梦"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/179/">6. 噩梦</a></h3><h4 id="问题描述-5"><a href="#问题描述-5" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="7-A计划"><a href="#7-A计划" class="headerlink" title="7. A计划"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4236/">7. A计划</a></h3><h4 id="问题描述-6"><a href="#问题描述-6" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><hr>
+<h3 id="8-旅行"><a href="#8-旅行" class="headerlink" title="8. 旅行"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4237/">8. 旅行</a></h3><h4 id="问题描述-7"><a href="#问题描述-7" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="思路-7"><a href="#思路-7" class="headerlink" title="思路"></a>思路</h4><h4 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h4>
                 
             </div>
             <hr/>
@@ -565,7 +502,7 @@ Values   ('202001001','1',NULL),
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/04/01/shu-ju-ku-sqlserver-shi-yan-qian-yan/">https://liaoy0103.top/2022/04/01/shu-ju-ku-sqlserver-shi-yan-qian-yan/</a>
+                    <a href="https://liaoy0103.top/2022/06/01/kuangbin-zhuan-ti-er-sou-suo-jin-jie/">https://liaoy0103.top/2022/06/01/kuangbin-zhuan-ti-er-sou-suo-jin-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -603,8 +540,12 @@ Values   ('202001001','1',NULL),
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">数据库基本操作</span>
+                                <a href="/tags/kuangbin%E4%B8%93%E9%A2%98/">
+                                    <span class="chip bg-color">kuangbin专题</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/">
+                                    <span class="chip bg-color">简单搜索</span>
                                 </a>
                             
                         </div>
@@ -1052,49 +993,51 @@ Values   ('202001001','1',NULL),
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/03/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-1/">
+                <a href="/2022/06/01/kuangbin-zhuan-ti-er-sou-suo-jin-jie/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/06/uZ8RqkW4siXEDHb.jpg" class="responsive-img" alt="面向对象程序设计实验1">
+                        <img src="https://s2.loli.net/2022/06/01/l2GS5OJIawXWgvo.jpg" class="responsive-img" alt="kuangbin专题二搜索进阶">
                         
-                        <span class="card-title">面向对象程序设计实验1</span>
+                        <span class="card-title">kuangbin专题二搜索进阶</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                             
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    面向对象程序设计
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                    ACM算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">面向对象程序设计</span>
+                    <a href="/tags/kuangbin%E4%B8%93%E9%A2%98/">
+                        <span class="chip bg-color">kuangbin专题</span>
                     </a>
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/">
+                        <span class="chip bg-color">简单搜索</span>
                     </a>
                     
                 </div>
@@ -1108,12 +1051,12 @@ Values   ('202001001','1',NULL),
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/25/shi-yong-markdown-yu-fa-xie-wen-zhang/">
+                <a href="/2022/05/24/kuangbin-zhuan-ti-yi-jian-dan-sou-suo-xia/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/06/gjS2yh8oxJHspMX.jpg" class="responsive-img" alt="使用Markdown语法写文章">
+                        <img src="https://s2.loli.net/2022/05/24/HXplnsbgk4Em35A.jpg" class="responsive-img" alt="kuangbin专题一简单搜索(下)">
                         
-                        <span class="card-title">使用Markdown语法写文章</span>
+                        <span class="card-title">kuangbin专题一简单搜索(下)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1124,14 +1067,14 @@ Values   ('202001001','1',NULL),
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E5%88%9D%E6%AD%A5/" class="post-category">
-                                    博客初步
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                    ACM算法
                                 </a>
                             
                             
@@ -1141,12 +1084,12 @@ Values   ('202001001','1',NULL),
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/">
-                        <span class="chip bg-color">Markdown语法</span>
+                    <a href="/tags/kuangbin%E4%B8%93%E9%A2%98/">
+                        <span class="chip bg-color">kuangbin专题</span>
                     </a>
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-                        <span class="chip bg-color">博客文章</span>
+                    <a href="/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/">
+                        <span class="chip bg-color">简单搜索</span>
                     </a>
                     
                 </div>

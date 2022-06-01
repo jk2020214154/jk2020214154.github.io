@@ -6,7 +6,7 @@
   <link href="https://liaoy0103.top/atom.xml" rel="self"/>
   
   <link href="https://liaoy0103.top/"/>
-  <updated>2022-05-31T12:41:48.548Z</updated>
+  <updated>2022-06-01T12:12:49.453Z</updated>
   <id>https://liaoy0103.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kuangbin专题二搜索进阶</title>
+    <link href="https://liaoy0103.top/2022/06/01/kuangbin-zhuan-ti-er-sou-suo-jin-jie/"/>
+    <id>https://liaoy0103.top/2022/06/01/kuangbin-zhuan-ti-er-sou-suo-jin-jie/</id>
+    <published>2022-06-01T12:06:33.000Z</published>
+    <updated>2022-06-01T12:12:49.453Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="ACM算法" scheme="https://liaoy0103.top/categories/ACM%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="kuangbin专题" scheme="https://liaoy0103.top/tags/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="简单搜索" scheme="https://liaoy0103.top/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>kuangbin专题一简单搜索(下)</title>
@@ -498,33 +525,6 @@
     <id>https://liaoy0103.top/2022/04/12/di-shi-san-jie-lan-qiao-bei-sheng-sai-c-b-zu-bu-ti-xia/</id>
     <published>2022-04-12T07:34:38.000Z</published>
     <updated>2022-05-06T01:53:54.078Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="ACM算法" scheme="https://liaoy0103.top/categories/ACM%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="补题" scheme="https://liaoy0103.top/tags/%E8%A1%A5%E9%A2%98/"/>
-    
-    <category term="蓝桥杯" scheme="https://liaoy0103.top/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第十三届蓝桥杯省赛C++B组补题(上)</title>
-    <link href="https://liaoy0103.top/2022/04/12/di-shi-san-jie-lan-qiao-bei-sheng-sai-c-b-zu-bu-ti-shang/"/>
-    <id>https://liaoy0103.top/2022/04/12/di-shi-san-jie-lan-qiao-bei-sheng-sai-c-b-zu-bu-ti-shang/</id>
-    <published>2022-04-12T07:31:14.000Z</published>
-    <updated>2022-04-28T11:22:20.283Z</updated>
     
     
       
