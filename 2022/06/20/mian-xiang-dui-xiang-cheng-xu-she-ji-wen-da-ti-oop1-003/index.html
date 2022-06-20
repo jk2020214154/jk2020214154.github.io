@@ -482,13 +482,13 @@
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li><p>在输入时，从键盘输入的数据先放在<b><font color="red">键盘缓冲区</font></b>中，当按<strong>回车键</strong>时，键盘缓冲区中的数据输入到程序中的<b><font color="Orange">输入缓冲区</font></b>，形成$cin$流，然后用<u><strong>流提取运算符</strong></u><code>&gt;&gt;</code>从<b><font color="Orange">输入缓冲区</font></b>中提取数据送给程序中的<b><font color="Blue">有关变量</font></b>。</p>
+<li><p>在<strong>输入</strong>时，从键盘输入的数据先放在<b><font color="red">键盘缓冲区</font></b>中，当按<strong>回车键</strong>时，键盘缓冲区中的数据输入到程序中的<b><font color="Orange">输入缓冲区</font></b>，形成$cin$流，然后用<u><strong>流提取运算符</strong></u><code>&gt;&gt;</code>从<b><font color="Orange">输入缓冲区</font></b>中提取数据送给程序中的<b><font color="Blue">有关变量</font></b>。</p>
 </li>
-<li><p>当用$cout$和<u><strong>流插入运算符</strong></u><code>&lt;&lt;</code>向显示器输出数据时，先将这些数据送到程序中的<b><font color="DarkGreen">输出缓冲区</font></b>保存，直到缓冲区<strong>满了或遇到</strong>$endl$，就将缓冲区中的全部数据送到<b><font color="Purple">显示器</font></b>显示出来。</p>
+<li><p>当用$cout$和<u><strong>流插入运算符</strong></u><code>&lt;&lt;</code>向显示器<strong>输出</strong>数据时，先将这些数据送到程序中的<b><font color="DarkGreen">输出缓冲区</font></b>保存，直到缓冲区<strong>满了或遇到</strong>$endl$，就将缓冲区中的全部数据送到<b><font color="Purple">显示器</font></b>显示出来。</p>
 </li>
 </ul>
-<h4 id="2-阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）"><a href="#2-阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）" class="headerlink" title="2. 阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）"></a>2. 阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）</h4><p>传值: <font color="Red">实参用变量名（或常数），形参用变量名</font></p>
-<p>传值调用: 是单向的，实参把值拷贝一份给形参，形参值的改变不会影响实参</p>
+<h4 id="2-阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）"><a href="#2-阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）" class="headerlink" title="2. 阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）"></a>2. 阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）</h4><p><strong>传值</strong>: <font color="Red">实参用变量名（或常数），形参用变量名</font></p>
+<p><strong>传值调用</strong>: 是单向的，实参把值拷贝一份给形参，形参值的改变不会影响实参</p>
 <h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
@@ -514,9 +514,9 @@
 i<span class="token operator">=</span><span class="token number">2</span> j<span class="token operator">=</span><span class="token number">5</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
-<li>传指针: <font color="Blue">实参用地址，形参用指针</font></li>
+<li><strong>传指针</strong>: <font color="Blue">实参用地址，形参用指针</font></li>
 </ul>
-<p>传址调用：是双向的，把实参的地址传给形参，形参就指向实参变量，因此形参的改变会影响实参</p>
+<p><strong>传址调用</strong>：是双向的，把实参的地址传给形参，形参就指向实参变量，因此形参的改变会影响实参</p>
 <h5 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h5><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
@@ -542,9 +542,9 @@ i<span class="token operator">=</span><span class="token number">2</span> j<span
 i<span class="token operator">=</span><span class="token number">5</span> j<span class="token operator">=</span><span class="token number">2</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
-<li>传引用: <font color="DarkGreen">实参用变量名，形参用引用</font></li>
+<li><strong>传引用</strong>: <font color="DarkGreen">实参用变量名，形参用引用</font></li>
 </ul>
-<p>引用调用：形参是实参的别名，形参的改变也会影响实参，注意，实参只能用变量名，不能用常量</p>
+<p><strong>引用调用</strong>：形参是实参的别名，形参的改变也会影响实参，注意，实参只能用变量名，不能用常量</p>
 <h5 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h5><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
@@ -570,16 +570,16 @@ i<span class="token operator">=</span><span class="token number">5</span> j<span
 i<span class="token operator">=</span><span class="token number">5</span> j<span class="token operator">=</span><span class="token number">2</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
-<li>效率问题:在内置类型当中三种传递方式的效率上都差不多；在自定义类型当中，<strong>传引用</strong>的更高效一些，因为它没有对形参进行一次拷贝</li>
+<li><strong>效率问题</strong>:在内置类型当中三种传递方式的效率上都差不多；在自定义类型当中，<strong>传引用</strong>的更高效一些，因为它没有对形参进行一次拷贝</li>
 </ul>
 <h4 id="3-什么是内联函数？为什么要使用内联函数？"><a href="#3-什么是内联函数？为什么要使用内联函数？" class="headerlink" title="3. 什么是内联函数？为什么要使用内联函数？"></a>3. 什么是内联函数？为什么要使用内联函数？</h4><ul>
-<li>定义: 当编译器发现某段代码在调用一个内联函数时，它不是去调用该函数，而是将该函数的代码，整段插入到当前位置。</li>
-<li>原因: 省去了调用的过程，加快程序运行速度(<b><font color="red">实现代码的重用,提高开发效率</font></b>),但是可能使得程序的体积变大。</li>
+<li><strong>定义</strong>: 当编译器发现某段代码在调用一个内联函数时，它不是去调用该函数，而是将该函数的代码，整段插入到当前位置。</li>
+<li><strong>原因</strong>: 省去了调用的过程，加快程序运行速度(<b><font color="red">实现代码的重用,提高开发效率</font></b>),但是可能使得程序的体积变大。</li>
 </ul>
 <h4 id="4-什么是类的前向声明？使用类的前向声明时，要注意什么？"><a href="#4-什么是类的前向声明？使用类的前向声明时，要注意什么？" class="headerlink" title="4. 什么是类的前向声明？使用类的前向声明时，要注意什么？"></a>4. 什么是类的前向声明？使用类的前向声明时，要注意什么？</h4><ul>
-<li><p>类的前向声明: 是在引用未定义的类之前，声明该类，使编译器知道是一个类名。当程序中使用这个类名时，编译器就不会认为是错误，而类的完整定义可以在程序的其他地方。</p>
+<li><p><strong>类的前向声明</strong>: 是在引用未定义的类之前，声明该类，使编译器知道是一个类名。当程序中使用这个类名时，编译器就不会认为是错误，而类的完整定义可以在程序的其他地方。</p>
 </li>
-<li><p>注意:</p>
+<li><p><strong>注意事项</strong>:</p>
 </li>
 </ul>
 <ol>
@@ -599,12 +599,12 @@ i<span class="token operator">=</span><span class="token number">5</span> j<span
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="5-什么是先验条件-Precondition-，什么是后置条件-Postcondition-？"><a href="#5-什么是先验条件-Precondition-，什么是后置条件-Postcondition-？" class="headerlink" title="5. 什么是先验条件(Precondition)，什么是后置条件(Postcondition)？"></a>5. 什么是先验条件(Precondition)，什么是后置条件(Postcondition)？</h4><ul>
-<li>先验条件($Precondition$): 针对方法($method$)，它规定了在<b><font color="red">调用该方法之前</font></b>必须为真的条件</li>
-<li>后置条件($Postcondition$): 针对方法($method$)，它规定了<b><font color="DarkGreen">方法顺利执行完毕之后</font></b>必须为真的条件</li>
+<li><strong>先验条件($Precondition$)</strong>: 针对方法($method$)，它规定了在<b><font color="red">调用该方法之前</font></b>必须为真的条件</li>
+<li><strong>后置条件($Postcondition$)</strong>: 针对方法($method$)，它规定了<b><font color="DarkGreen">方法顺利执行完毕之后</font></b>必须为真的条件</li>
 </ul>
 <h4 id="6-什么是名称空间-namespace-？它的主要作用是什么？要使用一个名称空间中声明的标识符，方式有哪些？"><a href="#6-什么是名称空间-namespace-？它的主要作用是什么？要使用一个名称空间中声明的标识符，方式有哪些？" class="headerlink" title="6. 什么是名称空间(namespace)？它的主要作用是什么？要使用一个名称空间中声明的标识符，方式有哪些？"></a>6. 什么是名称空间(namespace)？它的主要作用是什么？要使用一个名称空间中声明的标识符，方式有哪些？</h4><ul>
-<li>定义: 名称空间通过定义一种新的声明区域来创建命名的名称空间，一个名称空间中的实体不会和另外一个名称空间中的同名实体冲突.</li>
-<li>作用: 处理程序中常见的<b><font color="red">同名冲突</font></b></li>
+<li><strong>定义</strong>: 名称空间通过定义一种新的声明区域来创建命名的名称空间，一个名称空间中的实体不会和另外一个名称空间中的同名实体冲突.</li>
+<li><strong>作用</strong>: 处理程序中常见的<b><font color="red">同名冲突</font></b></li>
 </ul>
 <h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
@@ -632,7 +632,7 @@ i<span class="token operator">=</span><span class="token number">5</span> j<span
 owl<span class="token operator">::</span>a<span class="token operator">=</span> <span class="token number">3</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
-<li>方法</li>
+<li><strong>方法</strong></li>
 </ul>
 <ol>
 <li>直接使用域解析符<code>::</code>.<pre class="line-numbers language-cpp"><code class="language-cpp">mfc<span class="token operator">::</span>a<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span>
@@ -656,12 +656,12 @@ a<span class="token operator">=</span><span class="token number">5</span><span c
 <span class="token comment" spellcheck="true">//...直接使用mfc中的成员(可不用域解析符)</span>
 owl<span class="token operator">::</span>a<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="7-什么是重载-Overloading-，解释并举例说明？能否根据返回值不同，对函数进行重载，为什么？"><a href="#7-什么是重载-Overloading-，解释并举例说明？能否根据返回值不同，对函数进行重载，为什么？" class="headerlink" title="7. 什么是重载(Overloading)，解释并举例说明？能否根据返回值不同，对函数进行重载，为什么？"></a>7. 什么是重载(Overloading)，解释并举例说明？能否根据返回值不同，对函数进行重载，为什么？</h4><p>重载: 一个类中定义了多个方法名相同,而他们的<b><font color="red">参数的数量不同或数量相同而类型和次序不同</font></b>,则称为方法的重载($Overloading$)</p>
+<h4 id="7-什么是重载-Overloading-，解释并举例说明？能否根据返回值不同，对函数进行重载，为什么？"><a href="#7-什么是重载-Overloading-，解释并举例说明？能否根据返回值不同，对函数进行重载，为什么？" class="headerlink" title="7. 什么是重载(Overloading)，解释并举例说明？能否根据返回值不同，对函数进行重载，为什么？"></a>7. 什么是重载(Overloading)，解释并举例说明？能否根据返回值不同，对函数进行重载，为什么？</h4><p><strong>重载</strong>: 一个类中定义了多个方法名相同,而他们的<b><font color="red">参数的数量不同或数量相同而类型和次序不同</font></b>,则称为方法的重载($Overloading$)</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span>string st<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>原因: 不能根据返回值不同，对函数进行重载,容易产生歧义,当$main$函数调用<code>Fun(1,2)</code>,编译器不知道选择哪个函数进行调用</p>
+<p><strong>原因</strong>: 不能根据返回值不同，对函数进行重载,容易产生歧义,当$main$函数调用<code>Fun(1,2)</code>,编译器不知道选择哪个函数进行调用</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">Fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">long</span> <span class="token function">Fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -675,8 +675,8 @@ owl<span class="token operator">::</span>a<span class="token operator">=</span><
 
 <span class="token macro property">#<span class="token directive keyword">endif</span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="9-dynamic-cast的作用是什么？试举例说明"><a href="#9-dynamic-cast的作用是什么？试举例说明" class="headerlink" title="9. dynamic-cast的作用是什么？试举例说明"></a>9. dynamic-cast的作用是什么？试举例说明</h4><p>作用: 将基类的地址转换为派生类的地址，如果类型匹配则转换成功，否则转换失败，返回空地址。</p>
-<p>转换原则:</p>
+<h4 id="9-dynamic-cast的作用是什么？试举例说明"><a href="#9-dynamic-cast的作用是什么？试举例说明" class="headerlink" title="9. dynamic-cast的作用是什么？试举例说明"></a>9. dynamic-cast的作用是什么？试举例说明</h4><p><strong>作用</strong>: 将基类的地址转换为派生类的地址，如果类型匹配则转换成功，否则转换失败，返回空地址。</p>
+<p><strong>转换原则</strong>:</p>
 <ul>
 <li>如果$p$是一个指向$B$类型的对象的指针，则转换成功；</li>
 <li>如果$p$不是一个指向$B$类型的对象的指针，则转换失败，返回一个空地址.</li>
@@ -1241,17 +1241,16 @@ owl<span class="token operator">::</span>a<span class="token operator">=</span><
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/06/20/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop1-003/">
+                <a href="/2022/06/20/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop4-mian-xiang-dui-xiang-gai-lun/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/06/20/1VEI3csvHKX2feW.jpg" class="responsive-img" alt="面向对象程序设计问答题OOP1-003">
+                        <img src="https://s2.loli.net/2022/06/20/uldzvFZmKo97sAC.jpg" class="responsive-img" alt="面向对象程序设计问答题OOP4面向对象概论">
                         
-                        <span class="card-title">面向对象程序设计问答题OOP1-003</span>
+                        <span class="card-title">面向对象程序设计问答题OOP4面向对象概论</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1261,9 +1260,9 @@ owl<span class="token operator">::</span>a<span class="token operator">=</span><
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1276,7 +1275,6 @@ owl<span class="token operator">::</span>a<span class="token operator">=</span><
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1568,7 +1566,7 @@ owl<span class="token operator">::</span>a<span class="token operator">=</span><
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">39.9k</span>
+                        class="white-color">40.6k</span>
             
             
             
