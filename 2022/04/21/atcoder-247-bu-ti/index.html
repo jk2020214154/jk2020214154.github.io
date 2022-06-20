@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -474,7 +475,7 @@
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">模拟</font></b>,结果为$’0’+substr(0,3)$.</p>
 </blockquote>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : A_-_Move_Right.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -523,7 +524,7 @@
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"0"</span><span class="token operator">+</span>s<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="B-Unique-Nicknames"><a href="#B-Unique-Nicknames" class="headerlink" title="B - Unique Nicknames"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/B">B - Unique Nicknames</a></h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给定$n$个人,每个人都有一个姓氏$s_i$和名字$t_i$.<br>现在考虑给这$n$个人取昵称,第$i$个人的昵称为$a_i$,每个$a_i$应满足以下条件:</p>
@@ -536,7 +537,7 @@
 <h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p>由于数据范围较小,可<b><font color="Red">暴力枚举</font></b>,保证名字与名字之间不能相同,同时姓氏与名字之间也不相同.</p>
 </blockquote>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : B_-_Unique_Nicknames.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -599,7 +600,7 @@ string s1<span class="token punctuation">[</span>MAXN<span class="token punctuat
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Yes"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="C-1-2-1-3-1-2-1"><a href="#C-1-2-1-3-1-2-1" class="headerlink" title="C - 1 2 1 3 1 2 1"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/C">C - 1 2 1 3 1 2 1</a></h3><h4 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给定序列$S_n$如下:</p>
@@ -612,7 +613,7 @@ string s1<span class="token punctuation">[</span>MAXN<span class="token punctuat
 <h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">递归打印</font></b>.</p>
 </blockquote>
-<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : C_-_1_2_1_3_1_2_1.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -674,7 +675,7 @@ string s1<span class="token punctuation">[</span>MAXN<span class="token punctuat
     <span class="token function">dfs</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="D-Cylinder"><a href="#D-Cylinder" class="headerlink" title="D - Cylinder"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/D">D - Cylinder</a></h3><h4 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给你一个水平圆柱(容器),给你$Q$次询问,每次操作有以下两种情况:</p>
@@ -686,7 +687,7 @@ string s1<span class="token punctuation">[</span>MAXN<span class="token punctuat
 <h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">双端队列模拟</font></b>.如果操作是$1$,将$x$和$c$放入双端队列的尾部,如果操作是$2$,将头部弹出直至$c$为$0$,去判断取出的个数$c$与头部元素的$c’$的关系.<br>注意开$long\ long$.</p>
 </blockquote>
-<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : D_-_Cylinder.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -770,7 +771,7 @@ deque<span class="token operator">&lt;</span>PLL<span class="token operator">></
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="E-Max-Min"><a href="#E-Max-Min" class="headerlink" title="E - Max Min"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/E">E - Max Min</a></h3><h4 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给定长度为$N$的序列$A$和两个整数$X,Y$,找出区间对$[L,R]$满足以下条件的对数:</p>
@@ -782,7 +783,7 @@ deque<span class="token operator">&lt;</span>PLL<span class="token operator">></
 <h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">尺取</font></b>.对于那部分数$p$($p&gt;X$或者$p&lt;Y$)不在满足的区间$[L,R]$之间,可将其作为分割点,将可行的区间划分出来.例如:$A=(4,2,5,4,3,4,2),X=4,Y=2$,可划分为$(4,2),(4,3,4,2)$两大块,寻找既包含$X$和$Y$的区间数.</p>
 </blockquote>
-<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : E_-_Max_Min.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -866,7 +867,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
     cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="F-Cards"><a href="#F-Cards" class="headerlink" title="F - Cards"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/489306#problem/F">F - Cards</a></h3><h4 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给你$n$张卡片,每张卡片的正反面都有一个数字$p_i$和$q_i$,正反面各构成$1-n$的排列(两个排列可能相同),从这$n$张卡片中选出若干张,满足选出的卡片可以表示$1-n$的所有数字,问满足条件的方案数,结果对$998244353$求余.</p>
@@ -879,7 +880,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
 </ul>
 <p>此时的$G_i=dp[i][1][1]+dp[i][0][1]+dp[i][1][0]$.</p>
 </blockquote>
-<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : F_-_Cards.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -975,7 +976,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
     cout <span class="token operator">&lt;&lt;</span> ans <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1814,7 +1815,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

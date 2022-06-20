@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -488,7 +489,7 @@
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><ul>
 <li>方法一 :枚举<b><font color="Blue">每一个元素</font></b></li>
 </ul>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 
@@ -537,11 +538,11 @@
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>方法二: 枚举<b><font color="Orange">每一行(或每一列)</font></b>.</li>
 </ul>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 
@@ -591,7 +592,7 @@
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="2-地牢大师"><a href="#2-地牢大师" class="headerlink" title="2. 地牢大师"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1098/">2. 地牢大师</a></h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>你现在被困在一个三维地牢中，需要找到最快脱离的出路！<br>地牢由若干个单位立方体组成，其中部分不含岩石障碍可以直接通过，部分包含岩石障碍无法通过。<br>向北，向南，向东，向西，向上或向下移动一个单元距离均需要一分钟。<br>你不能沿对角线移动，迷宫边界都是坚硬的岩石，你不能走出边界范围。<br>请问，你有可能逃脱吗？<br>如果可以，需要多长时间？</p>
@@ -606,7 +607,7 @@
 <h5 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例"></a>输出样例</h5><p>Escaped in 11 minute(s).<br>Trapped!</p>
 </blockquote>
 <h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p><b><font color="Red">三维bfs</font></b>,注意移动方向为上下前后左右$6$个方向.</p>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -684,7 +685,7 @@ node start_<span class="token punctuation">,</span>end_<span class="token punctu
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="3-抓住那头牛"><a href="#3-抓住那头牛" class="headerlink" title="3. 抓住那头牛"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1102/">3. 抓住那头牛</a></h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>农夫知道一头牛的位置，想要抓住它。<br>农夫和牛都位于数轴上，农夫起始位于点$N$，牛位于点$K$。<br>农夫有两种移动方式：</p>
@@ -701,7 +702,7 @@ node start_<span class="token punctuation">,</span>end_<span class="token punctu
 <h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">经典bfs</font></b>,一维搜索,此处可不用判断农夫与牛的位置关系.</p>
 </blockquote>
-<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -751,7 +752,7 @@ node start_<span class="token punctuation">,</span>end_<span class="token punctu
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token function">bfs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="4-翻转"><a href="#4-翻转" class="headerlink" title="4. 翻转"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4221/">4. 翻转</a></h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>给定一个 $M×N$ 的 $01$ 矩阵。<br>你需要选择其中一些元素，并对选择的元素进行翻转操作。<br>翻转操作是指将所选元素以及与其上下左右相邻的元素（如果有）进行翻转（$0$ 变 $1$，$1$ 变 $0$）。<br>我们希望最终矩阵变为一个全 $0$ 矩阵，并且选择进行翻转操作的元素数量尽可能少。<br>输出最佳翻转方案。</p>
@@ -762,7 +763,7 @@ node start_<span class="token punctuation">,</span>end_<span class="token punctu
 <h5 id="输出样例-3"><a href="#输出样例-3" class="headerlink" title="输出样例"></a>输出样例</h5><p>$0$ $0$ $0$ $0$<br>$1$ $0$ $0$ $1$<br>$1$ $0$ $0$ $1$<br>$0$ $0$ $0$ $0$</p>
 </blockquote>
 <h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><p>思想同<a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/97/">费解的开关</a>  <a target="_blank" rel="noopener" href="https://www.acwing.com/activity/content/code/content/2876048/">费解的开关代码</a><br>先枚举第一行的所有状态(用二进制表示),然后逐层将当前位置$(x,y)$为$1$的将$(x+1,y)$进行翻转(避免后效性),最后判断最后一行是否均为0,满足条件更新最小翻转次数及翻转情况.</p>
-<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 
@@ -833,7 +834,7 @@ node start_<span class="token punctuation">,</span>end_<span class="token punctu
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="5-找倍数"><a href="#5-找倍数" class="headerlink" title="5. 找倍数"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4222/">5. 找倍数</a></h3><h4 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>给定一个正整数$n$，请你找到一个它的非零倍数$m$。<br>要求$m$中只包含数字$0$或$1$，并且总位数不超过 $100$位。</p>
@@ -846,7 +847,7 @@ node start_<span class="token punctuation">,</span>end_<span class="token punctu
 <h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">bfs的思想</font></b>,初始让$1$放入队列,每次取出队头$x$,判断是否满足$x%n==0$,不满足将$10\times x$和$10 \times x+1$放入队列中.</p>
 </blockquote>
-<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -883,7 +884,7 @@ ll <span class="token function">bfs</span><span class="token punctuation">(</spa
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="6-质数路径"><a href="#6-质数路径" class="headerlink" title="6. 质数路径"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4223/">6. 质数路径</a></h3><h4 id="问题描述-5"><a href="#问题描述-5" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>给定两个四位质数$A$和$B$，你需要通过最少的操作次数将$A$变为$B$。<br>每次操作只能改变当前数的其中一位数字，并且每次操作过后，当前数必须仍然是一个质数。<br>例如，将$1033$变为$8179$，最少需要进行$6$次操作，具体操作为：<br><code>1033 -&gt; 1733 -&gt; 3733 -&gt; 3739 -&gt; 3779 -&gt; 8779 -&gt; 8179</code><br>请计算并输出所需要的最少操作次数。</p>
@@ -896,7 +897,7 @@ ll <span class="token function">bfs</span><span class="token punctuation">(</spa
 <h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p>每一个数最多$9\times 4$的变化,利用<b><font color="Red">bfs</font></b>找出最短路径即可.</p>
 </blockquote>
-<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
@@ -978,7 +979,7 @@ ll <span class="token function">bfs</span><span class="token punctuation">(</spa
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="7-洗牌"><a href="#7-洗牌" class="headerlink" title="7. 洗牌"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4224/">7. 洗牌</a></h3><h4 id="问题描述-6"><a href="#问题描述-6" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>给定两叠纸牌$S_1$和$S_2$，每叠恰好有$C$张牌。<br>每张牌的尺寸大小都完全相同，但是颜色可能不同。<br>下面介绍洗牌规则。<br>不妨设$S_1$中纸牌从上到下编号依次为 $a_1,a_2,…,a_C$，$S_2$ 中纸牌从上到下编号依次为$b_1,b_2,…,b_C$。<br>洗牌就是将这两叠牌交错堆叠在一起，形成一个拥有 $2C$张牌的新牌堆$S_{12}$。<br>新牌堆中的牌由上至下依次为 $a_1,b_1,a_2,b_2,…,a_C,b_C$。<br>可参考下图：<br><img src="https://s2.loli.net/2022/05/30/mlOcVzBLi9GnTDA.png"><br>然后，将牌堆从中间一分为二，下半部分是新的 $S_1$，上半部分是新的 $S_2$。<br>这样就可以继续进行洗牌操作获得新的$S_{12}$了。<br>给定$S_1$和$S_2$，请问至少需要进行多少轮洗牌操作方可获得指定牌堆$S_{12}$。</p>
@@ -989,7 +990,7 @@ ll <span class="token function">bfs</span><span class="token punctuation">(</spa
 <h5 id="输出样例-6"><a href="#输出样例-6" class="headerlink" title="输出样例"></a>输出样例</h5><p>$1$ $2$<br>$2$ $-1$</p>
 </blockquote>
 <h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><p>此题为<b><font color="Red">模拟+bfs(可不用bfs)</font></b>,最多枚举$2C$次模拟操作,就可以知道能否得到该字符串.</p>
-<h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -1042,7 +1043,7 @@ string s1<span class="token punctuation">,</span>s2<span class="token punctuatio
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1885,7 +1886,7 @@ string s1<span class="token punctuation">,</span>s2<span class="token punctuatio
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

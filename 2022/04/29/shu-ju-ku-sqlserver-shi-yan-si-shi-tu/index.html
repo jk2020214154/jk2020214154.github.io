@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -472,49 +473,49 @@
 <h3 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h3><h4 id="1-定义视图"><a href="#1-定义视图" class="headerlink" title="(1).定义视图"></a>(1).定义视图</h4><h5 id="建立视图"><a href="#建立视图" class="headerlink" title="建立视图"></a>建立视图</h5><ul>
 <li>建立数学系学生的视图</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">create view Math_Student
+<pre class="line-numbers language-SQL"><code class="language-SQL">create view Math_Student
 as
 select Sno 学号,Sname 姓名,Sage 年龄,Ssex 性别 from Student
 where Sdept='数学'
 --先执行上面语句,再执行最后语句
 select * from Math_Student
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>建立学生的学号$(Sno)$、姓名$(Sname)$、选修课程名$(Cname)$及成绩$(Grade)$的视图.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">create view Student_Grade
+<pre class="line-numbers language-SQL"><code class="language-SQL">create view Student_Grade
 as
 select Sc.Sno 学号,Sname 姓名,Cname 课程名,Grade 成绩 from Student,Course,Sc
 where Student.Sno=Sc.Sno and Course.Cno=Sc.cno
 --先执行上面语句,再执行最后语句
 select * from Student_Grade
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>定义一个反映学生出生年份的视图.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">create view Birth_year
+<pre class="line-numbers language-SQL"><code class="language-SQL">create view Birth_year
 as
 select Sno 学号,Sname 姓名,DateName(year,GetDate())-Sage 出生年份 from Student
 --先执行上面语句,再执行最后语句
 select * from Birth_year
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h5 id="删除视图"><a href="#删除视图" class="headerlink" title="删除视图"></a>删除视图</h5><ul>
 <li>删除反映学生出生年份的视图.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">drop view Birth_year
-</code></pre>
+<pre class="line-numbers language-SQL"><code class="language-SQL">drop view Birth_year
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="2-查询视图"><a href="#2-查询视图" class="headerlink" title="(2).查询视图"></a>(2).查询视图</h4><ul>
 <li>在数学系的学生视图中找出年龄$(Sage)$小于$20$岁的学生姓名$(Sname)$和年龄$(Sage)$.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">select 姓名,年龄 from Math_Student
+<pre class="line-numbers language-SQL"><code class="language-SQL">select 姓名,年龄 from Math_Student
 where 年龄<20
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li>在创建的第二个视图中查询成绩在$85$分以上的学生学号$(Sno)$、姓名$(Sname)$和课程名称$(Cname)$.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">select 学号,姓名,课程名 from Student_Grade
+<pre class="line-numbers language-SQL"><code class="language-SQL">select 学号,姓名,课程名 from Student_Grade
 where 成绩>=85
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1353,7 +1354,7 @@ where 成绩>=85
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

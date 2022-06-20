@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -483,7 +484,7 @@
 <h5 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h5><p>$6$<br>FILL(2)<br>POUR(2,1)<br>DROP(1)<br>POUR(2,1)<br>FILL(2)<br>POUR(2,1)</p>
 </blockquote>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>基于<b><font color="red">bfs</font></b>的思想,将两个杯子分别看作坐标系中的$x$和$y$,去跑bfs即可,此时无非就6种情况,倒满$A$(来源于$B$或外界倒满),倒空$A$,倒满$B$(来源于$A$或外界倒满),倒空$B$.</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -546,7 +547,7 @@ string res<span class="token punctuation">[</span><span class="token number">6</
     <span class="token function">bfs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="9-点火游戏"><a href="#9-点火游戏" class="headerlink" title="9. 点火游戏"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4226/">9. 点火游戏</a></h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>给定一个 $N$ 行 $M$ 列的方格矩阵。<br>其中一部分方格是草地，其余部分是空地。<br>草地能够被燃烧，空地不会。<br>当某个草地在 $t$ 时刻被点燃时，其上下左右四个方向的相邻方格中的<strong>草地方格</strong>也会在 $t+1$ 时刻被点燃。<br>注意，空地方格无论如何都不可能被点燃。<br>现在，你可以选择最多两个草地，将它们点燃。<br>请你计算，使得所有草地都被点燃所需花费的最少时间。</p>
@@ -559,7 +560,7 @@ string res<span class="token punctuation">[</span><span class="token number">6</
 <h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p>经典的<b><font color="red">bfs</font></b>问题,此题可暴力枚举两个草地的情况(可能存在一个草堆的情况,在跑两重循环第二层应从$i$开始),无终止条件,在$bfs$跑完后判断当前燃烧的草堆的个数是否与所有的草堆个数相等,返回最长的时间,并每次取最小值.</p>
 </blockquote>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
@@ -642,7 +643,7 @@ string res<span class="token punctuation">[</span><span class="token number">6</
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="10-起火迷宫"><a href="#10-起火迷宫" class="headerlink" title="10. 起火迷宫"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4227/">10. 起火迷宫</a></h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>一个迷宫可以看作一个 $R$ 行 $C$ 列的方格矩阵。<br>其中一些方格是空地，用 <code>.</code> 表示，其他方格是障碍，用 <code>#</code> 表示。<br>开始时，乔位于一块空地之中。<br>迷宫中一些空地已经起火了，幸运的是火还没有蔓延至乔所在的位置。<br>为了避免被火烧伤，乔需要尽快逃离迷宫。<br>已知，乔每单位时间只能沿上下左右四个方向前进一格距离，并且在前进过程中，他不能进入障碍方格。<br>火每单位时间都会蔓延至其上下左右四个方向的相邻空地，但是火也会被障碍阻挡。<br>如果一个方格已经起火或者会在乔进入方格的那一时刻恰好起火，则该方格很危险，乔不能进入。<br>当乔进入到任意一个位于边界的空地方格时，他都可以再花费一单位时间，直接逃离迷宫。<br>请问，乔想要逃离迷宫，最少需要花费的时间。</p>
@@ -661,7 +662,7 @@ string res<span class="token punctuation">[</span><span class="token number">6</
 <h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p>基于<b><font color="red">bfs思想</font></b>,先把火的蔓延情况跑一遍$bfs$,然后把人(注意考虑他到达边界的情况和他能走的情况必然在火蔓延之前,即$t_{人}+1 &lt; t_{火}$)的行走情况跑一遍$bfs$.</p>
 </blockquote>
-<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -763,19 +764,19 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="11-迷宫问题"><a href="#11-迷宫问题" class="headerlink" title="11. 迷宫问题"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/description/1078/">11. 迷宫问题</a></h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>给定一个 $n \times n$ 的二维数组，如下所示：</p>
 </blockquote>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">int</span> maze<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> maze<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
 <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>它表示一个迷宫，其中的$1$表示墙壁，$0$表示可以走的路，只能横着走或竖着走，不能斜着走，要求编程序找出从左上角到右下角的最短路线。<br>数据保证至少存在一条从左上角走到右下角的路径。</p>
 <h5 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行包含整数 $n$。<br>接下来 $n$ 行，每行包含 $n$ 个整数 $0$ 或 $1$，表示迷宫。</p>
@@ -787,7 +788,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
 <h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p>基于<b><font color="red">bfs</font></b>的思想,这题主要考察的是<strong>输出路径</strong>,可采取<b><font color="blue">递归</font></b>实现路径的输出,用$xx$数组记录当前点的前驱结点的横坐标,用$yy$数组记录当前点的前驱结点的纵坐标,此题我下标是从(1,1)开始的,输出时坐标应为$(x-1,y-1)$.</p>
 </blockquote>
-<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -859,7 +860,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
     <span class="token function">pre_out</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="12-石油储备"><a href="#12-石油储备" class="headerlink" title="12. 石油储备"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4228/">12. 石油储备</a></h3><h4 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>一片土地可以看作是一个 $n$ 行 $m$ 列的方格矩阵。<br>其中一些方格藏有石油，用 <code>@</code> 表示，其余方格没有石油，用 <code>*</code> 表示。<br>每个方格都与其上、下、左、右、左上、右上、左下、右下八个方格视为相邻。<br>如果两个藏有石油的方格相邻，则它们被认为是处于同一片油田，否则它们被认为是处于不同油田。<br>请问，该土地中共有多少片油田。</p>
@@ -872,7 +873,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
 <h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p>基于<b><font color="red">bfs</font></b>的思想,一次枚举没有标记的石油方格,枚举的次数即为答案.</p>
 </blockquote>
-<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -932,7 +933,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
 
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="13-非常可乐"><a href="#13-非常可乐" class="headerlink" title="13. 非常可乐"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4229/">13. 非常可乐</a></h3><h4 id="问题描述-5"><a href="#问题描述-5" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>大家一定觉的运动以后喝可乐是一件很惬意的事情，但是 $seeyou$ 却不这么认为。<br>因为每次当 $seeyou$ 买了可乐以后，阿牛就要求和 $seeyou$ 一起分享这一瓶可乐，而且一定要喝的和 $seeyou$ 一样多。<br>但 $seeyou$ 的手中只有两个杯子，它们的容量分别是 $N$ 毫升和 $M$ 毫升。<br>可乐的体积为 $S$ （$S&lt;101$）毫升　(正好装满一瓶) ，它们三个之间可以相互倒可乐 (都是没有刻度的，且 $S=N+M,101＞S＞0，N＞0，M＞0$) 。<br>聪明的 $ACMER$ 你们说他们能平分吗？<br>如果能请输出倒可乐的最少的次数，如果不能输出 <code>NO</code>。</p>
@@ -945,7 +946,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
 <h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p>与罐子那题类似,无非就多一维的<b><font color="red">bfs</font></b>,注意从$i$倒入$j$,倒入的容积是$min(w[i],v[j]-w[j])$.<br>另给一种大佬的<b><font color="Orange">数论</font></b>做法<a target="_blank" rel="noopener" href="https://www.acwing.com/solution/content/90865/">巨佬链接</a></p>
 </blockquote>
-<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -1015,7 +1016,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="14-找路"><a href="#14-找路" class="headerlink" title="14. 找路"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4230/">14. 找路</a></h3><h4 id="问题描述-6"><a href="#问题描述-6" class="headerlink" title="问题描述"></a>问题描述</h4><blockquote>
 <p>给定一个 $n$ 行 $m$ 列的方格矩阵。<br>其中有些方格是空地（可以进入），有些方格是餐厅（可以进入），有些方格是障碍（不可进入）。<br>开始时，小 $Y$ 和小 $M$ 各自位于一个空地方格中。<br>每个人都可以沿上下左右四个方向进行移动，移动一格距离需要花费 $11$ 分钟时间。<br>他们希望选择一家餐厅进行聚餐，要求两人从各自出发点到达该餐厅所花费的时间之和尽可能小。<br>输出这个最小时间和。</p>
@@ -1035,7 +1036,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
 <h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p>分别跑两个人的$bfs$,用$dist1$数组存储第一个人的行走情况,用$dist2$数组存储第二个人的行走情况,最后枚举所有的餐馆取$11 \times (dist1+dist2)$最小值即可.</p>
 </blockquote>
-<h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -1119,7 +1120,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1962,7 +1963,7 @@ vector<span class="token operator">&lt;</span>PII<span class="token operator">><
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

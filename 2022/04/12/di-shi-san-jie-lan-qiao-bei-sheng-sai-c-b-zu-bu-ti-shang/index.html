@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -473,9 +474,9 @@
 </ul>
 <h4 id="答案提交"><a href="#答案提交" class="headerlink" title="答案提交"></a>答案提交</h4><p>这是一道结果填空的题,你只需要算出结果后提交即可.本题的结果为一个整数,在提交答案时只填写这个整数,填写多余的内容将无法得分.</p>
 <h4 id="答案-1478"><a href="#答案-1478" class="headerlink" title="答案 :1478"></a>答案 :<b><font color="Red">1478</font></b></h4><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>模拟,考察进制转换,$res= 2 \times 9^0 + 2 \times 9^1 + 0 \times 9^2 + 2 \times 9^3 =2+18+2 \times 729 = 1478$</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 由于作者懒得写c++,直接上python代码</span>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 由于作者懒得写c++,直接上python代码</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>pow<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>pow<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">0</span><span class="token operator">*</span>pow<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>pow<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="试题-B-顺子日期-5分"><a href="#试题-B-顺子日期-5分" class="headerlink" title="试题 B: 顺子日期(5分)"></a>试题 B: 顺子日期(5分)</h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><ul>
 <li>小明特别喜欢顺子.顺子指的就是<b><font color="ForestGreen">连续的三个数字</font></b>:$123、456$等.顺子日期指的就是在日期的$yyyymmdd$表示法中,存在任意连续的三位数是一个顺子的日期.例如$20220123$就是一个顺子日期,因为它出现了一个顺子:$123$, <b><font color="DeepSkyBlue">而$20221023$则不是一个顺子日期</font></b>,它一个顺子也没有.小明想知道在整个$2022$年份中,一共有多少个顺子日期.</li>
@@ -490,7 +491,7 @@
 <li>$123y$,$y$的取值为$(0或1)$,共$2$种.</li>
 </ul>
 <p>如果不算$012$的这种顺子,(忽略前四位)结果为:$0123$,$1123$,$1230$,$1231$.</p>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 
@@ -527,7 +528,7 @@
     cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="试题-C-刷题统计-10分"><a href="#试题-C-刷题统计-10分" class="headerlink" title="试题 C: 刷题统计(10分)"></a>试题 C: <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4405/">刷题统计</a>(10分)</h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><ul>
 <li>小明决定从下周一开始努力刷题准备蓝桥杯竞赛.他计划周一至周五每天做$a$道题目,周六和周日每天做$b$道题目.请你帮小明计算,按照计划他将在第几天实现做题数大于等于$n$题?<blockquote>
@@ -543,7 +544,7 @@
 </li>
 </ul>
 <h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><p>$10^{18}$的数据暴力肯定不行,需将所有的题对一周的总题数作除法,剩下的余数部分可通过枚举的方式解决,结果为$\frac{n}{5\times a + 2 \times b} \times 7+n$%$(5\times a + 2 \times b)$题数所需要花费的天数.</p>
-<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//蓝桥杯中交的代码</span>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//蓝桥杯中交的代码</span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
@@ -605,7 +606,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
     
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="试题-D-修剪灌木-10分"><a href="#试题-D-修剪灌木-10分" class="headerlink" title="试题 D: 修剪灌木(10分)"></a>试题 D: <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4406/">修剪灌木</a>(10分)</h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><ul>
 <li>爱丽丝要完成一项修剪灌木的工作.</li>
@@ -629,7 +630,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
 <p>以$4$棵灌木为例(可发现只要先模拟从左到右一次,再模拟从右到左一次,最后模拟从左到右一次即可找到每棵灌木的最大高度):</p>
 <p><img src="https://s2.loli.net/2022/04/13/vlsyfhcuYwj9d6B.png" alt="过程模拟图"></p>
 <p><img src="https://s2.loli.net/2022/04/13/if6kUu7hO8pKNPl.png" alt="结果图"></p>
-<h4 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 
@@ -673,7 +674,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>方法$2$: 找规律,我们可在方法$1$的模拟基础上发现左右的值刚好关于中心对称.</li>
 </ul>
@@ -685,7 +686,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
 </ul>
 <p>故第$i$棵灌木最高高度为$2 \times max(n-i,i-1)$.</p>
 </blockquote>
-<h4 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 
@@ -723,7 +724,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
         cout <span class="token operator">&lt;&lt;</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="试题-E-X-进制减法-15分"><a href="#试题-E-X-进制减法-15分" class="headerlink" title="试题 E: X 进制减法(15分)"></a>试题 E: <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4407/">X 进制减法</a>(15分)</h3><h4 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h4><ul>
 <li>进制规定了数字在数位上逢几进一.</li>
@@ -796,7 +797,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
 <p>$(D_{n-1} \times \prod_{i=k+1}^{n-2}P_i+D_{n-2} \times \prod_{i=k+1}^{n-3}+… +D_{k+1})$表示的含义为在$k$左边$A$的前缀与$B$的前缀差,由于$A \geqslant B$,故$A$的前缀与$B$的前缀差也为非负数.故当前的$P_k$取值为$max(2,A_k+1,B_k+1)$.</p>
 <p>最后怎么表示结果呢,借助<b><font color="red">秦九韶算法</font></b>.</p>
 <p>$f(x)=a_nx^n+a_{n-1}x^{n-1}+…+a_1x+a_0$<br>$=(…((a_nx+a_{n-1})x+a_{n-2})x+…+a_1)x+a_0$.</p>
-<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 
@@ -826,7 +827,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
     cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="试题-F-统计子矩阵-15分"><a href="#试题-F-统计子矩阵-15分" class="headerlink" title="试题 F: 统计子矩阵(15分)"></a>试题 F: 统计子矩阵(15分)</h3><h4 id="问题描述-5"><a href="#问题描述-5" class="headerlink" title="问题描述"></a>问题描述</h4><p>给定一个$N \times M$的矩阵$A$,请你统计有多少个子矩阵 (最小$1 \times 1$,最大$N × M$) 满足子矩阵中所有数的和不超过给定的整数$K$?</p>
 <blockquote>
@@ -854,7 +855,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
 <p><b><font color="Red">前缀和+双指针</font></b> ,时间复杂度为${\color{Blue} {O(n^3)}}$,<del>我虽然用到了二维前缀和,即枚举两个顶点的位置($4$重循环,时间复杂度为$O(n^4)$),结果肯定是t了,真不知道拿什么东西去优化</del></p>
 </blockquote>
 <p>将矩阵中的元素转化为列前缀和,枚举上边界$i$和下边界$j$,把这每一小块构成一维数组,借助双指针枚举左边界$l$和右边界$r$,判断当前区间的值是否满足小于等于$K$,如果不满足则将左边界往右移直至满足条件,此时结果应加上$r-l+1$.</p>
-<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 
@@ -895,7 +896,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1738,7 +1739,7 @@ ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

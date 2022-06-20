@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -470,7 +471,7 @@
 <h3 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h3><ul>
 <li>在示例数据库建立多个用户$u1,u2$,赋予$u1$查看和删除$student$表的权限,授予$u2$查看数学系学生视图的权限,然后验证它们是否具有真正的权限.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 分别执行</span>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 分别执行</span>
 sp_addlogin <span class="token string">'u1'</span><span class="token punctuation">,</span><span class="token string">'123'</span><span class="token punctuation">,</span>Stu
 
 sp_addlogin <span class="token string">'u2'</span><span class="token punctuation">,</span><span class="token string">'147'</span><span class="token punctuation">,</span>Stu
@@ -488,7 +489,7 @@ sp_grantdbaccess u2
 <span class="token keyword">to</span> u2
 
 <span class="token comment" spellcheck="true">-- 验证过程略</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><p>给示例数据库中每个表建立主码;相关的表建立外码;在每个表的部分列上建立$CHECK$约束.</p>
 </li>
@@ -1333,7 +1334,7 @@ sp_grantdbaccess u2
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

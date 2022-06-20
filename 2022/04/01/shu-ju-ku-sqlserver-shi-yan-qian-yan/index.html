@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -464,23 +465,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-创建学生信息表Student"><a href="#1-创建学生信息表Student" class="headerlink" title="1 创建学生信息表Student"></a>1 创建学生信息表Student</h3><pre class=" language-SQL"><code class="language-SQL">Create table Student
+                <h3 id="1-创建学生信息表Student"><a href="#1-创建学生信息表Student" class="headerlink" title="1 创建学生信息表Student"></a>1 创建学生信息表Student</h3><pre class="line-numbers language-SQL"><code class="language-SQL">Create table Student
     (Sno char(10) primary key,
      Sname char(20) unique,
      Ssex char(2),
      Sage smallint,
      Sdept char(30)
     )
-</code></pre>
-<h3 id="2-创建课程信息表Course"><a href="#2-创建课程信息表Course" class="headerlink" title="2 创建课程信息表Course"></a>2 创建课程信息表Course</h3><pre class=" language-SQL"><code class="language-SQL">Create table Course
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-创建课程信息表Course"><a href="#2-创建课程信息表Course" class="headerlink" title="2 创建课程信息表Course"></a>2 创建课程信息表Course</h3><pre class="line-numbers language-SQL"><code class="language-SQL">Create table Course
     (Cno char(4) primary key,
      Cname char(40) NOT NULL,
      Cpno char(4),
      Credit smallint,
      foreign key(Cpno) references Course(Cno)
     )
-</code></pre>
-<h3 id="3-创建选课信息表SC"><a href="#3-创建选课信息表SC" class="headerlink" title="3 创建选课信息表SC"></a>3 创建选课信息表SC</h3><pre class=" language-SQL"><code class="language-SQL">Create table SC
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-创建选课信息表SC"><a href="#3-创建选课信息表SC" class="headerlink" title="3 创建选课信息表SC"></a>3 创建选课信息表SC</h3><pre class="line-numbers language-SQL"><code class="language-SQL">Create table SC
     (Sno char(10),
      Cno char(4),
      Grade smallint,
@@ -488,10 +489,10 @@
      foreign key(Sno) references Student(Sno),
      foreign key(Cno) references Course(Cno) 
     )
-</code></pre>
-<h3 id="4-删除选课信息表SC"><a href="#4-删除选课信息表SC" class="headerlink" title="4 删除选课信息表SC"></a>4 删除选课信息表SC</h3><pre class=" language-SQL"><code class="language-SQL">drop table SC
-</code></pre>
-<h3 id="5-录入学生信息表Student"><a href="#5-录入学生信息表Student" class="headerlink" title="5 录入学生信息表Student"></a>5 录入学生信息表Student</h3><pre class=" language-SQL"><code class="language-SQL">insert
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-删除选课信息表SC"><a href="#4-删除选课信息表SC" class="headerlink" title="4 删除选课信息表SC"></a>4 删除选课信息表SC</h3><pre class="line-numbers language-SQL"><code class="language-SQL">drop table SC
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="5-录入学生信息表Student"><a href="#5-录入学生信息表Student" class="headerlink" title="5 录入学生信息表Student"></a>5 录入学生信息表Student</h3><pre class="line-numbers language-SQL"><code class="language-SQL">insert
 into Student
 Values  ('202001001','张小玲','女',19,'电子信息'),
         ('202001008','张玲','女',20,'电子信息'),
@@ -504,8 +505,8 @@ Values  ('202001001','张小玲','女',19,'电子信息'),
         ('202103001','赵丽红','女',20,'网络工程'),
         ('202104001','李宏伟','男',19,'通信工程'),
         ('202104005','刘景鹏','男',21,'通信工程')
-</code></pre>
-<h3 id="6-录入课程信息表Course"><a href="#6-录入课程信息表Course" class="headerlink" title="6 录入课程信息表Course"></a>6 录入课程信息表Course</h3><pre class=" language-SQL"><code class="language-SQL">insert
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6-录入课程信息表Course"><a href="#6-录入课程信息表Course" class="headerlink" title="6 录入课程信息表Course"></a>6 录入课程信息表Course</h3><pre class="line-numbers language-SQL"><code class="language-SQL">insert
 into Course
 Values   ('1','数据库','5',4),
          ('2','高等数学',NULL,2),
@@ -514,8 +515,8 @@ Values   ('1','数据库','5',4),
          ('5','数据结构','7',4),
          ('6','数据处理',NULL,2),
          ('7','C语言','6',5)
-</code></pre>
-<h3 id="7-录入选课信息表SC"><a href="#7-录入选课信息表SC" class="headerlink" title="7  录入选课信息表SC"></a>7  录入选课信息表SC</h3><pre class=" language-SQL"><code class="language-SQL">insert
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-录入选课信息表SC"><a href="#7-录入选课信息表SC" class="headerlink" title="7  录入选课信息表SC"></a>7  录入选课信息表SC</h3><pre class="line-numbers language-SQL"><code class="language-SQL">insert
 into SC
 Values   ('202001001','1',NULL),
          ('202001001','2',95),
@@ -538,7 +539,7 @@ Values   ('202001001','1',NULL),
          ('202101003','4',87),
          ('202104001','3',97),
          ('202104001','5',65)
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1377,7 +1378,7 @@ Values   ('202001001','1',NULL),
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -637,7 +638,7 @@
 <td align="center"></td>
 </tr>
 </tbody></table>
-<pre class=" language-SQL"><code class="language-SQL">create table Student
+<pre class="line-numbers language-SQL"><code class="language-SQL">create table Student
     (  学号       char(8)        not null  primary key,
        学生姓名   nvarchar(8)    not null ,
        性别       char(2)        not null ,
@@ -661,43 +662,43 @@ create table Student_Course
        foreign key (学号)   references Student (学号),
     )
 # 录入数据略
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>从$student$、$course$和$student_course$三张表中检索选修了课程的学生的学号、姓名、课程号、课程名及成绩.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">select Student.学号,Student.学生姓名,Course.课程号,Course.课程名称,Student_Course.成绩
+<pre class="line-numbers language-SQL"><code class="language-SQL">select Student.学号,Student.学生姓名,Course.课程号,Course.课程名称,Student_Course.成绩
     from Student ,Course ,Student_Course
     where Student.学号=Student_Course.学号 and Course.课程号=Student_Course.课程号
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>如果要在数据检索时对表中数据按照一定条件进行分组汇总或求平均值,就要在$SELECT$语句中与$GROUP$ $BY$子句一起使用集合函数.使用$GROUP$ $BY$子句进行数据检索可得到数据分类的汇总统计、平均值或其他统计信息.</li>
 </ul>
 <p>(1) 使用不带$HAVING$的$GROUP$ $BY$子句,汇总出$student_course$表中的学生的学号及总成绩</p>
-<pre class=" language-SQL"><code class="language-SQL">select 学号,sum(成绩) 总成绩
+<pre class="line-numbers language-SQL"><code class="language-SQL">select 学号,sum(成绩) 总成绩
     from Student_Course
     group by 学号
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>(2) 使用带$HAVING$的$GROUP$ $BY$子句,汇总出$student_course$表中总分大于$450$分的学生的学号及总成绩</p>
-<pre class=" language-SQL"><code class="language-SQL">select 学号,sum(成绩) 总成绩
+<pre class="line-numbers language-SQL"><code class="language-SQL">select 学号,sum(成绩) 总成绩
     from Student_Course
     group by 学号
     having sum(成绩)>450
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="2-子查询"><a href="#2-子查询" class="headerlink" title="(2).子查询"></a>(2).子查询</h4><p>1．使用$IN$或$NOT$ $IN$关键字.</p>
 <ul>
 <li>使用$IN$关键字查询出‘$jk1$’ ‘$dx2$’ ‘$dx1$’班所有男生的学号、课程号及相应的成绩</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">select Student_Course.学号,课程号,成绩
+<pre class="line-numbers language-SQL"><code class="language-SQL">select Student_Course.学号,课程号,成绩
     from Student_Course,Student
     where Student.学号=Student_Course.学号 and Student.班级号 in ('jk1','dx2','dx1') and Student.性别='男'
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ol start="2">
 <li>使用$EXISTS$或$NOT$ $EXISTS$关键字.</li>
 </ol>
 <ul>
 <li>使用$EXISTS$关键字查询出$‘jk1’$班选修‘数据结构’课程的学生的学号、姓名;使用$NOT EXISTS$查询出‘$jk1$’班没有选修‘数据结构’课程的学生的学号、姓名</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">select Student.学号,Student.学生姓名
+<pre class="line-numbers language-SQL"><code class="language-SQL">select Student.学号,Student.学生姓名
     from Student
     where exists
     (    select * from Student_Course ,Course
@@ -710,7 +711,7 @@ select Student.学号,Student.学生姓名
     (    select * from Student_Course ,Course
         where Student_Course.学号=Student.学号 and Student_Course.课程号=Course.课程号 and Course.课程名称='数据结构' 
     )
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1549,7 +1550,7 @@ select Student.学号,Student.学生姓名
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

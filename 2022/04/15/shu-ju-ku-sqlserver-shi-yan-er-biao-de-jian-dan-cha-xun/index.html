@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -528,66 +529,66 @@
 <h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><h4 id="1-基本查询"><a href="#1-基本查询" class="headerlink" title="(1). 基本查询"></a>(1). 基本查询</h4><ul>
 <li>从teacher表中分别检索出教师的所有信息.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
-</code></pre>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>查询teacher表中教工号、姓名和职称.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名<span class="token punctuation">,</span>职称 <span class="token keyword">from</span> teacher
-</code></pre>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名<span class="token punctuation">,</span>职称 <span class="token keyword">from</span> teacher
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="2-查询时改变列标题的显示"><a href="#2-查询时改变列标题的显示" class="headerlink" title="(2). 查询时改变列标题的显示"></a>(2). 查询时改变列标题的显示</h4><p>从teacher表中分别检索出教师教工号、姓名、家庭住址信息并分别加上‘教师姓名’、‘教工号’、‘家庭住址’等标题信息.</p>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名 教师姓名<span class="token punctuation">,</span>家庭住址 <span class="token keyword">from</span> teacher
-</code></pre>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名 教师姓名<span class="token punctuation">,</span>家庭住址 <span class="token keyword">from</span> teacher
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="3-基于WHERE语句进行数据查询"><a href="#3-基于WHERE语句进行数据查询" class="headerlink" title="(3). 基于WHERE语句进行数据查询"></a>(3). 基于WHERE语句进行数据查询</h4><ul>
 <li>基于比较条件,从teacher表中查询出教工号小于2130的教师资料.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher 
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher 
 <span class="token keyword">where</span> 教工号<span class="token operator">&lt;</span><span class="token string">'2130'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li>基于BETWEEN语句,从teacher表中查询出教工号界于2100和2130之间的教师资料.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
 <span class="token keyword">where</span> 教工号 <span class="token operator">between</span> <span class="token string">'2100'</span> <span class="token operator">and</span> <span class="token string">'2130'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li>基于IN子句的数据查询,从teacher表中查询出职称为“教授”或“副教授”的教师的教工号、教师姓名、职称及家庭住址.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名 教师姓名<span class="token punctuation">,</span>职称<span class="token punctuation">,</span>家庭住址 <span class="token keyword">from</span> teacher
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名 教师姓名<span class="token punctuation">,</span>职称<span class="token punctuation">,</span>家庭住址 <span class="token keyword">from</span> teacher
 <span class="token keyword">where</span> 职称 <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token string">'教授'</span><span class="token punctuation">,</span><span class="token string">'副教授'</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">//也可以写成下面一种</span>
 <span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名 教师姓名<span class="token punctuation">,</span>职称<span class="token punctuation">,</span>家庭住址 <span class="token keyword">from</span> teacher
 <span class="token keyword">where</span> 职称<span class="token operator">=</span><span class="token string">'教授'</span> <span class="token operator">or</span> 职称<span class="token operator">=</span><span class="token string">'副教授'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>基于LIKE子句的查询,从teacher表中分别检索出姓赵的教师的资料.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
 <span class="token keyword">where</span> 姓名 <span class="token operator">like</span> <span class="token string">'赵%'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li>使用TOP关键字查询,分别从teacher中检索出前2条及前面67%的教师的信息.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">top</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">top</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
 
 <span class="token keyword">select</span> <span class="token keyword">top</span> <span class="token number">67</span> <span class="token keyword">percent</span> <span class="token operator">*</span> <span class="token keyword">from</span> teacher
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>使用DISTINCT关键字查询,从teacher表中检索出教师的职称并且要求显示的职称不重复.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> 职称 <span class="token keyword">from</span> teacher
-</code></pre>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> 职称 <span class="token keyword">from</span> teacher
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>用计算列查询,将teacher表中各教师的姓名、教工号及工资按95%发放的信息,将工资按95%发放后列名该为‘预发工资’.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 姓名<span class="token punctuation">,</span>教工号<span class="token punctuation">,</span>工资<span class="token punctuation">,</span>工资<span class="token operator">*</span><span class="token number">0.95</span> 预发工资 <span class="token keyword">from</span> teacher
-</code></pre>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> 姓名<span class="token punctuation">,</span>教工号<span class="token punctuation">,</span>工资<span class="token punctuation">,</span>工资<span class="token operator">*</span><span class="token number">0.95</span> 预发工资 <span class="token keyword">from</span> teacher
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>使用ORDER BY语句对查询的结果进行排序,从teacher表中查询工资大于4500的教师的教工号、姓名,并按升序排列.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名 <span class="token keyword">from</span> teacher
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">select</span> 教工号<span class="token punctuation">,</span>姓名 <span class="token keyword">from</span> teacher
 <span class="token keyword">where</span> 工资<span class="token operator">></span><span class="token number">4500</span> <span class="token keyword">order</span> <span class="token keyword">by</span> 工资 <span class="token keyword">asc</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1426,7 +1427,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

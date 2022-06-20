@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -474,7 +475,7 @@
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">思维题</font></b>.<br>由于长方形的每条边要么平行于$x$轴,要么平行于$y$轴,即只需要找出<b><font color="Orange">横纵坐标出现一次的数</font></b>即为答案;<br>此处也可直接对三个点的横纵坐标分别进行<b><font color="Green">异或操作</font></b>,即为答案.</p>
 </blockquote>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : A_-_Four_Points.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -536,7 +537,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
     <span class="token comment" spellcheck="true">//cout &lt;&lt; (x[1]^x[2]^x[3]) &lt;&lt; ' ' &lt;&lt; (y[1]^y[2]^y[3]) &lt;&lt; endl;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="B-Get-Closer"><a href="#B-Get-Closer" class="headerlink" title="B - Get Closer"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/488484#problem/B">B - Get Closer</a></h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>从二维平面上的点$(0,0)$出发,向点$(A,B)$方向移动距离$1$,求移动后的坐标为多少.</p>
@@ -544,7 +545,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
 <h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">勾股定理+相似三角形</font></b>.<br>首先求出$(0,0)$到$(A,B)$的距离$d=\sqrt{A^2+B^2}$,然后所求的坐标为$(\frac{A}{d},\frac{B}{d})$,也可近似看成求$sinx$和$cosx$(因为$sin^2x+cos^2x=1$).</p>
 </blockquote>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : B_-_Get_Closer.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -594,7 +595,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.12f %.12f"</span><span class="token punctuation">,</span>a<span class="token operator">/</span>temp<span class="token punctuation">,</span>b<span class="token operator">/</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="C-Coupon"><a href="#C-Coupon" class="headerlink" title="C - Coupon"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/488484#problem/C">C - Coupon</a></h3><h4 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给定$N$个物品,每个物品$i$的价格为$A_i$,$Takahashi$有$K$张优惠券(可优惠$X$).每张优惠券可用于这$N$个物品,每个物品可用任意小于等于$K$数量的优惠券,如果使用了$k$张,你只需要花费$max(A_i-kX,0)$.<br>问最小花费为多少.</p>
@@ -602,7 +603,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
 <h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">贪心</font></b>.<br>要想使花费最小,就要尽可能多得使用优惠券,如果优惠券能减去商品价格大于$X$的话,就贪心地使用优惠券,如果所有商品剩下的价格都小于$X$元后还有剩余优惠券,就贪心选择剩下物品中价格更高的.</p>
 </blockquote>
-<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : C_-_Coupon.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -670,7 +671,7 @@ map<span class="token operator">&lt;</span>ll<span class="token punctuation">,</
     cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="D-2-variable-Function"><a href="#D-2-variable-Function" class="headerlink" title="D - 2-variable Function"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/488484#problem/D">D - 2-variable Function</a></h3><h4 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给你一个整数$N$,其中$1 \leqslant N \leqslant 10^{18}$,找一个最小的整数$X$满足以下条件:</p>
@@ -682,7 +683,7 @@ map<span class="token operator">&lt;</span>ll<span class="token punctuation">,</
 <h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p> <b><font color="Red">枚举+二分</font></b>.<br>由于数据较大,暴力枚举必不现实,考虑从整数对$(a,b)$出发,鉴于$N$的范围是$N \leqslant 10^{18}$,可推出$a,b$的范围为$0-10^6$,跑两重循环也会超时,故考虑先考虑$a$,然后二分找出合适$b$的值使之$X \geqslant N$成立,时间复杂度为$O(10^6 \times log(10^6))$.</p>
 </blockquote>
-<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
  * @file    : D_-_2_-variable_Function.cpp
  * @author  : SDTBU_LY
  * @version : V1.0.0
@@ -753,7 +754,7 @@ ll <span class="token function">f</span><span class="token punctuation">(</span>
     cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="E-Bishop-2"><a href="#E-Bishop-2" class="headerlink" title="E - Bishop 2"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/488484#problem/E">E - Bishop 2</a></h3><h4 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给定一个$N \times N$的棋盘.每个位置$(i,j)$都有对应的值$S_{i,j}$.</p>
@@ -771,7 +772,7 @@ ll <span class="token function">f</span><span class="token punctuation">(</span>
 </ul>
 </blockquote>
 </blockquote>
-<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : E_-_Bishop_2.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -862,7 +863,7 @@ ll <span class="token function">f</span><span class="token punctuation">(</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token function">bfs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="F-typewriter"><a href="#F-typewriter" class="headerlink" title="F - typewriter"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/488484#problem/F">F - typewriter</a></h3><h4 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给定$N$个字符串集,每个字符串集的字符有小写字母($a,b,c,…x,y,z$组成),可以进行以下操作:</p>
@@ -880,7 +881,7 @@ ll <span class="token function">f</span><span class="token punctuation">(</span>
 <ul>
 <li>通过枚举以上情况时间复杂度为$O(2^n)$,$N$个字母能打印的长度为$L$的字符串的个数为$N^L$,使用快速幂计算花费$O(logL)$的时间,总的时间复杂度为$O(2^nlogL)$.</li>
 </ul>
-<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : F_-_typewriter.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -976,7 +977,7 @@ ll <span class="token function">fast_pow</span><span class="token punctuation">(
     cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="G-Game-on-Tree-3"><a href="#G-Game-on-Tree-3" class="headerlink" title="G - Game on Tree 3"></a><a target="_blank" rel="noopener" href="https://vjudge.csgrandeur.cn/contest/488484#problem/G">G - Game on Tree 3</a></h3><h4 id="题意-6"><a href="#题意-6" class="headerlink" title="题意"></a>题意</h4><blockquote>
 <p>给定一个总共有$n$个结点同时以$1$为根结点的树,除根节点外的每一个顶点$i$都有对应的权值$A_i$.初始有个纸片放在1号根结点位置,每轮$Aoki$(先手)可以将任意一点的权值变为$0$,$Takahashi$(后手)可以将纸片移动到一个相邻的结点,并且可以随时结束游戏.后手如果到达叶子结点自行结束游戏.游戏的得分是纸片最后在的位置上的点权,后手的目标是<b><font color="Pink">最大化</font></b>点权,先手的目标是<b><font color="Chocolate">最小化</font></b>点权.求双方采用最优策略能得到的最大得分.</p>
@@ -984,7 +985,7 @@ ll <span class="token function">fast_pow</span><span class="token punctuation">(
 <h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><blockquote>
 <p><b><font color="Red">二分+树上dp</font></b>.<br>要求最大得分可通过二分把问题转化为判别的问题.二分后问题就变成了判断是否能够取到大于等于$mid$的得分.由于采用最优策略必然不会往回走,可采用树形dp解决.<br>后手每往下走一步,那么先手就能把这个结点子树中某个结点变为$0$,考虑$f(u)$为纸片在当前结点时能走到的权值大于$mid$的结点的数目,显然$f(u)$等于其所有子树的$f$的贡献加上其本身的贡献,由于每往下走一步对手会删除一个点,结果需$-1$,最终判断是否成立取决于$f(1)&gt;0$.</p>
 </blockquote>
-<h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
+<h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">/**
   * @file    : G_-_Game_on_Tree_3.cpp
   * @author  : SDTBU_LY
   * @version : V1.0.0
@@ -1068,7 +1069,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
     cout <span class="token operator">&lt;&lt;</span> r <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1907,7 +1908,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

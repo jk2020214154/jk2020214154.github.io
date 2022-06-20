@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -475,7 +476,7 @@
 <h4 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h4><ul>
 <li>在示例数据库的学生基本信息表上如果存在出生时间在$1995$年以前的学生,给出这些学生的列表.否则给出一条提示信息,说明没有满足条件的学生.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">--由于建表无出生年份,另建一个视图</span>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">--由于建表无出生年份,另建一个视图</span>
 <span class="token keyword">create</span> <span class="token keyword">view</span> studentbase
 <span class="token keyword">as</span>
 <span class="token keyword">select</span> Sno<span class="token punctuation">,</span>Sname<span class="token punctuation">,</span>Ssex<span class="token punctuation">,</span>Sage<span class="token punctuation">,</span>Sdept<span class="token punctuation">,</span><span class="token number">2022</span><span class="token operator">-</span>Sage 出生年份 <span class="token keyword">from</span> Student
@@ -486,17 +487,17 @@
 <span class="token keyword">end</span>
 <span class="token keyword">else</span> 
     <span class="token keyword">print</span> <span class="token string">'无满足条件的学生'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>显示所有系别为<code>计算机</code>的学生信息,并且在显示之前,暂停$1$分钟.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">waitfor</span> delay <span class="token string">'00:01:00'</span>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">waitfor</span> delay <span class="token string">'00:01:00'</span>
     <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> studentbase <span class="token keyword">where</span> Sdept<span class="token operator">=</span><span class="token string">'计算机'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li>创建一个函数,可以按学号查询学生选修课的平均成绩,如果不及格,显示其学号,姓名,并输出<code>该同学平均成绩不及格</code>,否则输出<code>全部通过</code></li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">function</span> cj<span class="token punctuation">(</span><span class="token variable">@s_no</span> char<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">function</span> cj<span class="token punctuation">(</span><span class="token variable">@s_no</span> char<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">returns</span> <span class="token keyword">float</span>
 <span class="token keyword">begin</span>
     <span class="token keyword">declare</span> <span class="token variable">@x</span> <span class="token keyword">float</span><span class="token punctuation">,</span><span class="token variable">@name</span> char<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
@@ -512,11 +513,11 @@
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'该同学平均成绩不及格'</span><span class="token punctuation">)</span>
 <span class="token keyword">end</span>
 <span class="token keyword">else</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'全部通过'</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>创建一个触发器，当对学生表执行$UPDATE$操作时,该触发器被触发,不允许修改学生表中的学号.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">trigger</span> update_sno <span class="token keyword">on</span> student
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">trigger</span> update_sno <span class="token keyword">on</span> student
 <span class="token keyword">for</span> <span class="token keyword">update</span>
 <span class="token keyword">as</span>
 <span class="token keyword">begin</span>
@@ -529,11 +530,11 @@
 
 <span class="token comment" spellcheck="true">--举例</span>
 <span class="token keyword">update</span> student <span class="token keyword">set</span> sno<span class="token operator">=</span><span class="token string">'95001'</span> <span class="token keyword">where</span> sno<span class="token operator">=</span><span class="token string">'202001008'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>创建一个存储过程,它带有一个输入参数,用于接受学号,显示该学生的姓名、选修课的课程名、成绩.</li>
 </ul>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">proc</span> p1<span class="token punctuation">(</span><span class="token variable">@s_no</span> char<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">proc</span> p1<span class="token punctuation">(</span><span class="token variable">@s_no</span> char<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">as</span>
 <span class="token keyword">begin</span>
     <span class="token keyword">select</span> sname<span class="token punctuation">,</span>cname<span class="token punctuation">,</span>grade <span class="token keyword">from</span> Student<span class="token punctuation">,</span>Course<span class="token punctuation">,</span>SC <span class="token keyword">where</span> sc<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Course<span class="token punctuation">.</span>Cno <span class="token operator">and</span> sc<span class="token punctuation">.</span>Sno<span class="token operator">=</span>Student<span class="token punctuation">.</span>Sno <span class="token operator">and</span> sc<span class="token punctuation">.</span>sno<span class="token operator">=</span><span class="token variable">@s_no</span>
@@ -541,7 +542,7 @@
 
 <span class="token comment" spellcheck="true">--举例</span>
 <span class="token keyword">exec</span> p1 <span class="token string">'202001001'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1380,7 +1381,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

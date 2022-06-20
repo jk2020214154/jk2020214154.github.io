@@ -31,10 +31,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -529,7 +530,7 @@
 <td>计算机体系结构</td>
 </tr>
 </tbody></table>
-<pre class=" language-SQL"><code class="language-SQL"># 建表
+<pre class="line-numbers language-SQL"><code class="language-SQL"># 建表
 create table teacher
     (教工号      char(10) primary key,
      姓名        char(20) ,
@@ -548,38 +549,38 @@ values
 ('2113','赵启升','连云港市','5817693','工程师',4800,'计算机网络'),
 ('2114','胡云','连云港市','5817692','助教',3500,'计算机软件'),
 ('2115','葛庆兵','连云港市','5817694','助教',3500,'计算机体系结构')
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="2-修改数据内容"><a href="#2-修改数据内容" class="headerlink" title="(2).修改数据内容"></a>(2).修改数据内容</h4><ul>
 <li>向teacher表中插入一行数据(‘2210’,’李涛’, ‘上海’,8949200,’副教授’,8900,’计算机应用’).</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">insert
+<pre class="line-numbers language-SQL"><code class="language-SQL">insert
 into teacher
 values ('2210','李涛','上海','8949200','副教授',8900,'计算机应用')
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>更改teacher表数据，将教工号=‘2112’的所在教研室改为‘计算机应用’.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">update teacher
+<pre class="line-numbers language-SQL"><code class="language-SQL">update teacher
 set 所在教研室='计算机应用'
 where 教工号='2112'
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>删除teacher表中教工号=‘2112’的行.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">delete
+<pre class="line-numbers language-SQL"><code class="language-SQL">delete
 from teacher
 where 教工号='2112'
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h4 id="3-修改表结构"><a href="#3-修改表结构" class="headerlink" title="(3).修改表结构"></a>(3).修改表结构</h4><ul>
 <li>使用T-SQL语句向teacher表中添加籍贯字段.</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">alter table teacher add 籍贯 char(10)
-</code></pre>
+<pre class="line-numbers language-SQL"><code class="language-SQL">alter table teacher add 籍贯 char(10)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>删除teacher表中的籍贯字段</li>
 </ul>
-<pre class=" language-SQL"><code class="language-SQL">alter table teacher drop column 籍贯
-</code></pre>
+<pre class="line-numbers language-SQL"><code class="language-SQL">alter table teacher drop column 籍贯
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
@@ -1418,7 +1419,7 @@ where 教工号='2112'
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             

@@ -37,10 +37,11 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -477,23 +478,23 @@
                 <h4 id="题目概要"><a href="#题目概要" class="headerlink" title="题目概要"></a>题目概要</h4><p>通讯录是由通讯录条目组成的;通讯录总条目数,通讯录中现有多少条.可以输入通讯录、可以输出通讯录、可以查找、修改.其中的通讯录条目可以是一般条目,也可以是朋友条目.</p>
 <p><img src="https://s2.loli.net/2022/04/27/TFUBlNAe8ogz5LI.png"></p>
 <p>要求：</p>
-<pre class=" language-Markdown"><code class="language-Markdown">1.输入通讯录
+<pre class="line-numbers language-Markdown"><code class="language-Markdown">1.输入通讯录
 2.输出通讯录
 3.查找姓名
 4.修改(输入姓名，修改其电话)
 0.退出
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h4><p>(1). 指针数组.数组中的每一个元素是一个指针,可以指向一般条目的对象,也可以指向朋友条目的对象.<br><img src="https://s2.loli.net/2022/04/27/vGM5cigOmol4WEN.png"></p>
-<h5 id="指针数组的声明："><a href="#指针数组的声明：" class="headerlink" title="指针数组的声明："></a>指针数组的声明：</h5><pre class=" language-cpp"><code class="language-cpp">CommEntry <span class="token operator">*</span><span class="token operator">*</span> pCes<span class="token punctuation">;</span>
-</code></pre>
-<h5 id="申请内存："><a href="#申请内存：" class="headerlink" title="申请内存："></a>申请内存：</h5><pre class=" language-cpp"><code class="language-cpp">    pCes <span class="token operator">=</span> <span class="token keyword">new</span> CommEntry <span class="token operator">*</span> <span class="token punctuation">[</span>maxCount<span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
-<h5 id="回收内存："><a href="#回收内存：" class="headerlink" title="回收内存："></a>回收内存：</h5><pre class=" language-cpp"><code class="language-cpp">   <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>             
+<h5 id="指针数组的声明："><a href="#指针数组的声明：" class="headerlink" title="指针数组的声明："></a>指针数组的声明：</h5><pre class="line-numbers language-cpp"><code class="language-cpp">CommEntry <span class="token operator">*</span><span class="token operator">*</span> pCes<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="申请内存："><a href="#申请内存：" class="headerlink" title="申请内存："></a>申请内存：</h5><pre class="line-numbers language-cpp"><code class="language-cpp">    pCes <span class="token operator">=</span> <span class="token keyword">new</span> CommEntry <span class="token operator">*</span> <span class="token punctuation">[</span>maxCount<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="回收内存："><a href="#回收内存：" class="headerlink" title="回收内存："></a>回收内存：</h5><pre class="line-numbers language-cpp"><code class="language-cpp">   <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>             
       <span class="token keyword">delete</span> pCes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
    <span class="token punctuation">}</span>
    <span class="token keyword">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>pCes<span class="token punctuation">;</span>
-</code></pre>
-<h5 id="元素的使用"><a href="#元素的使用" class="headerlink" title="元素的使用:"></a>元素的使用:</h5><pre class=" language-cpp"><code class="language-cpp">    <span class="token keyword">if</span> <span class="token punctuation">(</span>iType<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="元素的使用"><a href="#元素的使用" class="headerlink" title="元素的使用:"></a>元素的使用:</h5><pre class="line-numbers language-cpp"><code class="language-cpp">    <span class="token keyword">if</span> <span class="token punctuation">(</span>iType<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
         pCes<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> CommEntry<span class="token punctuation">;</span>           
     <span class="token punctuation">}</span> 
@@ -506,10 +507,10 @@
    <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//注意，下一行是多态函数的调用</span>
       <span class="token punctuation">(</span>pCes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">output</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
    <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>(2). 多态的使用</p>
 <p>1.输出通讯录时,根据据条目的实际类型(一般或是朋友)输出条目内容.提示:使用多态.<br>2.在输入通讯录时,根据据用户的要求创建通迅目的管理条目数.<br>3.（选做）写一个成员函数,分开显示朋友条目与一般条目.提示:使用RTTI技术.</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstring></span></span>
 
@@ -722,7 +723,7 @@ string FriendEntry<span class="token operator">::</span><span class="token funct
     <span class="token keyword">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>data<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1561,7 +1562,7 @@ string FriendEntry<span class="token operator">::</span><span class="token funct
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.1k</span>
+                        class="white-color">39.9k</span>
             
             
             
