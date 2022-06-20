@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>面向对象程序设计问答题OOP5类</title>
+      <link href="/2022/06/20/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop5-lei/"/>
+      <url>/2022/06/20/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop5-lei/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-什么是类？通常一个类中，包含什么样的内容？定义一个类的语法是什么，试举例说明。"><a href="#1-什么是类？通常一个类中，包含什么样的内容？定义一个类的语法是什么，试举例说明。" class="headerlink" title="1. 什么是类？通常一个类中，包含什么样的内容？定义一个类的语法是什么，试举例说明。"></a>1. 什么是类？通常一个类中，包含什么样的内容？定义一个类的语法是什么，试举例说明。</h4><ul><li><strong>定义</strong>: 类是<u><strong>逻辑上相关的函数与数据的封装</strong></u>，描述了所创建对象共同的属性和方法。</li><li><strong>内容</strong>: 类中声明或定义的变量和函数称为成员，类的成员包括<b><font color="Red">数据成员和成员函数/方法</font></b>，<u><strong>数据成员</strong></u>描述<b><font color="Blue">问题的属性</font></b>，<u><strong>成员函数/方法</strong></u>描述<b><font color="Orange">问题的行为</font></b>。</li></ul><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//class+类名</span>    <span class="token keyword">public</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>访问控制    <span class="token comment" spellcheck="true">//成员函数/方法</span>    <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span> <span class="token keyword">unsigned</span> n <span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">unsigned</span> <span class="token function">getAge</span><span class="token punctuation">(</span> <span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>    <span class="token keyword">private</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>访问控制    <span class="token comment" spellcheck="true">//数据成员</span>    <span class="token keyword">unsigned</span> age<span class="token punctuation">;</span>    <span class="token keyword">protected</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>访问控制    <span class="token comment" spellcheck="true">//...</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//此处有分号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-什么是对象？什么是类？类与对象的关系是什么？"><a href="#2-什么是对象？什么是类？类与对象的关系是什么？" class="headerlink" title="2. 什么是对象？什么是类？类与对象的关系是什么？"></a>2. 什么是对象？什么是类？类与对象的关系是什么？</h4><ul><li><strong>定义</strong>: 类是<u><strong>逻辑上相关的函数与数据的封装</strong></u>，描述了所创建对象共同的属性和方法,对象是类的某一<strong>特定实体</strong>,例如将整个公司的雇员看成一个类，那么每一个雇员就是该类的一个特定实体，也就是一个对象</li><li><strong>关系</strong>: 类是对象的<u><strong>抽象</strong></u>，而对象是类的<u><strong>具体实例</strong></u>。类是抽象的，不占用内存，而对象是具体的，占用存储空间。</li></ul><h4 id="3-类中的成员可以用public-x2F-protected-x2F-private分别进行修饰，这三种成员在什么情况下是可以被访问的？类中没有用public-x2F-protected-x2F-private修饰的成员，其可访问性是什么，结构体中没有用public-x2F-protected-x2F-private修饰的成员，其可访问性是什么？"><a href="#3-类中的成员可以用public-x2F-protected-x2F-private分别进行修饰，这三种成员在什么情况下是可以被访问的？类中没有用public-x2F-protected-x2F-private修饰的成员，其可访问性是什么，结构体中没有用public-x2F-protected-x2F-private修饰的成员，其可访问性是什么？" class="headerlink" title="3. 类中的成员可以用public/protected/private分别进行修饰，这三种成员在什么情况下是可以被访问的？类中没有用public/protected/private修饰的成员，其可访问性是什么，结构体中没有用public/protected/private修饰的成员，其可访问性是什么？"></a>3. 类中的成员可以用public/protected/private分别进行修饰，这三种成员在什么情况下是可以被访问的？类中没有用public/protected/private修饰的成员，其可访问性是什么，结构体中没有用public/protected/private修饰的成员，其可访问性是什么？</h4><ul><li>$public$: 修饰的成员可以在任何地方被访问</li><li>$private$: 修饰的成员只能由<b><font color="Red">该类中的函数、其友元函数访问</font></b>,不能被任何其他访问，该类对象也不能访问</li><li>protected: 修饰的成员可以被<b><font color="Red">该类中函数</font></b>、<b><font color="Blue">子类函数</font></b>、<b><font color="Red">友元函数访问</font></b>；但不能被该类对象访问</li><li>在<strong>类</strong>中没有用$public/protected/private$修饰的成员，其可访问性默认是$private$</li><li>在<strong>结构体</strong>中没有用$public/protected/private$修饰的成员，其可访问性默认是$public$</li></ul><h4 id="4-什么是类作用域-Class-scope-、文件作用域-file-scope-、函数作用域（function-scope）？"><a href="#4-什么是类作用域-Class-scope-、文件作用域-file-scope-、函数作用域（function-scope）？" class="headerlink" title="4. 什么是类作用域(Class scope)、文件作用域(file scope)、函数作用域（function scope）？"></a>4. 什么是类作用域(Class scope)、文件作用域(file scope)、函数作用域（function scope）？</h4><ul><li><p><strong>类作用域</strong>: 类作用域是指<b><font color="green">类定义范围</font></b>（包括类的声明部分和相应成员函数实现整个范围）。在该范围内，类的成员函数对数据成员有完全访问权限。</p></li><li><p><strong>文件作用域</strong>: 文件作用域也称全局作用域。定义在所有函数之外的标识符，具有文件作用域，作用域为<b><font color="Red">从定义处到整个源文件结束</font></b>。文件中定义的全局变量和函数都具有文件作用域。</p></li><li><p><strong>函数作用域</strong>: 函数中定义的变量，包括形参和函数体中定义的局部变量，作用域都在该函数内，也称为函数域,<b><font color="Orange">从函数开始和函数结束</font></b></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面向对象程序设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面向对象程序设计 </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面向对象程序设计问答题OOP4面向对象概论</title>
       <link href="/2022/06/20/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop4-mian-xiang-dui-xiang-gai-lun/"/>
       <url>/2022/06/20/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop4-mian-xiang-dui-xiang-gai-lun/</url>
