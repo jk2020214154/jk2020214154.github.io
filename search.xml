@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>面向对象程序设计问答题OOP15友元</title>
+      <link href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop15-you-yuan/"/>
+      <url>/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop15-you-yuan/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-什么是友元-friend-函数？为什么要使用友员函数？"><a href="#1-什么是友元-friend-函数？为什么要使用友员函数？" class="headerlink" title="1. 什么是友元(friend)函数？为什么要使用友员函数？"></a>1. 什么是友元(friend)函数？为什么要使用友员函数？</h4><ul><li><p>友元函数是在类声明中由关键字$friend$修饰说明的非成员函数或其它类的成员函数，在它的函数体中能够通过对象名访问$private$和$protected$成员</p></li><li><p><strong>原因</strong>: <b><font color="red">增加灵活性</font></b>，使程序员可以在封装和快速性方面做合理选择</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面向对象程序设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面向对象程序设计 </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面向对象程序设计问答题OOP14操作符重载</title>
       <link href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop14-cao-zuo-fu-chong-zai/"/>
       <url>/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop14-cao-zuo-fu-chong-zai/</url>
