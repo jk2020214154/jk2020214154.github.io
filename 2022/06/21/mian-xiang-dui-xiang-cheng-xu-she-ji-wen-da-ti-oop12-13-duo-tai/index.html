@@ -442,14 +442,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    753
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -479,7 +479,49 @@
 <li>抽象类<strong>不可实例化</strong>,但可以派生</li>
 <li>当继承一个抽象类的时候，必须<strong>实现所有的纯虚函数</strong>，即可以实现实例化，否则由抽象类派生的类也是一个抽象类</li>
 </ul>
-<h4 id="2-对于函数调用，什么是前期绑定-Early-Binding，又称为静态联编-？什么是的后期绑定-Late-Binding，又称为动态联编-？重载函数是后期绑定吗，如果不是为什么？"><a href="#2-对于函数调用，什么是前期绑定-Early-Binding，又称为静态联编-？什么是的后期绑定-Late-Binding，又称为动态联编-？重载函数是后期绑定吗，如果不是为什么？" class="headerlink" title="2. 对于函数调用，什么是前期绑定(Early Binding，又称为静态联编)？什么是的后期绑定(Late Binding，又称为动态联编)？重载函数是后期绑定吗，如果不是为什么？"></a>2. 对于函数调用，什么是前期绑定(Early Binding，又称为静态联编)？什么是的后期绑定(Late Binding，又称为动态联编)？重载函数是后期绑定吗，如果不是为什么？</h4><h4 id="3-要让一个函数调用表现出多态特征，必须满足哪些条件？"><a href="#3-要让一个函数调用表现出多态特征，必须满足哪些条件？" class="headerlink" title="3. 要让一个函数调用表现出多态特征，必须满足哪些条件？"></a>3. 要让一个函数调用表现出多态特征，必须满足哪些条件？</h4><h4 id="4-简述虚函数动态绑定的实现原理。"><a href="#4-简述虚函数动态绑定的实现原理。" class="headerlink" title="4. 简述虚函数动态绑定的实现原理。"></a>4. 简述虚函数动态绑定的实现原理。</h4><h4 id="5-什么是隐藏-hiding-、覆盖-overriding-、重载-overloading-？对比它们的异同？以C-代码为例进行说明。"><a href="#5-什么是隐藏-hiding-、覆盖-overriding-、重载-overloading-？对比它们的异同？以C-代码为例进行说明。" class="headerlink" title="5. 什么是隐藏(hiding)、覆盖(overriding)、重载(overloading)？对比它们的异同？以C++代码为例进行说明。"></a>5. 什么是隐藏(hiding)、覆盖(overriding)、重载(overloading)？对比它们的异同？以C++代码为例进行说明。</h4><h4 id="6-什么是多态？"><a href="#6-什么是多态？" class="headerlink" title="6. 什么是多态？"></a>6. 什么是多态？</h4><ul>
+<h4 id="2-对于函数调用，什么是前期绑定-Early-Binding，又称为静态联编-？什么是后期绑定-Late-Binding，又称为动态联编-？重载函数是后期绑定吗，如果不是为什么？"><a href="#2-对于函数调用，什么是前期绑定-Early-Binding，又称为静态联编-？什么是后期绑定-Late-Binding，又称为动态联编-？重载函数是后期绑定吗，如果不是为什么？" class="headerlink" title="2. 对于函数调用，什么是前期绑定(Early Binding，又称为静态联编)？什么是后期绑定(Late Binding，又称为动态联编)？重载函数是后期绑定吗，如果不是为什么？"></a>2. 对于函数调用，什么是前期绑定(Early Binding，又称为静态联编)？什么是后期绑定(Late Binding，又称为动态联编)？重载函数是后期绑定吗，如果不是为什么？</h4><ul>
+<li><strong>前期绑定</strong>: 绑定工作在<strong>编译连接阶段</strong>完成的，因为绑定过程是在程序开始执行之前进行的，因此也称为早期绑定或前绑定。在编译、连接过程中，系统就可以根据类型匹配等特征确定程序中操作调用与执行该操作代码的关系，即确定了某一个同名标识到底是要调用哪一段程序代码。</li>
+<li><strong>后期绑定</strong>: 绑定工作在<strong>程序运行阶段</strong>完成的。</li>
+</ul>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+     <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Get</span><span class="token punctuation">(</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token operator">:</span> <span class="token keyword">public</span> A<span class="token punctuation">{</span> 
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Get</span><span class="token punctuation">(</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">MyFunction</span><span class="token punctuation">(</span> A <span class="token operator">*</span> pa <span class="token punctuation">)</span><span class="token punctuation">{</span>
+    pa<span class="token operator">-</span><span class="token operator">></span><span class="token function">Get</span><span class="token punctuation">(</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>重载函数<strong>不是后期绑定</strong>，是静态绑定，原因: <code>C++</code>代码在<strong>编译时</strong>会根据参数列表对函数进行重命名,从而实现函数重载。</li>
+</ul>
+<h4 id="3-要让一个函数调用表现出多态特征，必须满足哪些条件？"><a href="#3-要让一个函数调用表现出多态特征，必须满足哪些条件？" class="headerlink" title="3. 要让一个函数调用表现出多态特征，必须满足哪些条件？"></a>3. 要让一个函数调用表现出多态特征，必须满足哪些条件？</h4><ul>
+<li>是父、子类的函数，即存在<strong>继承体系结构</strong>。</li>
+<li>父类中标为$virtual$的成员函数(<strong>虚函数</strong>)，且为名字覆盖(重置)关系(不是重载)。</li>
+<li>通过父类的<strong>指针或是引用</strong>指向或引用一个对象，并调用虚函数。</li>
+</ul>
+<h4 id="4-简述虚函数动态绑定的实现原理。"><a href="#4-简述虚函数动态绑定的实现原理。" class="headerlink" title="4. 简述虚函数动态绑定的实现原理。"></a>4. 简述虚函数动态绑定的实现原理。</h4><ul>
+<li>构造函数中为对象的虚指针赋值，通过多态类型的指针或引用调用成员函数时，通过虚指针找到虚表，进而找到所调用的虚函数的入口地址，通过该入口地址调用虚函数。</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/XmbFcgOr7fnaoKj.png" alt="动态绑定的实现原理"></p>
+<p><img src="https://s2.loli.net/2022/06/21/3Dxc2Ty4lNw7GEi.png" alt="举例"></p>
+<h4 id="5-什么是隐藏-hiding-、覆盖-overriding-、重载-overloading-？对比它们的异同？以C-代码为例进行说明。"><a href="#5-什么是隐藏-hiding-、覆盖-overriding-、重载-overloading-？对比它们的异同？以C-代码为例进行说明。" class="headerlink" title="5. 什么是隐藏(hiding)、覆盖(overriding)、重载(overloading)？对比它们的异同？以C++代码为例进行说明。"></a>5. 什么是隐藏(hiding)、覆盖(overriding)、重载(overloading)？对比它们的异同？以C++代码为例进行说明。</h4><ul>
+<li><strong>名字隐藏</strong>:</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/WiCNm9G5v6chk1n.png" alt="名字隐藏"></p>
+<ul>
+<li><strong>名字覆盖</strong>:</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/FyTZ7A1u3CODKsw.png" alt="名字覆盖"></p>
+<ul>
+<li><strong>名字重载</strong>:</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/SJiKCQpW2fBPgtb.png" alt="名字重载"></p>
+<h4 id="6-什么是多态？"><a href="#6-什么是多态？" class="headerlink" title="6. 什么是多态？"></a>6. 什么是多态？</h4><ul>
 <li>多态是一种运行时绑定机制($run-time$ $binding$) ，通过这种机制，实现将函数名绑定到函数具体实现代码的目的。</li>
 </ul>
 <h4 id="7-dynamic-cast的作用是什么？试举例说明。"><a href="#7-dynamic-cast的作用是什么？试举例说明。" class="headerlink" title="7. dynamic-cast的作用是什么？试举例说明。"></a>7. dynamic-cast的作用是什么？试举例说明。</h4><p><img src="https://s2.loli.net/2022/06/21/LWgTlYNsOFSZqv2.png" alt="dynamic-cast的作用"></p>
@@ -1377,7 +1419,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">48.5k</span>
+                        class="white-color">48.8k</span>
             
             
             
