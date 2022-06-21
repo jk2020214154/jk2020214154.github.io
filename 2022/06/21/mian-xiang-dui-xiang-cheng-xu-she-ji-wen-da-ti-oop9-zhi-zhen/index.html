@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库SQLServer实验五数据库安全性、完整性控制, C++,算法,数据结构,ACM">
+    <meta name="keywords" content="面向对象程序设计问答题OOP9指针, C++,算法,数据结构,ACM">
     <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库SQLServer实验五数据库安全性、完整性控制 | 搁浅至云</title>
+    <title>面向对象程序设计问答题OOP9指针 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -274,12 +274,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/06/qIaAOYptg5yez7C.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/06/21/ZzjivKeu2WB741N.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库SQLServer实验五数据库安全性、完整性控制</h1>
+                    <h1 class="description center-align post-title">面向对象程序设计问答题OOP9指针</h1>
                 </div>
             </div>
         </div>
@@ -399,8 +399,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">数据库基本操作</span>
+                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                                <span class="chip bg-color">面向对象程序设计</span>
+                            </a>
+                        
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
                             </a>
                         
                     </div>
@@ -411,8 +415,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
+                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                面向对象程序设计
                             </a>
                         
                     </div>
@@ -424,21 +428,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-06
+                    2022-06-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-06
+                    2022-06-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    174
+                    521
                 </div>
                 
 
@@ -465,37 +469,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ul>
-<li>掌握如何对数据库和表进行安全性、完整性控制</li>
+                <pre class="line-numbers language-cpp"><code class="language-cpp">    <span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token punctuation">,</span><span class="token operator">*</span>q<span class="token punctuation">;</span>
+    p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">// 给一个整型变量分配所需的空间</span>
+    q <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 给元素个数为20的整型数组分配空间</span>
+    <span class="token keyword">delete</span> p<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">// 释放一个整型变量所占用的空间</span>
+    <span class="token keyword">delete</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span>q<span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// 释放元素个数为20的整型数组所占用的空间</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="1-操作符new的作用是什么？如何申请单个空间？如何申请动态数组？用new创建类的对象时，会发生哪些操作？必要时，请用代码说明。"><a href="#1-操作符new的作用是什么？如何申请单个空间？如何申请动态数组？用new创建类的对象时，会发生哪些操作？必要时，请用代码说明。" class="headerlink" title="1. 操作符new的作用是什么？如何申请单个空间？如何申请动态数组？用new创建类的对象时，会发生哪些操作？必要时，请用代码说明。"></a>1. 操作符new的作用是什么？如何申请单个空间？如何申请动态数组？用new创建类的对象时，会发生哪些操作？必要时，请用代码说明。</h4><ul>
+<li><strong>作用</strong>: 在堆中申请一段空间，动态分配内存</li>
+<li><strong>申请单个空间</strong>: <code>int *a=new int;</code></li>
+<li><strong>申请动态数组</strong>: <code>int *b=new int[10];</code></li>
+<li><strong>操作</strong>: $new$创建类对象需要指针接收，一处初始化，多处使用，作用域是全局，且需要手动释放空间，在堆中动态分配内存，调用构造函数。</li>
 </ul>
-<h3 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h3><ul>
-<li>在示例数据库建立多个用户$u1,u2$,赋予$u1$查看和删除$student$表的权限,授予$u2$查看数学系学生视图的权限,然后验证它们是否具有真正的权限.</li>
+<h4 id="2-操作符delete的作用是什么？如何删除单个用new申请的空间？如何删除申请的动态数组？用delete删除一个类的对象时，会发生哪些操作？必要时，请用代码说明。"><a href="#2-操作符delete的作用是什么？如何删除单个用new申请的空间？如何删除申请的动态数组？用delete删除一个类的对象时，会发生哪些操作？必要时，请用代码说明。" class="headerlink" title="2. 操作符delete的作用是什么？如何删除单个用new申请的空间？如何删除申请的动态数组？用delete删除一个类的对象时，会发生哪些操作？必要时，请用代码说明。"></a>2. 操作符delete的作用是什么？如何删除单个用new申请的空间？如何删除申请的动态数组？用delete删除一个类的对象时，会发生哪些操作？必要时，请用代码说明。</h4><ul>
+<li><strong>作用</strong>: 释放所申请的空间</li>
+<li><strong>删除单个空间</strong>: <code>delete a;</code></li>
+<li><strong>删除动态数组</strong>: <code>delete []b;</code></li>
+<li><strong>操作</strong>: 释放在堆中分配的内存，调用析构函数</li>
 </ul>
-<pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 分别执行</span>
-sp_addlogin <span class="token string">'u1'</span><span class="token punctuation">,</span><span class="token string">'123'</span><span class="token punctuation">,</span>Stu
-
-sp_addlogin <span class="token string">'u2'</span><span class="token punctuation">,</span><span class="token string">'147'</span><span class="token punctuation">,</span>Stu
-
-sp_grantdbaccess u1
-
-sp_grantdbaccess u2
-
-<span class="token keyword">grant</span> <span class="token keyword">select</span><span class="token punctuation">,</span><span class="token keyword">delete</span>
-<span class="token keyword">on</span> student
-<span class="token keyword">To</span> u1
-
-<span class="token keyword">grant</span> <span class="token keyword">select</span>
-<span class="token keyword">on</span>  Math_Student
-<span class="token keyword">to</span> u2
-
-<span class="token comment" spellcheck="true">-- 验证过程略</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li><p>给示例数据库中每个表建立主码;相关的表建立外码;在每个表的部分列上建立$CHECK$约束.</p>
-</li>
-<li><p>过程略(此过程一般在建表时就需要设置).</p>
-</li>
+<h4 id="3-什么是悬挂指针-又称为野指针，Dangling-Pointers-，其危害是什么？"><a href="#3-什么是悬挂指针-又称为野指针，Dangling-Pointers-，其危害是什么？" class="headerlink" title="3. 什么是悬挂指针(又称为野指针，Dangling Pointers)，其危害是什么？"></a>3. 什么是悬挂指针(又称为野指针，Dangling Pointers)，其危害是什么？</h4><ul>
+<li><strong>定义</strong>: 指针指向非法的内存地址，那么这个指针就是悬挂指针，也叫野指针，意为无法正常使用的指针。</li>
+<li><strong>危害</strong>: 野指针造成的危害程度和危害时间未知，因为野指针指向的内存空间，有可能是某个重要的数据或其他程序，严重的情况下会造成程序崩溃。</li>
 </ul>
+<h4 id="4-什么是切片-Slicing-？"><a href="#4-什么是切片-Slicing-？" class="headerlink" title="4. 什么是切片(Slicing)？"></a>4. 什么是切片(Slicing)？</h4><p>派生类的存储结构与基类的存储结构存在着<code>粘接（splice）</code>关系：当子类对象拷贝到父类对象时，父类对象中只存在父类定义的成员，而不会出现任何子类中的成员。</p>
 
                 
             </div>
@@ -522,7 +518,7 @@ sp_grantdbaccess u2
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/05/06/shu-ju-ku-sqlserver-shi-yan-wu-shu-ju-ku-an-quan-xing-wan-zheng-xing-kong-zhi/">https://liaoy0103.top/2022/05/06/shu-ju-ku-sqlserver-shi-yan-wu-shu-ju-ku-an-quan-xing-wan-zheng-xing-kong-zhi/</a>
+                    <a href="https://liaoy0103.top/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop9-zhi-zhen/">https://liaoy0103.top/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop9-zhi-zhen/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -560,8 +556,12 @@ sp_grantdbaccess u2
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">数据库基本操作</span>
+                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+                                    <span class="chip bg-color">面向对象程序设计</span>
+                                </a>
+                            
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
                                 </a>
                             
                         </div>
@@ -1009,28 +1009,29 @@ sp_grantdbaccess u2
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/05/11/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-6/">
+                <a href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop9-zhi-zhen/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/11/16DGAaUrkT8BgO3.jpg" class="responsive-img" alt="面向对象程序设计实验6">
+                        <img src="https://s2.loli.net/2022/06/21/ZzjivKeu2WB741N.jpg" class="responsive-img" alt="面向对象程序设计问答题OOP9指针">
                         
-                        <span class="card-title">面向对象程序设计实验6</span>
+                        <span class="card-title">面向对象程序设计问答题OOP9指针</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                             
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1043,6 +1044,7 @@ sp_grantdbaccess u2
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1065,23 +1067,23 @@ sp_grantdbaccess u2
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/04/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-10/">
+                <a href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop8-geng-duo-cheng-yuan-han-shu/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/04/qN6bkeXHfslt4ro.jpg" class="responsive-img" alt="面向对象程序设计实验10">
+                        <img src="https://s2.loli.net/2022/06/21/HrILTExyDkOdSeq.jpg" class="responsive-img" alt="面向对象程序设计问答题OOP8更多成员函数">
                         
-                        <span class="card-title">面向对象程序设计实验10</span>
+                        <span class="card-title">面向对象程序设计问答题OOP8更多成员函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                             
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-21
                             </span>
                         <span class="publish-author">
                             

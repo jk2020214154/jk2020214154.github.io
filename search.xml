@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>面向对象程序设计问答题OOP9指针</title>
+      <link href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop9-zhi-zhen/"/>
+      <url>/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop9-zhi-zhen/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-cpp"><code class="language-cpp">    <span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token punctuation">,</span><span class="token operator">*</span>q<span class="token punctuation">;</span>    p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">// 给一个整型变量分配所需的空间</span>    q <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 给元素个数为20的整型数组分配空间</span>    <span class="token keyword">delete</span> p<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">// 释放一个整型变量所占用的空间</span>    <span class="token keyword">delete</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span>q<span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// 释放元素个数为20的整型数组所占用的空间</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="1-操作符new的作用是什么？如何申请单个空间？如何申请动态数组？用new创建类的对象时，会发生哪些操作？必要时，请用代码说明。"><a href="#1-操作符new的作用是什么？如何申请单个空间？如何申请动态数组？用new创建类的对象时，会发生哪些操作？必要时，请用代码说明。" class="headerlink" title="1. 操作符new的作用是什么？如何申请单个空间？如何申请动态数组？用new创建类的对象时，会发生哪些操作？必要时，请用代码说明。"></a>1. 操作符new的作用是什么？如何申请单个空间？如何申请动态数组？用new创建类的对象时，会发生哪些操作？必要时，请用代码说明。</h4><ul><li><strong>作用</strong>: 在堆中申请一段空间，动态分配内存</li><li><strong>申请单个空间</strong>: <code>int *a=new int;</code></li><li><strong>申请动态数组</strong>: <code>int *b=new int[10];</code></li><li><strong>操作</strong>: $new$创建类对象需要指针接收，一处初始化，多处使用，作用域是全局，且需要手动释放空间，在堆中动态分配内存，调用构造函数。</li></ul><h4 id="2-操作符delete的作用是什么？如何删除单个用new申请的空间？如何删除申请的动态数组？用delete删除一个类的对象时，会发生哪些操作？必要时，请用代码说明。"><a href="#2-操作符delete的作用是什么？如何删除单个用new申请的空间？如何删除申请的动态数组？用delete删除一个类的对象时，会发生哪些操作？必要时，请用代码说明。" class="headerlink" title="2. 操作符delete的作用是什么？如何删除单个用new申请的空间？如何删除申请的动态数组？用delete删除一个类的对象时，会发生哪些操作？必要时，请用代码说明。"></a>2. 操作符delete的作用是什么？如何删除单个用new申请的空间？如何删除申请的动态数组？用delete删除一个类的对象时，会发生哪些操作？必要时，请用代码说明。</h4><ul><li><strong>作用</strong>: 释放所申请的空间</li><li><strong>删除单个空间</strong>: <code>delete a;</code></li><li><strong>删除动态数组</strong>: <code>delete []b;</code></li><li><strong>操作</strong>: 释放在堆中分配的内存，调用析构函数</li></ul><h4 id="3-什么是悬挂指针-又称为野指针，Dangling-Pointers-，其危害是什么？"><a href="#3-什么是悬挂指针-又称为野指针，Dangling-Pointers-，其危害是什么？" class="headerlink" title="3. 什么是悬挂指针(又称为野指针，Dangling Pointers)，其危害是什么？"></a>3. 什么是悬挂指针(又称为野指针，Dangling Pointers)，其危害是什么？</h4><ul><li><strong>定义</strong>: 指针指向非法的内存地址，那么这个指针就是悬挂指针，也叫野指针，意为无法正常使用的指针。</li><li><strong>危害</strong>: 野指针造成的危害程度和危害时间未知，因为野指针指向的内存空间，有可能是某个重要的数据或其他程序，严重的情况下会造成程序崩溃。</li></ul><h4 id="4-什么是切片-Slicing-？"><a href="#4-什么是切片-Slicing-？" class="headerlink" title="4. 什么是切片(Slicing)？"></a>4. 什么是切片(Slicing)？</h4><p>派生类的存储结构与基类的存储结构存在着<code>粘接（splice）</code>关系：当子类对象拷贝到父类对象时，父类对象中只存在父类定义的成员，而不会出现任何子类中的成员。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面向对象程序设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面向对象程序设计 </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面向对象程序设计问答题OOP8更多成员函数</title>
       <link href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop8-geng-duo-cheng-yuan-han-shu/"/>
       <url>/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop8-geng-duo-cheng-yuan-han-shu/</url>
