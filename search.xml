@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>面向对象程序设计问答题OOP16UML</title>
+      <link href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop16uml/"/>
+      <url>/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop16uml/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-什么是UML？如何画UML中的类图？什么是类与类之间依赖关系、关联关系、包含关系？试举例说明这三种类之间的关系。这三种关系如何和UML图表示？"><a href="#1-什么是UML？如何画UML中的类图？什么是类与类之间依赖关系、关联关系、包含关系？试举例说明这三种类之间的关系。这三种关系如何和UML图表示？" class="headerlink" title="1. 什么是UML？如何画UML中的类图？什么是类与类之间依赖关系、关联关系、包含关系？试举例说明这三种类之间的关系。这三种关系如何和UML图表示？"></a>1. 什么是UML？如何画UML中的类图？什么是类与类之间依赖关系、关联关系、包含关系？试举例说明这三种类之间的关系。这三种关系如何和UML图表示？</h4><ul><li>UML是一种可视化的的面向对象建模语言，描述<b><font color="red">软件模型的静态结构、动态行为及模块组织与管理</font></b>。</li></ul><p><img src="https://s2.loli.net/2022/06/21/3KWqZFNr74XLb68.png" alt="类图"></p><p><img src="https://s2.loli.net/2022/06/21/CFRHv5OBJxo7jdT.png" alt="依赖关系"></p><p><img src="https://s2.loli.net/2022/06/21/J37TlthcMdzNnrL.png" alt="关联关系"></p><p><img src="https://s2.loli.net/2022/06/21/3r2RLFc4UGkt8MC.png" alt="包含关系"></p><p><img src="https://s2.loli.net/2022/06/21/Nd2yeHXn9UpwCKJ.png" alt="类与对象之间的关系"></p><h4 id="2-常见的类与类之间的关系有哪几种，举例说明每种关系的对应UML图如何画？两个什么样的类可以实现为继承关系？"><a href="#2-常见的类与类之间的关系有哪几种，举例说明每种关系的对应UML图如何画？两个什么样的类可以实现为继承关系？" class="headerlink" title="2. 常见的类与类之间的关系有哪几种，举例说明每种关系的对应UML图如何画？两个什么样的类可以实现为继承关系？"></a>2. 常见的类与类之间的关系有哪几种，举例说明每种关系的对应UML图如何画？两个什么样的类可以实现为继承关系？</h4><ul><li><strong>依赖</strong>关系、<strong>关联</strong>关系、<strong>包含</strong>关系、<strong>继承</strong>关系。</li></ul><p><img src="https://s2.loli.net/2022/06/21/jqG2m9PUSREXOIi.png" alt="继承关系"></p><ul><li>在一个类既需要<strong>另一个类里的成员变量和方法</strong>,也需要<strong>自己不同于另一个类的成员和方法时</strong>,可以将两个类定义为继承关系。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面向对象程序设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面向对象程序设计 </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面向对象程序设计问答题OOP15友元</title>
       <link href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop15-you-yuan/"/>
       <url>/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop15-you-yuan/</url>
