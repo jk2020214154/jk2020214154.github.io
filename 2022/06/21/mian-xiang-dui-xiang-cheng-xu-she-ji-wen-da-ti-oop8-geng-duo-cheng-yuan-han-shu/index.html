@@ -31,9 +31,9 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -512,14 +512,14 @@ d<span class="token operator">=</span><span class="token keyword">static_cast</s
 <blockquote>
 <p>$const$出现在星号左边，表示<b><font color="blue">被指物</font></b>是常量；<br>$const$出现在右边，<b><font color="red">指针自身</font></b>是常量；<br>$const$出现在左右两边，<b><font color="Green">被指物和指针自身</font></b>是常量。</p>
 </blockquote>
-<pre class="line-numbers language-cpp"><code class="language-cpp">    <span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//1.p可变,p指向的对象可变</span>
-    <span class="token keyword">int</span> <span class="token keyword">const</span> <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//2.const修饰指向的对象,p可变,p指向的对象不可变</span>
-    <span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//3.const修饰指向的对象,p可变,p指向的对象不可变(与2相同)</span>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//1.p可变,p指向的对象可变</span>
+<span class="token keyword">int</span> <span class="token keyword">const</span> <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//2.const修饰指向的对象,p可变,p指向的对象不可变</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//3.const修饰指向的对象,p可变,p指向的对象不可变(与2相同)</span>
 
-    <span class="token keyword">int</span> <span class="token operator">*</span> <span class="token keyword">const</span> p<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//4.const修饰指针p,p不可变,定义时需要初始化,p指向的对象可变</span>
+<span class="token keyword">int</span> <span class="token operator">*</span> <span class="token keyword">const</span> p<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//4.const修饰指针p,p不可变,定义时需要初始化,p指向的对象可变</span>
 
-    <span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span><span class="token keyword">const</span> p<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//5.指针p和指针p指向的对象均不可变</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span><span class="token keyword">const</span> p<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//5.指针p和指针p指向的对象均不可变</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>修饰<strong>常引用</strong></li>
