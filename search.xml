@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>面向对象程序设计问答题OOP18异常</title>
+      <link href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop18-yi-chang/"/>
+      <url>/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop18-yi-chang/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-使用异常处理机制的好处是什么？"><a href="#1-使用异常处理机制的好处是什么？" class="headerlink" title="1. 使用异常处理机制的好处是什么？"></a>1. 使用异常处理机制的好处是什么？</h4><ul><li>将常规代码与错误处理代码的分离</li><li>实现在调用栈中传播异常</li><li>实现对不同的错误类型进行分类</li></ul><h4 id="2-简述C-中的异常处理机制。要捕获某段代码中的所有异常，应该如何编写代码？"><a href="#2-简述C-中的异常处理机制。要捕获某段代码中的所有异常，应该如何编写代码？" class="headerlink" title="2. 简述C++中的异常处理机制。要捕获某段代码中的所有异常，应该如何编写代码？"></a>2. 简述C++中的异常处理机制。要捕获某段代码中的所有异常，应该如何编写代码？</h4><ul><li><code>C++</code>中，$try$与$catch$用于实现异常的处理。</li></ul><blockquote><p>当$try$块出现异常，则$catch$中匹配相应的异常处理，若$catch$块中没有匹配该异常对象的语句，则转向外一层的$try$、$catch$语句，若一直退回到主函数都无法处理异常，则由系统调用$terminate()$函数终止程序。用异常规格($exception$ $specification$)列出函数可能会抛出所有异常的类型。</p></blockquote><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">try</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//包含可能抛出异常的语句；</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>类型名 <span class="token punctuation">[</span>形参名<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//可能出现的异常1</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>类型名 <span class="token punctuation">[</span>形参名<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//可能出现的异常2</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//如果不确定异常类型,在这里可以捕获所有类型异常!</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://s2.loli.net/2022/06/21/sbrhBIjU76AESev.png" alt="处理除零异常"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面向对象程序设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面向对象程序设计 </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面向对象程序设计问答题OOP17模块</title>
       <link href="/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop17-mo-kuai/"/>
       <url>/2022/06/21/mian-xiang-dui-xiang-cheng-xu-she-ji-wen-da-ti-oop17-mo-kuai/</url>
