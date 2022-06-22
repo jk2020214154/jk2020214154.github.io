@@ -442,7 +442,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    603
+                    604
                 </div>
                 
 
@@ -508,7 +508,7 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="2-为什么重载为全局函数的运算符通常要比重载为成员函数的运算符多一个参数？举例说明。"><a href="#2-为什么重载为全局函数的运算符通常要比重载为成员函数的运算符多一个参数？举例说明。" class="headerlink" title="2. 为什么重载为全局函数的运算符通常要比重载为成员函数的运算符多一个参数？举例说明。"></a>2. 为什么重载为全局函数的运算符通常要比重载为成员函数的运算符多一个参数？举例说明。</h4><ul>
 <li>当重载为<strong>成员函数</strong>时，会有一个$this$指针，指向当前的类，所以只需要一个参数就可以了。</li>
-<li>当重载为<strong>全局函数</strong>时，将没有隐含的参数$this$指针，这样将会多一个参数。</li>
+<li>而当重载为<strong>全局函数</strong>时，将没有隐含的参数$this$指针，这样将会多一个参数。</li>
 </ul>
 <pre class="line-numbers language-cpp"><code class="language-cpp">Complex <span class="token keyword">operator</span> <span class="token operator">+</span><span class="token punctuation">(</span>Complex<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">friend</span> Complex <span class="token keyword">operator</span><span class="token operator">+</span><span class="token punctuation">(</span>Complex <span class="token operator">&amp;</span>c1<span class="token punctuation">,</span>Complex <span class="token operator">&amp;</span>c2<span class="token punctuation">)</span><span class="token punctuation">;</span>
