@@ -31,9 +31,9 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 6.1.0">
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="搁浅至云" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -435,7 +435,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-21
+                    2022-06-22
                 </div>
                 
 
@@ -487,8 +487,12 @@
 <li><p>当用$cout$和<u><strong>流插入运算符</strong></u><code>&lt;&lt;</code>向显示器<strong>输出</strong>数据时，先将这些数据送到程序中的<b><font color="DarkGreen">输出缓冲区</font></b>保存，直到缓冲区<strong>满了或遇到</strong>$endl$，就将缓冲区中的全部数据送到<b><font color="Purple">显示器</font></b>显示出来。</p>
 </li>
 </ul>
-<h4 id="2-阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）"><a href="#2-阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）" class="headerlink" title="2. 阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）"></a>2. 阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）</h4><p><strong>传值</strong>: <font color="Red">实参用变量名（或常数），形参用变量名</font></p>
+<h4 id="2-阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）"><a href="#2-阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）" class="headerlink" title="2. 阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）"></a>2. 阐述C＋＋中函数三种调用方式的实现机制、特点及其实参、形参格式，最好用代码说明。试比较三种方式的执行效率。（提示：传址、传值、引用传递）</h4><ul>
+<li><strong>传值</strong>: <font color="Red">实参用变量名（或常数），形参用变量名</font></li>
+</ul>
+<blockquote>
 <p><strong>传值调用</strong>: 是单向的，实参把值拷贝一份给形参，形参值的改变不会影响实参</p>
+</blockquote>
 <h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
@@ -516,7 +520,9 @@ i<span class="token operator">=</span><span class="token number">2</span> j<span
 <ul>
 <li><strong>传指针</strong>: <font color="Blue">实参用地址，形参用指针</font></li>
 </ul>
+<blockquote>
 <p><strong>传址调用</strong>：是双向的，把实参的地址传给形参，形参就指向实参变量，因此形参的改变会影响实参</p>
+</blockquote>
 <h5 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h5><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
@@ -544,7 +550,9 @@ i<span class="token operator">=</span><span class="token number">5</span> j<span
 <ul>
 <li><strong>传引用</strong>: <font color="DarkGreen">实参用变量名，形参用引用</font></li>
 </ul>
+<blockquote>
 <p><strong>引用调用</strong>：形参是实参的别名，形参的改变也会影响实参，注意，实参只能用变量名，不能用常量</p>
+</blockquote>
 <h5 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h5><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
@@ -1818,15 +1826,6 @@ $(function () {
     color="130 0 0" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
 
-    
-        
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
-            }
-        </script>
     
 
     <!-- 雪花特效 -->
