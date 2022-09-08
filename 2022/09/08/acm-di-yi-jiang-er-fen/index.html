@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库SQLServer实验四视图, C++,算法,数据结构,ACM">
+    <meta name="keywords" content="ACM第一讲:二分, C++,算法,数据结构,ACM">
     <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库SQLServer实验四视图 | 搁浅至云</title>
+    <title>ACM第一讲:二分 | 搁浅至云</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -274,12 +274,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/04/29/nhYFSKi3zjsaHR9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库SQLServer实验四视图</h1>
+                    <h1 class="description center-align post-title">ACM第一讲:二分</h1>
                 </div>
             </div>
         </div>
@@ -399,8 +399,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">数据库基本操作</span>
+                            <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">基础算法</span>
                             </a>
                         
                     </div>
@@ -411,8 +411,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                ACM算法
                             </a>
                         
                     </div>
@@ -424,28 +424,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-29
+                    2022-09-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-29
+                    2022-09-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    286
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    9 分
                 </div>
                 
 
@@ -465,57 +465,173 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ul>
-<li>熟练掌握$sql$的应用;</li>
-<li>掌握$sql$视图建立和删除;</li>
-<li>掌握$sql$视图查询.</li>
-</ul>
-<h3 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h3><h4 id="1-定义视图"><a href="#1-定义视图" class="headerlink" title="(1).定义视图"></a>(1).定义视图</h4><h5 id="建立视图"><a href="#建立视图" class="headerlink" title="建立视图"></a>建立视图</h5><ul>
-<li>建立数学系学生的视图</li>
-</ul>
-<pre class="line-numbers language-SQL"><code class="language-SQL">create view Math_Student
-as
-select Sno 学号,Sname 姓名,Sage 年龄,Ssex 性别 from Student
-where Sdept='数学'
---先执行上面语句,再执行最后语句
-select * from Math_Student
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <p>二分</p>
+<blockquote>
+<p>①二分概念:</p>
+</blockquote>
+<p>二分算法，又称<strong>折半查找</strong>，即在一个<strong>单调有序</strong>的集合中查找一个解。每次分为左右两部分，判断解在哪个部分中并调整上下界，直到找到目标元素，每次二分后都将舍弃一半的查找空间。</p>
+<blockquote>
+<p>②时间复杂度: $O(logn)$</p>
+</blockquote>
+<blockquote>
+<p>③二分常见模型:</p>
+</blockquote>
 <ul>
-<li>建立学生的学号$(Sno)$、姓名$(Sname)$、选修课程名$(Cname)$及成绩$(Grade)$的视图.</li>
+<li>二分查找:在一个单调有序的区间上求解分界点。</li>
+<li>二分答案:<strong>最小值最大(最大值最小)问题</strong>，这类双最值问题常常选用二分法进行求解，也就是确定答案后，配合<strong>贪心、DP等其他算法</strong>检验这个答案是否合理，将最优化问题转换为判定性问题。</li>
 </ul>
-<pre class="line-numbers language-SQL"><code class="language-SQL">create view Student_Grade
-as
-select Sc.Sno 学号,Sname 姓名,Cname 课程名,Grade 成绩 from Student,Course,Sc
-where Student.Sno=Sc.Sno and Course.Cno=Sc.cno
---先执行上面语句,再执行最后语句
-select * from Student_Grade
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>注：一般题目默认在一个<strong>从小到大的区间</strong>上。</p>
+</blockquote>
+<h3 id="一、整数二分"><a href="#一、整数二分" class="headerlink" title="一、整数二分"></a>一、整数二分</h3><h4 id="1-查找精确值"><a href="#1-查找精确值" class="headerlink" title="1. 查找精确值"></a>1. 查找精确值</h4><p>从一个有序数组中找到一个符合要求的<strong>精确值</strong>(如猜数游戏)。如查找值为$key$的元素下标,不存在返回$-1$。</p>
+<p>区间划分为：$[l,mid-1],mid,[mid+1,r]$。</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">binary_search</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span><span class="token keyword">int</span> r<span class="token punctuation">,</span><span class="token keyword">int</span> key<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/*
+    l&lt;=r的原因:
+    如果最后只剩下a[pos]和a[pos+1]这两个元素,此时l=pos,r=pos+1
+    计算出mid=(l+r)/2=(pos+pos+1)/2=pos
+    当a[mid]&lt;key,此时l=mid+1=pos+1,继续检测第pos+1个元素;
+    反之写成l&lt;r时,此时会直接退出循环,不再检测第pos+1个元素,导致答案错误
+    */</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>l<span class="token operator">&lt;=</span>r<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> mid<span class="token operator">=</span><span class="token punctuation">(</span>l<span class="token operator">+</span>r<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">==</span>key<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//[l,mid-1]-----mid-----[mid+1,r]</span>
+        <span class="token comment" spellcheck="true">//由于mid在上个if中不成立时(即mid不是最终答案),此时可把mid排除在外</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">></span>key<span class="token punctuation">)</span>
+            r<span class="token operator">=</span>mid<span class="token number">-1</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> l<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-查找大于等于-x2F-大于key的第一个元素"><a href="#2-查找大于等于-x2F-大于key的第一个元素" class="headerlink" title="2. 查找大于等于/大于key的第一个元素"></a>2. 查找大于等于/大于key的第一个元素</h4><p>这种通常题目描述为<strong>满足某种情况的最小的元素</strong>。</p>
+<p>区间划分为：$[l,mid],[mid+1,r]$</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">binary_search</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span><span class="token keyword">int</span> r<span class="token punctuation">,</span><span class="token keyword">int</span> key<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>l<span class="token operator">&lt;</span>r<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">/*
+        此处不需要+1,即不写成mid=(l+r+1)/2;
+        如果最后只剩下a[pos]和a[pos+1]这两个元素,此时l=pos,r=pos+1
+        计算出mid=(l+r)/2=(pos+pos+1)/2=pos
+        如果a[mid]>key,那么之后l=r=pos,跳出循环
+        如果a[mid]&lt;key,那么之后l=r=pos+1,跳出循环,故不会造成死循环
+        */</span>
+        <span class="token keyword">int</span> mid<span class="token operator">=</span><span class="token punctuation">(</span>l<span class="token operator">+</span>r<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">></span>key<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">//如果求大于等于则写成a[mid]>=key,此处也可以是check(mid)</span>
+        <span class="token comment" spellcheck="true">//if(check(mid))</span>
+            r<span class="token operator">=</span>mid<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> l<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//如果a[mid]&lt;key,那么a[mid]以及小于a[mid]的值都需排除在外,故l=mid+1</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> l<span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="举例"><a href="#举例" class="headerlink" title="举例:"></a>举例:</h5><p>设原数组个数为$7$,元素序列为$[1,3,5,8,10,12,15]$,用该二分查找代码查找$11$</p>
 <ul>
-<li>定义一个反映学生出生年份的视图.</li>
+<li>第一次:$l=1,r=7,mid=(l+r)/2=4$,此时$a[mid]=8&lt;11$,更新$l=mid+1=5$;</li>
+<li>第二次:$l=5,r=7,mid=(l+r)/2=6$,此时$a[mid]=12&gt;11$,更新$r=mid=6$;</li>
+<li>第三次:$l=5,r=6,mid=(l+r)/2=5$,此时$a[mid]=10&lt;11$,更新$l=mid+1=6$,此时$l=r=6$退出循环.</li>
 </ul>
-<pre class="line-numbers language-SQL"><code class="language-SQL">create view Birth_year
-as
-select Sno 学号,Sname 姓名,DateName(year,GetDate())-Sage 出生年份 from Student
---先执行上面语句,再执行最后语句
-select * from Birth_year
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="删除视图"><a href="#删除视图" class="headerlink" title="删除视图"></a>删除视图</h5><ul>
-<li>删除反映学生出生年份的视图.</li>
+<p>最终得到结果为$12$(下标为$6$)。$12$是查到数组中大于$11$(查找数)的最小值。</p>
+<p>故该二分代码用来解决<strong>最大值最小化问题</strong>。</p>
+<h4 id="3-查找小于等于-x2F-小于key的最后一个元素"><a href="#3-查找小于等于-x2F-小于key的最后一个元素" class="headerlink" title="3. 查找小于等于/小于key的最后一个元素"></a>3. 查找小于等于/小于key的最后一个元素</h4><p>这种通常题目描述为<strong>满足某种情况的最大的元素</strong>。</p>
+<p>区间划分为：$[l,mid-1],[mid,r]$</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">binary_search</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span><span class="token keyword">int</span> r<span class="token punctuation">,</span><span class="token keyword">int</span> key<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>l<span class="token operator">&lt;</span>r<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">/*
+        这里mid=(l+r+1)/2;
+         如果最后只剩下a[pos]和a[pos+1]这两个元素,此时l=pos,r=pos+1
+        计算出mid=(l+r+1)/2=(pos+pos+1+1)/2=pos+1
+        如果a[mid]&lt;key,l=r=pos+1,跳出循环;如果a[mid]>key,l=pos+1-1=pos,跳出循环
+        */</span>
+        <span class="token keyword">int</span> mid<span class="token operator">=</span><span class="token punctuation">(</span>l<span class="token operator">+</span>r<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//如果求小于等于则写成a[mid]&lt;=key,此处也可以是check(mid)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">&lt;</span>key<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">//如果A[mid]&lt;key,说明比A[mid]更小的数肯定不是小于key的最大的元素</span>
+        <span class="token comment" spellcheck="true">//所以要排除mid之前的所有元素</span>
+            l<span class="token operator">=</span>mid<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> r<span class="token operator">=</span>mid<span class="token number">-1</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//如果A[mid]>key，那么说明A[mid]以及比A[mid]还要大的数都不可能小于key</span>
+        <span class="token comment" spellcheck="true">//所以排除A[mid]及其之后的元素。</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> l<span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="举例-1"><a href="#举例-1" class="headerlink" title="举例:"></a>举例:</h5><p>设原数组个数为$7$,元素序列为$[1,3,5,8,10,12,15]$,用该二分查找代码查找$11$</p>
+<ul>
+<li>第一次:$l=1,r=7,mid=(l+r+1)/2=4$,此时$a[mid]=8&lt;11$,更新$l=mid=4$;</li>
+<li>第二次:$l=4,r=7,mid=(l+r+1)/2=6$,此时$a[mid]=12&gt;11$,更新$r=mid-1=5$;</li>
+<li>第三次:$l=4,r=5,mid=(l+r+1)/2=5$,此时$a[mid]=10&lt;11$,更新$l=mid=5$,此时$l=r=5$退出循环.</li>
 </ul>
-<pre class="line-numbers language-SQL"><code class="language-SQL">drop view Birth_year
+<p>最终得到结果为$10$(下标为$5$)。$10$是查到数组中小于$11$(查找数)的最大值。</p>
+<p>故该二分代码用来解决<strong>最小值最大化问题</strong>。</p>
+<h4 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h4><p>最后两种情况的循环跳出条件是$l &lt; r$，为什么不是小于等于呢？因为我们的区间变换思路是不断的舍去不可能是解的区间，最后只剩下一个数就是我们的解。而第一种情况就算<strong>最后只剩一个数也有可能不是解</strong>，所以需要使用小于等于。</p>
+<ul>
+<li>查找精确值，循环条件是<strong>小于等于</strong>；查找满足情况的最大最小值，循环条件是<strong>小于</strong>。</li>
+<li>查找满足条件的最大数，$mid=(l+r+1)/2$；查找满足条件的最小数，$mid=(l+r)/2$</li>
+<li>如果存在没有解的情况，比如从$[1,2,3,4,5]$找出大于等于$6$的第一个数，我们只需要将最后剩下的数单独进行一次判断。</li>
+</ul>
+<h3 id="二、浮点二分"><a href="#二、浮点二分" class="headerlink" title="二、浮点二分"></a>二、浮点二分</h3><p>类似于数学对函数实行的二分法。</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">const</span> <span class="token keyword">double</span> eps<span class="token operator">=</span><span class="token number">1e-6</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//精度具体题目具体分析</span>
+<span class="token keyword">double</span> <span class="token function">binary_search</span><span class="token punctuation">(</span><span class="token keyword">double</span> l<span class="token punctuation">,</span><span class="token keyword">double</span> r<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>l<span class="token operator">+</span>eps<span class="token operator">&lt;</span>r<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">double</span> mid<span class="token operator">=</span><span class="token punctuation">(</span>l<span class="token operator">+</span>r<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            r<span class="token operator">=</span>mid<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> l<span class="token operator">=</span>mid<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> l<span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="三、STL二分函数"><a href="#三、STL二分函数" class="headerlink" title="三、STL二分函数"></a>三、STL二分函数</h3><h4 id="1-以有序数组为例"><a href="#1-以有序数组为例" class="headerlink" title="1. 以有序数组为例"></a>1. 以有序数组为例</h4><p>在<strong>从小到大的数组</strong>中,查找区间$[l,r)$某种情况的元素$k$;</p>
+<p>查找范围:$[l,r)$。时间复杂度为:$O(logn)$。</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token function">lower_bound</span><span class="token punctuation">(</span>a<span class="token operator">+</span>l<span class="token punctuation">,</span>a<span class="token operator">+</span>r<span class="token punctuation">,</span>k<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//二分查找第一个大于或等于k的数字</span>
+<span class="token function">upper_bound</span><span class="token punctuation">(</span>a<span class="token operator">+</span>l<span class="token punctuation">,</span>a<span class="token operator">+</span>r<span class="token punctuation">,</span>k<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//二分查找第一个大于k的数字</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>对于$lower$_$bound$来说，当元素$k$存在时返回指向该元素的地址，如果$k$大于数组中任何一个值，则返回指向$r$的地址。如果$k$小于数组中任何一个值，则返回指向$l$的地址。同理，$upper$_$bound$类似。</p>
+<ul>
+<li>技巧：因为返回的是数组地址，所以可以减去数组来求得在数组中的位置。</li>
+</ul>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> t<span class="token operator">=</span><span class="token function">lower_bound</span><span class="token punctuation">(</span>a<span class="token operator">+</span>l<span class="token punctuation">,</span>a<span class="token operator">+</span>r<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token operator">-</span>a<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="2-查询视图"><a href="#2-查询视图" class="headerlink" title="(2).查询视图"></a>(2).查询视图</h4><ul>
-<li>在数学系的学生视图中找出年龄$(Sage)$小于$20$岁的学生姓名$(Sname)$和年龄$(Sage)$.</li>
-</ul>
-<pre class="line-numbers language-SQL"><code class="language-SQL">select 姓名,年龄 from Math_Student
-where 年龄<20
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
-<li>在创建的第二个视图中查询成绩在$85$分以上的学生学号$(Sno)$、姓名$(Sname)$和课程名称$(Cname)$.</li>
+<li>此时,若$t$属于$[l,r)$,则$a[t]\geqslant k$。</li>
 </ul>
-<pre class="line-numbers language-SQL"><code class="language-SQL">select 学号,姓名,课程名 from Student_Grade
-where 成绩>=85
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="2-重载二分函数"><a href="#2-重载二分函数" class="headerlink" title="2. 重载二分函数"></a>2. 重载二分函数</h4><p>重载为在<strong>从大到小的数组</strong>中，查找区间$[l,r)$某种情况的元素$k$，或者在一个<strong>结构体数组</strong>中实行二分查找。</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token function">lower_bound</span><span class="token punctuation">(</span>a<span class="token operator">+</span>l<span class="token punctuation">,</span>a<span class="token operator">+</span>r<span class="token punctuation">,</span>k<span class="token punctuation">,</span>greater<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>        
+<span class="token comment" spellcheck="true">//二分查找第一个小于或等于k的数字</span>
+<span class="token function">lower_bound</span><span class="token punctuation">(</span>a<span class="token operator">+</span>l<span class="token punctuation">,</span>a<span class="token operator">+</span>r<span class="token punctuation">,</span>k<span class="token punctuation">,</span>cmp<span class="token punctuation">)</span>        
+<span class="token comment" spellcheck="true">//cmp 相当于重载 &lt;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>当元素$k$存在时返回指向该元素的地址，如果$k$大于数组中任何一个值，则返回指向$l$的地址。如果$k$小于数组中任何一个值，则返回指向$r$的地址。</li>
+</ul>
+<h4 id="3-二分函数运用于其他容器中"><a href="#3-二分函数运用于其他容器中" class="headerlink" title="3. 二分函数运用于其他容器中"></a>3. 二分函数运用于其他容器中</h4><p>除$vector$可变长数组，$deque$双端队列，$set$集合，$multiset$外，其他容器很少用二分函数或者不能用二分函数。</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token function">lower_bound</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>l<span class="token punctuation">,</span>a<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>r<span class="token punctuation">,</span>k<span class="token punctuation">)</span> <span class="token operator">-</span> a<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//vector 可变长数组，deque 双端队列，其实和数组差不多</span>
+set<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">::</span>iterator it <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">lower_bound</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//set ，集合，只能查找全体，返回的是迭代器,multiset和set差不多</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="4-与find-比较"><a href="#4-与find-比较" class="headerlink" title="4. 与find()比较"></a>4. 与find()比较</h4><ul>
+<li>$find()$一般是$O(n)$的时间复杂度，但序列可以是<strong>无序</strong>的。</li>
+<li>$lower$_$bound()$一般是$O(logn)$的时间复杂度，但序列必须的<strong>有序</strong>的。</li>
+<li>二者各有优劣，当<strong>数据量较大时</strong>尽量使用$lower$_$bound()$。</li>
+</ul>
+<h3 id="四、二分答案"><a href="#四、二分答案" class="headerlink" title="四、二分答案"></a>四、二分答案</h3><ul>
+<li>二分答案一般求解<strong>最小值最大（最大值最小）问题</strong>，将求解答案二分，配合<strong>贪心、DP等其他算法</strong>检验这个答案是否合理，将最优化问题转换为判定性问题。</li>
+<li>一般整数问题整数二分，实数问题浮点数二分，本质是一样的。</li>
+<li>复杂度一般为$O(nlogn)$，适合解决再$10^5$范围内的数据。</li>
+</ul>
 
                 
             </div>
@@ -542,7 +658,7 @@ where 成绩>=85
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liaoy0103.top/2022/04/29/shu-ju-ku-sqlserver-shi-yan-si-shi-tu/">https://liaoy0103.top/2022/04/29/shu-ju-ku-sqlserver-shi-yan-si-shi-tu/</a>
+                    <a href="https://liaoy0103.top/2022/09/08/acm-di-yi-jiang-er-fen/">https://liaoy0103.top/2022/09/08/acm-di-yi-jiang-er-fen/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -580,8 +696,8 @@ where 成绩>=85
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">数据库基本操作</span>
+                                <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">基础算法</span>
                                 </a>
                             
                         </div>
@@ -1029,16 +1145,18 @@ where 成绩>=85
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/30/2021-jiang-su-sheng-da-xue-sheng-cheng-xu-she-ji-da-sai-bu-ti/">
+                <a href="/2022/09/08/acm-di-yi-jiang-er-fen/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/04/30/khQSpruOCXRGtEL.jpg" class="responsive-img" alt="2021江苏省大学生程序设计大赛补题">
                         
-                        <span class="card-title">2021江苏省大学生程序设计大赛补题</span>
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ACM第一讲:二分">
+                        
+                        <span class="card-title">ACM第一讲:二分</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1048,9 +1166,58 @@ where 成绩>=85
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-30
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ACM%E7%AE%97%E6%B3%95/" class="post-category">
+                                    ACM算法
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">基础算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/09/03/acm-di-yi-jiang-sort-pai-xu/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.loli.net/2022/09/03/WjKaB3lIsiL8Owc.jpg" class="responsive-img" alt="ACM第一讲:sort排序">
+                        
+                        <span class="card-title">ACM第一讲:sort排序</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                             
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1066,64 +1233,8 @@ where 成绩>=85
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/2021ccpc/">
-                        <span class="chip bg-color">2021ccpc</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%A1%A5%E9%A2%98/">
-                        <span class="chip bg-color">补题</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/04/27/mian-xiang-dui-xiang-cheng-xu-she-ji-shi-yan-8/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.loli.net/2022/04/27/8DihdWGOBtacJnb.jpg" class="responsive-img" alt="面向对象程序设计实验8">
-                        
-                        <span class="card-title">面向对象程序设计实验8</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    面向对象程序设计
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">面向对象程序设计</span>
-                    </a>
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">基础算法</span>
                     </a>
                     
                 </div>

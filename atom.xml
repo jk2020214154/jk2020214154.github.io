@@ -6,7 +6,7 @@
   <link href="https://liaoy0103.top/atom.xml" rel="self"/>
   
   <link href="https://liaoy0103.top/"/>
-  <updated>2022-09-03T08:51:17.118Z</updated>
+  <updated>2022-09-08T10:02:41.807Z</updated>
   <id>https://liaoy0103.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ACM第一讲:二分</title>
+    <link href="https://liaoy0103.top/2022/09/08/acm-di-yi-jiang-er-fen/"/>
+    <id>https://liaoy0103.top/2022/09/08/acm-di-yi-jiang-er-fen/</id>
+    <published>2022-09-08T09:57:43.000Z</published>
+    <updated>2022-09-08T10:02:41.807Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="ACM算法" scheme="https://liaoy0103.top/categories/ACM%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="基础算法" scheme="https://liaoy0103.top/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>ACM第一讲:sort排序</title>
@@ -524,31 +549,6 @@
     <category term="补题" scheme="https://liaoy0103.top/tags/%E8%A1%A5%E9%A2%98/"/>
     
     <category term="CodeForces(cf)" scheme="https://liaoy0103.top/tags/CodeForces-cf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库SQLServer实验六T-SQL语句的编程</title>
-    <link href="https://liaoy0103.top/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/"/>
-    <id>https://liaoy0103.top/2022/05/13/shu-ju-ku-sqlserver-shi-yan-liu-t-sql-yu-ju-de-bian-cheng/</id>
-    <published>2022-05-13T02:07:14.000Z</published>
-    <updated>2022-05-13T03:02:46.420Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="数据库" scheme="https://liaoy0103.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="数据库基本操作" scheme="https://liaoy0103.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
