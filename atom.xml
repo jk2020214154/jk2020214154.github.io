@@ -6,7 +6,7 @@
   <link href="https://liaoy0103.top/atom.xml" rel="self"/>
   
   <link href="https://liaoy0103.top/"/>
-  <updated>2022-09-08T10:11:18.489Z</updated>
+  <updated>2022-11-29T02:39:03.262Z</updated>
   <id>https://liaoy0103.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统-第一章-计算机系统概述</title>
+    <link href="https://liaoy0103.top/2022/11/29/cao-zuo-xi-tong-di-yi-zhang-ji-suan-ji-xi-tong-gai-shu/"/>
+    <id>https://liaoy0103.top/2022/11/29/cao-zuo-xi-tong-di-yi-zhang-ji-suan-ji-xi-tong-gai-shu/</id>
+    <published>2022-11-29T01:34:46.000Z</published>
+    <updated>2022-11-29T02:39:03.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="操作系统" scheme="https://liaoy0103.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="操作系统" scheme="https://liaoy0103.top/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>ACM第一讲:二分</title>
@@ -522,33 +547,6 @@
     <category term="kuangbin专题" scheme="https://liaoy0103.top/tags/kuangbin%E4%B8%93%E9%A2%98/"/>
     
     <category term="简单搜索" scheme="https://liaoy0103.top/tags/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CodeForces-1673补题</title>
-    <link href="https://liaoy0103.top/2022/05/14/codeforces-1673-bu-ti/"/>
-    <id>https://liaoy0103.top/2022/05/14/codeforces-1673-bu-ti/</id>
-    <published>2022-05-14T10:09:25.000Z</published>
-    <updated>2022-05-20T11:42:41.410Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="ACM算法" scheme="https://liaoy0103.top/categories/ACM%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="补题" scheme="https://liaoy0103.top/tags/%E8%A1%A5%E9%A2%98/"/>
-    
-    <category term="CodeForces(cf)" scheme="https://liaoy0103.top/tags/CodeForces-cf/"/>
     
   </entry>
   
